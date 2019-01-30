@@ -1,0 +1,66 @@
+<html>
+
+<head>
+<link REL="stylesheet" HREF="../JSCRIPT/STYLES.CSS" TYPE="text/css">
+<script>
+
+pageX=6
+secX=4
+chapX=5
+
+indepthvar="off"
+examplesvar="off"
+questionsvar="off"
+
+</script>
+<script SRC="../JScript/textpage.js">
+document.write("js file not found")
+</script>
+
+<title></title>
+</head>
+
+<body BACKGROUND="../EFFECTS/BG.GIF">
+<!--Page Title Here-->
+<!--Body Text Here-->
+
+<p>&nbsp;</p>
+
+<h2>Carrier recovery for coherent PSK</h2>
+
+<table border="0" width="100%">
+  <tr>
+    <td width="100%">In order to ensure that the local carrier phase is approximately 0°, it
+    is necessary either to transmit a <font color="#0080FF">carrier phase reference</font>
+    alongside the data signal, or to derive the reference from the incoming data signal. The
+    concept of a separate reference signal has been discussed already in Chapter 4 as a means
+    of detecting and correcting for <a "" href="../ch4/c4s2p9.htm">local oscillator error</a>
+    and <a "" href="../ch4/c4s2p10.htm">Doppler shift</a> in mobile radio systems. <br>
+    </td>
+  </tr>
+</table>
+
+<table border="0" width="100%">
+  <tr>
+    <td width="50%">A data-derived reference for BPSK can be implemented by realizing that if
+    the binary PSK signal is squared, the 0<sup>o</sup> and 180<sup>o</sup>
+    phase states can be forced to be <font color="#0080FF">modulo 2<SPAN CLASS=greek>p</SPAN></font>, thereby removing
+    the modulation. The process of squaring also doubles the frequency of the carrier
+    component. This twice frequency term requires filtering (usually with a phase-locked
+    loop), to remove channel noise, and then the frequency must be halved to yield the
+    required coherent carrier term. </td>
+    <td width="50%"><img src="ch5figs/sec4/squarer.gif" align="right" WIDTH="400" HEIGHT="125"></td>
+  </tr>
+</table>
+
+<table border="0" width="100%">
+  <tr>
+    <td width="100%">For data systems using <i>N</i> different phase symbol states (<i>N</i>&nbsp;=&nbsp;2 for
+    binary-PSK), an <i>N<sup></i>th</sup> order non-linearity must be used to force the phase
+    modulation to be modulo 2<SPAN CLASS=greek>p</SPAN>. The remainder of the carrier recovery process remains
+    the same except that a frequency 'divide-by-<i>N' </i>circuit is needed to obtain the
+    correct carrier frequency. </td>
+  </tr>
+</table>
+</body>
+</html>

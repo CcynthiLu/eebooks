@@ -1,0 +1,64 @@
+<html>
+
+<head>
+<link REL="stylesheet" HREF="../JSCRIPT/STYLES.CSS" TYPE="text/css">
+<script>
+
+pageX=11
+secX=4
+chapX=5
+
+indepthvar="off"
+examplesvar="off"
+questionsvar="on"
+
+q1=q2=q3=0
+q4=1
+q5=q6=q7=0
+
+</script>
+<script SRC="../JScript/textpage.js">
+document.write("js file not found")
+</script>
+
+<title></title>
+</head>
+
+<body BACKGROUND="../EFFECTS/BG.GIF">
+<!--Page Title Here-->
+<!--Body Text Here-->
+
+<table border="0" CELLSPACING="4" align="right">
+  <tr>
+    <td VALIGN="top" ALIGN="center"><H4><a CLASS="popup" HREF="javascript:open_question_window(11,12)"><img SRC="../EFFECTS/Q_ICON.GIF" BORDER="0" VSPACE="4" WIDTH="44" HEIGHT="45"></a><br>
+    <a CLASS="popup" HREF="javascript:open_question_window(11,12)">Question 5.11</a></h4>
+    </td>
+  </tr>
+</table>
+
+<p>&nbsp;</p>
+
+<h2>Differential data decoding</h2>
+
+<table border="0" width="100%">
+  <tr>
+    <td width="40%">The differential decoding process is equally simple to implement using a
+    second exclusive-or gate and a 1-bit delay. The task is to observe whether the detected
+    data stream changes state over consecutive bits, in which case a logic 1 must have been
+    present in the input. If there is no change of state, a logic 0 must have been sent. This
+    change of state information is unaffected by any data inversion and hence the
+    encoding/decoding process is foolproof against carrier recovery phase ambiguity.</td>
+    <td width="60%"><img src="ch5figs/sec4/diff_dec.gif" align="right" WIDTH="300" HEIGHT="135"></td>
+  </tr>
+</table>
+
+  <h4 align="center"><img src="ch5figs/sec4/err_dec.gif" WIDTH="350" HEIGHT="102"></h4>
+
+  <h4>The only drawback with this coding process is that when single bit errors
+    occur in the received data sequence due to noise, and so on, and pass through the decoder,
+    they tend to propagate as <font color="#0080FF">double bit</font> errors. This is because
+    the decoder is comparing the logic state of the most recently received data bit with the
+    current data bit, and if the previous bit is in error, the next decoded bit will also be
+    in error. </h4>
+</body>
+</html>

@@ -1,0 +1,83 @@
+<html>
+
+<head>
+<link REL="stylesheet" HREF="../JSCRIPT/STYLES.CSS" TYPE="text/css">
+<script>
+
+pageX=6
+secX=1
+chapX=7
+
+indepthvar="off"
+examplesvar="off"
+questionsvar="on"
+
+q1=q2=0
+q3=1
+q4=q5=q6=q7=0
+
+</script>
+<script SRC="../JScript/textpage.js">
+document.write("js file not found")
+</script>
+
+<title></title>
+</head>
+
+<body BACKGROUND="../EFFECTS/BG.GIF">
+<!--Page Title Here-->
+<!--Body Text Here-->
+<!--proofed by DR 7/6-->
+
+<table border="0" CELLSPACING="4" align="right">
+  <tr>
+    <td VALIGN="top" ALIGN="center"><H4><a CLASS="popup" HREF="javascript:open_question_window(3,10)">
+    <img SRC="../EFFECTS/Q_ICON.GIF" BORDER="0" VSPACE="4" WIDTH="44" HEIGHT="45"></a><br>
+    <a CLASS="popup" HREF="javascript:open_question_window(3,10)">Question 7.3</a></h4>
+    </td>
+  </tr>
+</table>
+
+<p>&nbsp;</p>
+
+<h2>Dynamic range</h2>
+
+<table border="0" width="100%">
+  <tr>
+    <td width="50%">The ability of an A/D converter to cope with both large and small signals
+    is an important factor in waveform encoding, and the ratio of <i>V</i><sub>max</sub> to <i>V</i><sub>min</sub>
+    over which a converter will operate is called the <font color="#0080FF">dynamic range</font>.
+    This parameter depends heavily on the resolution of the A/D, that is, the number of bits
+    available to represent any given sample. The more bits in the converter, the more <font color="#0080FF">quantization</font> 
+    levels the converter is using to match to any given waveform sample.<br>
+    <br>
+    It is not difficult to see that an <i>n</i>-bit converter can differentiate between 2<sup><i>n</i></sup>&nbsp;=&nbsp;<i>M</i>
+    discrete signal levels and that the minimum signal variation that it can detect and
+    represent is <i>V</i><sub>max</sub>&nbsp;/&nbsp;<I>M</i> volts. 
+    This is often called the <font color="#0080FF">quantization step size</font>.<br>
+    <br>
+    </td>
+    <td width="50%"><img SRC="ch7figs/sec1/adc_dynm.gif" align="right" WIDTH="350" HEIGHT="243"></td>
+  </tr>
+</table>
+<div align="center"><center>
+
+<table border="0" cellpadding="10" BGCOLOR="#99ccff">
+  <tr>
+    <td width="100%"><h4 class="defleaderline">The <font color="#0080FF">dynamic range</font> for an
+    A/D converter is thus given by:</h4>
+<h4 CLASS="def"><i>Dynamic range</i> = <i>V</i><sub>max</sub>&nbsp;/&nbsp;<i>V</i><sub>min</sub>
+    =&nbsp;<i>V</i><sub>max</sub>&nbsp;/&nbsp;(<i>V</i><sub>max</sub>&nbsp;/&nbsp;<i>M</i>)
+    =&nbsp;M or 2<sup><i>n</i></sup> </h4>
+    <h4 CLASS="defleaderline">Expressed in dBs, this gives us the well known formula: the dynamic range
+    of a linear A/D is <i>n</i>&nbsp;x&nbsp;6.02&nbsp;dB.</h4></td>
+  </tr>
+</table>
+
+<table border="0" width="100%">
+    <td width="100%">An 8-bit converter thus has a dynamic range of approximately 48&nbsp;dB. </td>
+  </tr>
+</table>
+
+</body>
+</html>

@@ -1,0 +1,74 @@
+<html>
+
+<head>
+<link REL="stylesheet" HREF="../JSCRIPT/STYLES.CSS" TYPE="text/css">
+<script>
+
+pageX=2
+secX=2
+chapX=4
+
+indepthvar="on"
+examplesvar="off"
+questionsvar="off"
+
+</script>
+<script SRC="../JScript/textpage.js">
+document.write("js file not found")
+</script>
+
+<title></title>
+</head>
+
+<body BACKGROUND="../EFFECTS/BG.GIF">
+<!--Page Title Here-->
+
+<table border="0" CELLSPACING="4" align="right">
+  <tr>
+    <td VALIGN="top" ALIGN="center"><H4><a CLASS="popup" HREF="javascript:open_indepth_window(1)">
+    <img SRC="../EFFECTS/IND_ICON.GIF" BORDER="0" VSPACE="4" WIDTH="44" HEIGHT="45"></a><br>
+    <a CLASS="popup" HREF="javascript:open_indepth_window(1)">In-depth</a></h4>
+    </td>
+  </tr>
+</table>
+
+<p>&nbsp;</p>
+<!--proofed by DR 6/6-->
+<h2>Gain distortion &#150; amplifiers</h2>
+
+<p>&nbsp;</p>
+
+<table border="0" width="100%">
+  <tr>
+    <td width="50%"><h4>Amplifiers, particularly RF power amplifiers in radio systems and
+    higher power lasers in optical systems, do not exhibit a linear relationship between input
+    power and output power, often owing to <font color="#0080FF">gain compression</font> in
+    the devices used.<br>
+    <br>
+    The effect on digital signals passing through these non-linear devices is twofold.
+    Firstly, the careful pulse shaping achieved with a Nyquist filter can be corrupted,
+    reintroducing <a HREF="../Ch3/C3s2p1.htm">intersymbol interference</a> into the link.
+    Secondly, the non-linearity can result in what is commonly termed <font color="#0080FF">spectral
+    regrowth</font> due to <font color="#0080FF">intermodulation products</font> being
+    generated within devices.</h4>
+    </td>
+    <td width="50%"><img src="ch4figs/sec2/am_am.gif" border="0" align="right" WIDTH="250" HEIGHT="181"></td>
+  </tr>
+</table>
+
+<table border="0" width="100%">
+  <tr>
+    <td width="100%"><h4>In many applications, particularly digital cellular systems, spectral
+    regrowth is a major problem and a lot of design effort is focused on compensating for this
+    problem, either by <font color="#0080FF">linearizing</font><font COLOR="#8080FF"><i> </i></font>the
+    components (see <a CLASS="popup" HREF="javascript:open_indepth_window(1)">in-depth</a>), or by selecting modulation formats such as <a "" href="../ch5/c5s3p6.htm">GMSK</a> that are particularly tolerant to amplitude
+    non-linearity.<br>
+    <br>
+    In fact most components, mixers, op-amps, couplers, and so on are not perfectly linear and
+    hence introduce amplitude distortion; however, the distortion is usually much less than
+    that introduced by the higher power or active RF components within a system. </h4>
+    </td>
+  </tr>
+</table>
+</body>
+</html>

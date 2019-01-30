@@ -1,0 +1,168 @@
+<html>
+
+<head>
+<link REL="stylesheet" HREF="../../JSCRIPT/STYLES.CSS" TYPE="text/css">
+<meta HTTP-EQUIV="Content-Type" CONTENT="text/html; charset=windows-1252">
+<meta NAME="GENERATOR" CONTENT="Microsoft FrontPage 3.0">
+</head>
+<body LINK="#0000FF" VLINK="#800080" background="../../EFFECTS/popups/BG_ind.GIF">
+<!--proofed by DR 6/6-->
+<h2>The RS232 protocol</h2>
+
+<h4 CLASS="technical">The RS232 standard was drawn up by the CCITT in
+Europe and the Electronics Industries Association (EIA) in the United States in order to
+ensure that there was a worldwide common format for serial communication between computers
+and peripherals. This standard outlines the characteristics of the connectors to be used,
+(size, number of pins, shape, and so on), the voltage levels to be supported, and the
+control functions assigned to each pin. It also identifies the simple handshaking protocol
+which determines when the terminal equipment is ready to send and to receive data.<BR>
+<BR>
+The voltage levels for the RS232 interface are
+defined to lie between &#150;3&nbsp;V and &nbsp;15&nbsp;V for logic&nbsp;1, and +3&nbsp;V and +15&nbsp;V for 
+logic&nbsp;0. Typically they are set to &#150;12&nbsp;V and +12&nbsp;V. Note that the RS232 interface uses
+so-called 'negative logic'.<BR>
+<BR>
+The interface is normally limited to speeds of 20&nbsp;kbps over distances in the order of 
+15&nbsp;metres due to pulse rise times over these lengths
+of cables. Higher speeds are possible over much shorter distances, however.<br>
+<BR>
+&nbsp;A similar standard to the RS232, termed RS449, can deliver much higher interconnection speeds by specifying the use of 'balanced
+signalling' and much tighter specification of interconnection cable parameters. The
+RS449 interface can signal at speeds in excess of 2&nbsp;Mbps.<br><BR>
+
+A table of pin designations for the RS232 interface is given below.<BR><BR>
+
+<div align="center"><center>
+
+<table BORDER="1" CELLSPACING="1" BORDERCOLOR="#000000" CELLPADDING="7" WIDTH="277">
+  <tr>
+    <td CLASS="technical" VALIGN="TOP" COLSPAN="2"><b>Table of RS232 Pin Designations</b>
+  </tr>
+  <tr>
+    <td CLASS="technical" WIDTH="22%" VALIGN="TOP">1</td>
+    <td CLASS="technical" WIDTH="78%" VALIGN="TOP" align="center">Ground</td>
+  </tr>
+  <tr>
+    <td CLASS="technical" WIDTH="22%" VALIGN="TOP">2</td>
+    <td CLASS="technical" WIDTH="78%" VALIGN="TOP" align="center">Transmitted
+    data (TD)</td>
+  </tr>
+  <tr>
+    <td CLASS="technical" WIDTH="22%" VALIGN="TOP">3</td>
+    <td CLASS="technical" WIDTH="78%" VALIGN="TOP" align="center">Received
+    data (RD)</td>
+  </tr>
+  <tr>
+    <td CLASS="technical" WIDTH="22%" VALIGN="TOP">4</td>
+    <td CLASS="technical" WIDTH="78%" VALIGN="TOP" align="center">Request to
+    send (RTS)</td>
+  </tr>
+  <tr>
+    <td CLASS="technical" WIDTH="22%" VALIGN="TOP">5</td>
+    <td CLASS="technical" WIDTH="78%" VALIGN="TOP" align="center">Clear to
+    send (CTS)</td>
+  </tr>
+  <tr>
+    <td CLASS="technical" WIDTH="22%" VALIGN="TOP">6</td>
+    <td CLASS="technical" WIDTH="78%" VALIGN="TOP" align="center">Data set
+    ready (DSR)</td>
+  </tr>
+  <tr>
+    <td CLASS="technical" WIDTH="22%" VALIGN="TOP">7</td>
+    <td CLASS="technical" WIDTH="78%" VALIGN="TOP" align="center">Ground</td>
+  </tr>
+  <tr>
+    <td CLASS="technical" WIDTH="22%" VALIGN="TOP">8</td>
+    <td CLASS="technical" WIDTH="78%" VALIGN="TOP" align="center">Data
+    carrier detect (DCD)</td>
+  </tr>
+  <tr>
+    <td CLASS="technical" WIDTH="22%" VALIGN="TOP">9</td>
+    <td CLASS="technical" WIDTH="78%" VALIGN="TOP" align="center">Not
+    connected</td>
+  </tr>
+  <tr>
+    <td CLASS="technical" WIDTH="22%" VALIGN="TOP">10</td>
+    <td CLASS="technical" WIDTH="78%" VALIGN="TOP" align="center">Not
+    connected</td>
+  </tr>
+  <tr>
+    <td CLASS="technical" WIDTH="22%" VALIGN="TOP">11</td>
+    <td CLASS="technical" WIDTH="78%" VALIGN="TOP" align="center">Not
+    connected</td>
+  </tr>
+  <tr>
+    <td CLASS="technical" WIDTH="22%" VALIGN="TOP">12</td>
+    <td CLASS="technical" WIDTH="78%" VALIGN="TOP" align="center">Secondary
+    data carrier detect</td>
+  </tr>
+  <tr>
+    <td CLASS="technical" WIDTH="22%" VALIGN="TOP">13</td>
+    <td CLASS="technical" WIDTH="78%" VALIGN="TOP" align="center">Secondary
+    clear to send</td>
+  </tr>
+  <tr>
+    <td CLASS="technical" WIDTH="22%" VALIGN="TOP">14</td>
+    <td CLASS="technical" WIDTH="78%" VALIGN="TOP" align="center">Secondary
+    transmitted data</td>
+  </tr>
+  <tr>
+    <td CLASS="technical" WIDTH="22%" VALIGN="TOP">15</td>
+    <td CLASS="technical" WIDTH="78%" VALIGN="TOP" align="center">Secondary
+    transmitted clock</td>
+  </tr>
+  <tr>
+    <td CLASS="technical" WIDTH="22%" VALIGN="TOP">16</td>
+    <td CLASS="technical" WIDTH="78%" VALIGN="TOP" align="center">Secondary
+    received data</td>
+  </tr>
+  <tr>
+    <td CLASS="technical" WIDTH="22%" VALIGN="TOP">17</td>
+    <td CLASS="technical" WIDTH="78%" VALIGN="TOP" align="center">Receiver
+    clock (RC)</td>
+  </tr>
+  <tr>
+    <td CLASS="technical" WIDTH="22%" VALIGN="TOP">18</td>
+    <td CLASS="technical" WIDTH="78%" VALIGN="TOP" align="center">Divided
+    clock receiver (DCR)</td>
+  </tr>
+  <tr>
+    <td CLASS="technical" WIDTH="22%" VALIGN="TOP">19</td>
+    <td CLASS="technical" WIDTH="78%" VALIGN="TOP" align="center">Secondary
+    request to send</td>
+  </tr>
+  <tr>
+    <td CLASS="technical" WIDTH="22%" VALIGN="TOP">20</td>
+    <td CLASS="technical" WIDTH="78%" VALIGN="TOP" align="center">Data
+    terminal ready (DTR)</td>
+  </tr>
+  <tr>
+    <td CLASS="technical" WIDTH="22%" VALIGN="TOP">21</td>
+    <td CLASS="technical" WIDTH="78%" VALIGN="TOP" align="center">Signal
+    quality detect (SQ)</td>
+  </tr>
+  <tr>
+    <td CLASS="technical" WIDTH="22%" VALIGN="TOP">22</td>
+    <td CLASS="technical" WIDTH="78%" VALIGN="TOP" align="center">Ring
+    indicator (RI)</td>
+  </tr>
+  <tr>
+    <td CLASS="technical" WIDTH="22%" VALIGN="TOP">23</td>
+    <td CLASS="technical" WIDTH="78%" VALIGN="TOP" align="center">Data rate
+    selector</td>
+  </tr>
+  <tr>
+    <td CLASS="technical" WIDTH="22%" VALIGN="TOP">24</td>
+    <td CLASS="technical" WIDTH="78%" VALIGN="TOP" align="center">External
+    transmitter clock</td>
+  </tr>
+  <tr>
+    <td CLASS="technical" WIDTH="22%" VALIGN="TOP">25</td>
+    <td CLASS="technical" WIDTH="78%" VALIGN="TOP" align="center">Busy</td>
+  </tr>
+</table>
+</center></div>
+
+<p><small><small><font face="Verdana">&nbsp;</font></small></small></p>
+</body>
+</html>

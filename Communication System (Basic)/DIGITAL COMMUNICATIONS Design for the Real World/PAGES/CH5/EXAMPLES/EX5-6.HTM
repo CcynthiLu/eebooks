@@ -1,0 +1,50 @@
+<html>
+
+<head>
+<link REL="stylesheet" HREF="../../JSCRIPT/STYLES.CSS" TYPE="text/css">
+<meta HTTP-EQUIV="Content-Type" CONTENT="text/html; charset=windows-1252">
+<meta NAME="GENERATOR" CONTENT="Microsoft FrontPage 3.0">
+</head>
+<body LINK="#0000FF" VLINK="#800080" background="../../EFFECTS/popups/BG_ex.GIF">
+<!--proofed by DR 3/7-->
+<h2>Example 5.6</h2>
+
+<h4 CLASS="technical">A DPSK receiver has an error in the delay element
+equivalent to 10% of the carrier period. Given that the expression for bit error
+probability in a perfect (no delay error) DPSK receiver is of the form:<BR><BR>
+
+<i>P<sub>e</sub></i>&nbsp;=&nbsp;0.5exp(<I>E<sub>b</sub></i>/<i>N</i><sub>0</sub>)<BR><br>
+
+where <I>E<sub>b</sub></i> is the energy per bit, and <i>N</i><sub>0</sub> is the noise power density,
+what is the percentage increase in transmitter power required to counteract the degradation in receiver performance caused by the delay error?</h4>
+
+<h3>Solution</h3>
+
+<h4 CLASS="technical">The time delay error =&nbsp;10% of carrier period =&nbsp;36<sup>o</sup>
+of phase error in the notional carrier reference.<br><BR>
+
+The voltage output of the mixer used to compare the
+present symbol cos&nbsp;<SPAN CLASS=greek>w</SPAN><sub>c</sub><i>t</i>
+with the previous symbol cos(<SPAN CLASS=greek>w</SPAN><sub>c</sub><i>t</i>&nbsp;+&nbsp;<i>T<sub>b</sub></i>&nbsp;+&nbsp;36<sup>o</sup>) 
+will thus be reduced by a factor cos(36<sup>o</sup>) from
+its maximum value as a result of this timing error.<br><BR>
+
+This in turn equates to a reduction in symbol <font color="#0080FF">energy</font>
+at the input to the receiver of cos<sup>2</sup>(36<sup>o</sup>).<br><BR>
+
+The noise components passing through the mixer will
+also be affected by the phase error in the carrier reference, but since the noise vectors
+are assumed to be randomly distributed through 360<sup>o</sup>, the carrier phase error
+will reduce the effect of some noise vectors and enhance others, with the net effect that
+the <font color="#0080FF">average noise voltage</font> at the mixer output will remain unchanged. Hence it is only the
+symbol energy that is truly affected by the timing error and not the noise power. The bit
+error probability can thus be written as:<br><BR>
+
+<i>P<sub>e</sub></i>&nbsp;=&nbsp;0.5exp(<I>E<sub>b</sub></i>&nbsp;cos<sup>2</sup>(36<sup>o</sup>)&nbsp;/&nbsp;<i>N</i><sub>0</sub>)<BR><br>
+
+This means that the transmitted symbol energy must be increased by a factor 
+1&nbsp;/&nbsp;cos<sup>2</sup>(36<sup>o</sup>) =&nbsp;1.52, or 1.85&nbsp;dB, to maintain
+the same performance as a system with no timing error.</h4>
+
+</body>
+</html>

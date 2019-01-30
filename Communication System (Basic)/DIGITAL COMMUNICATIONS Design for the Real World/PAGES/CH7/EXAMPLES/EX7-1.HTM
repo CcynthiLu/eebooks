@@ -1,0 +1,34 @@
+<html>
+
+<head>
+<link REL="stylesheet" HREF="../../JSCRIPT/STYLES.CSS" TYPE="text/css">
+<meta HTTP-EQUIV="Content-Type" CONTENT="text/html; charset=windows-1252">
+<meta NAME="GENERATOR" CONTENT="Microsoft FrontPage 3.0">
+</head>
+<body LINK="#0000FF" VLINK="#800080" background="../../EFFECTS/popups/BG_ex.GIF">
+<!--proofed by DR 7/6-->
+<h2>Example 7.1</h2>
+
+<h4 CLASS="technical">A broadcast audio source signal contains frequencies
+in the range from 50&nbsp;Hz to 18&nbsp;kHz. What is the minimum sampling rate required for an A/D
+converter in order to ensure that there will be no aliasing? What is a practical sampling
+rate to choose for this application?</h4>
+
+<h4 CLASS="technical">If by accident a high frequency tone at 30&nbsp;kHz is
+added into the audio source, at what frequency will this signal appear in the sampled
+waveform if the sampling rate is set at 40000&nbsp;samples per second?</h4>
+<h3>Solution</h3>
+<h4 CLASS="technical">The Nyquist sampling rate for perfect signal
+reconstruction (no aliasing) must be twice the highest frequency component of a baseband
+signal, that is, 2&nbsp;x&nbsp;18&nbsp;kHz =&nbsp;36000&nbsp;samples per second. This sampling rate assumes that a
+'brick-wall' low pass filter can be used to remove alias components. In practice, a
+sampling rate of 44100&nbsp;samples per second is commonly used in the HiFi industry as the
+standard sampling rate for high quality audio signals with frequencies up to 20&nbsp;kHz.<br>
+<BR>
+If a sampling rate of 40000 samples per second is used to digitize a
+tone with a frequency of 30&nbsp;kHz, the sampling process will produce a difference frequency
+component at (40000&nbsp;&#150;&nbsp;30000) =&nbsp;10000&nbsp;Hz, which falls well within the half Nyquist
+bandwidth of 20&nbsp;kHz for a 40&nbsp;kHz sampled system. It would thus appear that a 10&nbsp;kHz tone
+had been applied at the input to the A/D converter.</h4>
+<h4 align="center"><img SRC="../ch7figs/sec1/example1.gif" WIDTH="400" HEIGHT="430"></h4></body>
+</html>

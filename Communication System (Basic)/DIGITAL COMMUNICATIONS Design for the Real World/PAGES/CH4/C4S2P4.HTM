@@ -1,0 +1,61 @@
+<html>
+
+<head>
+<link REL="stylesheet" HREF="../JSCRIPT/STYLES.CSS" TYPE="text/css">
+<script>
+
+pageX=4
+secX=2
+chapX=4
+
+indepthvar="off"
+examplesvar="off"
+questionsvar="off"
+
+</script>
+<script SRC="../JScript/textpage.js">
+document.write("js file not found")
+</script>
+
+<title></title>
+</head>
+
+<body BACKGROUND="../EFFECTS/BG.GIF">
+<!--Page Title Here-->
+<!--Body Text Here-->
+<!--proofed by DR 7/6-->
+<p>&nbsp;</p>
+
+<h2>Phase distortion &#150; filters</h2>
+
+<table border="0" width="100%">
+  <tr>
+    <td width="50%"><h4>Just as filters introduce amplitude ripple in the passband, many also
+    have phase variations across the passband and in the transition band. The effect of a
+    non-flat phase response in a filter is to cause the various frequency components that make
+    up the data signal to undergo slightly different amounts of <font color="#0080FF">phase
+    shift</font>. If the phase response is not flat, or does not increase linearly with
+    frequency (termed a <font color="#0080FF">linear phase response</font>), distortion will
+    be introduced into the time waveform of the data pulse or symbol as shown here. If the
+    component has a linear phase response, this translates into a fixed time delay of the
+    signal passing through it, but otherwise the signal will <font color="#0080FF">not</font> be distorted.</h4>
+    </td>
+    <td width="50%"><img src="ch4figs/sec2/groupdy2.gif" border="0" align="right" WIDTH="350" HEIGHT="241"></td>
+  </tr>
+</table>
+
+<table border="0" width="100%">
+  <tr>
+    <td width="100%"><h4><br>
+    Again, some filters have better phase responses than others, with the <font color="#0080FF">Bessel</font> filter
+    having a very good near linear phase response with frequency, and the <font color="#0080FF">Elliptic</font>
+    filter having a very poor response. <font color="#0080FF">Digital filters</font>, on the
+    other hand, can be implemented with <font color="#0080FF">perfectly linear phase response</font>
+    &#150; so-called linear phase filters and hence it is possible to implement a <a "" href="../ch3/c3s4p1.htm">raised cosine</a> filter with no phase distortion using these
+    techniques. (Note, not all digital filters have a linear phase response.)</h4>
+    </td>
+  </tr>
+</table>
+
+</body>
+</html>

@@ -1,0 +1,89 @@
+<html>
+
+<head>
+<link REL="stylesheet" HREF="../JSCRIPT/STYLES.CSS" TYPE="text/css">
+<script>
+
+pageX=4
+secX=5
+chapX=3
+
+indepthvar="on"
+examplesvar="off"
+questionsvar="off"
+
+</script>
+<script SRC="../JScript/textpage.js">
+document.write("js file not found")
+</script>
+
+<title></title>
+</head>
+
+<body BACKGROUND="../EFFECTS/BG.GIF">
+<!--Page Title Here-->
+<!--Body Text Here-->
+<!--proofed by DR 25/5-->
+<!--icons added MS 28/5-->
+
+<p>&nbsp;</p>
+
+<table border="0" width="100%">
+  <tr>
+    <td width="80%"><h2>Designing a matched filter with ISI in mind </h2>
+    </td>
+    <td>
+		<table border="0" ALIGN=right CELLSPACING=4>
+		  <tr>    
+		    <td VALIGN=top ALIGN=center><A HREF="javascript:open_indepth_window(3)"><IMG ALT="In Depth" SRC="../EFFECTS/IND_ICON.GIF" WIDTH="44" HEIGHT="45" BORDER="0" VSPACE="4"></A><BR>
+		    	<A CLASS="popup" HREF="javascript:open_indepth_window(3)">In-depth</A>
+		    </td>       
+		  </tr>
+		</table>    
+    </td>
+  </tr>
+</table>
+
+
+
+
+
+<table border="0" width="100%">
+  <tr>
+    <td width="100%"><h4>It can be shown (see <a HREF="javascript:open_indepth_window(3)">in-depth</a> section) that a detection filter will
+    be 'matched' to the input symbol pulse shape if the filter is designed with an impulse
+    response that is in fact a time reversed and delayed replica of the input symbol shape.
+    Alternatively, the frequency domain response of a matched filter must be equal to the
+    complex conjugate of the spectrum of the input symbol.</h4>
+    </td>
+  </tr>
+</table>
+
+<table border="0" width="100%">
+  <tr>
+    <td width="50%"><h4>Clearly, implementing a matched filter requires detailed knowledge of
+    the source data symbol shape, and also relies on the symbol shape remaining undistorted as
+    it passes through the channel. It also only holds true for <a "" href="../CH4/c4s3p6.htm">Additive
+    White Gaussian Noise</a>.<br>
+    </h4>
+    </td>
+    <td width="50%"><img src="ch3figs/sec5/match_fl.gif" align="right" border="0" WIDTH="350" HEIGHT="66"></td>
+  </tr>
+</table>
+
+<table border="0" width="100%">
+  <tr>
+    <td width="100%"><h4>If we can assume that the channel is distortion free or has been <a "" href="../CH4/c4s5p9.htm">equalized</a> to remove the distortion, then we can introduce
+    the concept of a <font color="#0080FF">matched filter pair</font>, with one filter
+    performing the pulse shaping in the transmitter and the other performing matched detection
+    in the receiver. We already have a requirement for paired filtering, however, driven by
+    the desire to achieve zero intersymbol interference. The important question is: does the <a "" href="C3s2p1.htm">Nyquist filtering requirement for zero ISI</a> conflict with the
+    matched filtering requirement for optimum <em>S/N</em> ratio? Fortunately it has been
+    proven mathematically (<a href="../CH10/c10s1p1.htm#Schwartz">Schwartz, 1990</a>) that the <a "" href="c3s4p1.htm">root raised cosine filter</a> pair satisfies both criteria, which
+    explains its popularity with modem designers around the world. </h4>
+    </td>
+  </tr>
+</table>
+
+</body>
+</html>

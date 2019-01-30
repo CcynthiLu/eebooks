@@ -1,0 +1,63 @@
+<html>
+
+<head>
+<link REL="stylesheet" HREF="../JSCRIPT/STYLES.CSS" TYPE="text/css">
+<script>
+
+pageX=5
+secX=2
+chapX=5
+
+indepthvar="off"
+examplesvar="off"
+questionsvar="off"
+
+</script>
+<script SRC="../JScript/textpage.js">
+document.write("js file not found")
+</script>
+
+<title></title>
+</head>
+
+<body BACKGROUND="../EFFECTS/BG.GIF">
+<!--Page Title Here-->
+<!--Body Text Here-->
+<!--proofed by DR 3/7-->
+
+<h2>Bandwidth limited ASK</h2>
+
+<h3>Bandpass filtering method</h3>
+
+<table border="0" width="100%">
+  <tr>
+    <td width="50%">In order to minimize the occupied bandwidth of the transmitted ASK signal,
+    <a "" href="../ch3/c3s2p2.htm">filtering or pulse shaping</a> is required either prior to
+    or after modulation onto a carrier.<br>
+    <br>
+    The switching method of ASK generation does not allow any pre-filtering of the modulating
+    baseband symbol stream, as the switch is a <font color="#0080FF">non-linear process</font>
+    and does not transfer the pulse-shaping information onto the carrier envelope. In this
+    case, any filtering to constrain the bandwidth must be performed on the modulated bandpass
+    signal. </td>
+    <td width="50%"><img src="ch5figs/sec2/askfilt1.gif" align="right" WIDTH="350" HEIGHT="154"></td>
+  </tr>
+</table>
+
+<table border="0" width="100%">
+  <tr>
+    <td width="100%">For example, if we wish to filter a 30&nbsp;kHz wide modulated signal
+    superimposed on a carrier at 900&nbsp;MHz (typical of some digital cellular systems in the
+    USA), this would imply a filter with a <font color="#0080FF">Quality factor</font>&nbsp;<I>Q</i>
+     =&nbsp;900&nbsp;x&nbsp;10<sup>6</sup> /&nbsp;30&nbsp;x&nbsp;10<sup>3</sup>
+     =&nbsp;30000. At present, this <I>Q</i> can only be achieved
+    using crystal filters, which have very very poor amplitude ripple and group delay
+    distortion in the passband. They certainly do not allow the designer to achieve the <a href="../ch3/c3s4p4.htm">root raised cosine bandpass</a> response required for zero
+    intersymbol interference. <br>
+    <br>
+    </td>
+  </tr>
+</table>
+
+</body>
+</html>

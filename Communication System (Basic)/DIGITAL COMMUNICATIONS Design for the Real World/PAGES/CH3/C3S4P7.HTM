@@ -1,0 +1,68 @@
+<html>
+
+<head>
+<link REL="stylesheet" HREF="../JSCRIPT/STYLES.CSS" TYPE="text/css">
+<script>
+
+pageX=7
+secX=4
+chapX=3
+
+indepthvar="off"
+examplesvar="off"
+questionsvar="off"
+
+</script>
+<script SRC="../JScript/textpage.js">
+document.write("js file not found")
+</script>
+
+<title></title>
+</head>
+
+<body BACKGROUND="../EFFECTS/BG.GIF">
+<!--Page Title Here-->
+<!--Body Text Here-->
+<!--proofed by DR 25/5-->
+
+<p>&nbsp;</p>
+
+<h2>Symbol timing recovery</h2>
+
+<table border="0" width="100%">
+  <tr>
+    <td width="100%"><h4>The eye diagram is a very graphic way of highlighting the need for
+    accurate symbol timing in the receiver in order to sample the received signal at the
+    maximum eye opening.</h4>
+    </td>
+  </tr>
+</table>
+
+<table border="0" width="100%">
+  <tr>
+    <td width="50%"><h4>Symbol timing can be derived by sending a timing reference alongside
+    the data signal, for example in the form of a continuous tone at a multiple or
+    sub-multiple of the symbol rate (<a href="../Ch10/c10s1p1.htm#Bateman1990">Bateman, 1990</A>), or in the form of a burst clock&nbsp;
+    between message data transmissions. Most symbol timing systems, however, obtain their
+    information from the message data itself, making use of the 'zero-crossing' information in
+    the baseband (<a "" href="../Ch1/C1s4p7.htm">bipolar</a>) signal.<br>
+    </h4>
+    </td>
+    <td width="50%"><img src="ch3figs/sec4/half_aph.gif" align="right" border="0" WIDTH="400" HEIGHT="169"></td>
+  </tr>
+</table>
+
+<table border="0" width="100%">
+  <tr>
+    <td width="100%"><h4>The problem of symbol timing is eased significantly for <a HREF="C3s4p1.htm" "">raised cosine filtered</a> signals if the roll-off factor <SPAN CLASS=greek>a</SPAN> is equal to 1. For this unique case, the zero-crossings of the
+    filtered waveform always occur at a time <i>T<sub>s</sub></i>/2 before the <a "" href="C3s2p1.htm">optimum zero ISI</a> detection point. Triggering a timer from these
+    zero-crossings to sample the signal <I>T<sub>s</sub></i>/2 seconds later will thus give perfect
+    symbol timing. When the data contains long strings of 1s or 0s, the sampling process must
+    interpolate the correct sample times until the next zero-crossing occurs. Data
+    'scrambling' can be used to try to increase the frequency of zero-crossings in the data
+    stream. </h4>
+    </td>
+  </tr>
+</table>
+</body>
+</html>

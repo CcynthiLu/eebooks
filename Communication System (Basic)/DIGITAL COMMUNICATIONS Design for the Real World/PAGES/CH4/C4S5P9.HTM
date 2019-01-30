@@ -1,0 +1,66 @@
+<html>
+
+<head>
+<link REL="stylesheet" HREF="../JSCRIPT/STYLES.CSS" TYPE="text/css">
+<script>
+
+pageX=9
+secX=5
+chapX=4
+
+indepthvar="off"
+examplesvar="off"
+questionsvar="off"
+
+</script>
+<script SRC="../JScript/textpage.js">
+document.write("js file not found")
+</script>
+
+<title></title>
+</head>
+
+<body BACKGROUND="../EFFECTS/BG.GIF">
+<!--Page Title Here-->
+<!--Body Text Here-->
+<!--proofed by DR 7/6-->
+
+<h2>Coping with multipath fading</h2>
+
+<h3>Channel equalizers</h3>
+
+<table border="0" width="100%">
+  <tr>
+    <td width="100%"><h4>For high-speed wireless data applications where pilot sounding or
+    parallel transmission is not appropriate or there is not sufficient bandwidth available to
+    spread the signal effectively, then it is necessary to use wideband channel
+    equalization techniques. These in effect involve sending a sounding pulse into the channel
+    and measuring the level, phase and time delay of each significant echo received from the
+    various transmission paths. The receiver then has to work out the<font color="#0080FF">
+    inverse channel transfer function</font> with which to correct the subsequent message
+    data.<br>
+    </h4>
+    </td>
+  </tr>
+</table>
+
+<table border="0" width="100%">
+  <tr>
+    <td width="50%"><h4>Because the strength, number and delay of the echoes vary with time as
+    the user moves, this channel sounding must be repeated frequently and a new inverse
+    channel transfer function calculated each time. A modern example of this approach to
+    combatting multipath is contained within the <A TARGET="_BLANK" CLASS="external" HREF="http://www.gsmworld.com">GSM digital cellular system</a>. 
+    The modulation bandwidth for GSM is 200&nbsp;kHz which means that
+    the fading is frequency selective and equalization is necessary. A sounding data sequence
+    is sent embedded in the centre of each GSM data packet (frame) which is repeated every 4.615&nbsp;ms.
+    In other words, the cellular phone is working out the echo response of its
+    surroundings at a rate of approximately 200 times per second. </h4>
+    </td>
+    <td width="50%"><img src="ch4figs/sec5/gsm_eq.gif" align="right" border="0" WIDTH="300" HEIGHT="101"></td>
+  </tr>
+</table>
+
+<h4><br>
+</h4>
+</body>
+</html>

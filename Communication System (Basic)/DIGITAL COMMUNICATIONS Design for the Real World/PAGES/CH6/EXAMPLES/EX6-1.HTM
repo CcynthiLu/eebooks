@@ -1,0 +1,33 @@
+<HTML>
+
+<head>
+<link REL="stylesheet" HREF="../../JSCRIPT/STYLES.CSS" TYPE="text/css">
+<meta HTTP-EQUIV="Content-Type" CONTENT="text/html; charset=windows-1252">
+<meta NAME="GENERATOR" CONTENT="Microsoft FrontPage 3.0">
+</head>
+
+<body BACKGROUND="../../EFFECTS/POPUPS/BG_EX.GIF" LINK="#0000FF" VLINK="#800080">
+<!--proofed by DR 30/5-->
+
+<h2>Example 6.1</h2>
+<h4>A digital television system has a source analogue
+video signal with bandwidth extending from 0&nbsp;Hz to 2&nbsp;MHz. This signal is sampled at four
+times the highest frequency using a 16-bit A/D converter. The resulting data signal is
+sent over the air using a 16-QAM modulation format with a roll-off factor on the
+pulse-shaping filters of <SPAN CLASS=greek>a</SPAN>&nbsp;=&nbsp;0.5.
+What is the bandwidth occupied by the transmitted digital video signal?</h4>
+
+<h3>Solution</h3>
+<h4>The sampling rate for the A/D converter is 4&nbsp;x&nbsp;2&nbsp;MHz
+=&nbsp;8&nbsp;million samples per second. Each sample is encoded as a 16-bit word, resulting in a
+bit rate of 16&nbsp;x&nbsp;8&nbsp;million =&nbsp;128&nbsp;Mbps at the converter output.</h4>
+
+<h4>A 16-QAM modulation format conveys four bits per
+symbol, and because it is a bandpass format, this equates to a maximum bandwidth
+efficiency of 4&nbsp;bits/second/Hz for an ideal (<SPAN CLASS=greek>a</SPAN>&nbsp;=&nbsp;0) filter. </h4>
+
+<h4>For <SPAN CLASS=greek>a</SPAN>&nbsp;=&nbsp;0.5, the bandwidth efficiency is reduced by a factor (1&nbsp;+&nbsp;<SPAN CLASS=greek>a</SPAN>) to 2.66&nbsp;bits/second/Hz, and the bandwidth required
+to support a data rate of 128&nbsp;Mbps is 48&nbsp;MHz.</h4>
+
+</body>
+</html>

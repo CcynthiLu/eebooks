@@ -1,0 +1,57 @@
+<html>
+
+<head>
+<link REL="stylesheet" HREF="../JSCRIPT/STYLES.CSS" TYPE="text/css">
+<script>
+
+pageX=11
+secX=2
+chapX=5
+
+indepthvar="off"
+examplesvar="off"
+questionsvar="off"
+
+</script>
+<script SRC="../JScript/textpage.js">
+document.write("js file not found")
+</script>
+
+<title></title>
+</head>
+
+<body BACKGROUND="../EFFECTS/BG.GIF">
+<!--Page Title Here-->
+<!--Body Text Here-->
+<!--proofed by DR 3/7-->
+<p>&nbsp;</p>
+
+<h2>Carrier recovery for ASK </h2>
+
+<table border="0" width="100%">
+  <tr>
+    <td width="100%">Clearly it is beneficial to use coherent detection of ASK if possible,
+    but first the problem of how to derive a frequency and phase-coherent carrier reference in
+    the receiver must be addressed. Obtaining sufficiently <a "" href="../ch4/c4s2p9.htm">stable
+    free-running oscillators</a> in both TX and RX units is not possible, and some means of
+    recovering the carrier frequency and phase from the incoming data signal is needed.<br>
+    </td>
+  </tr>
+</table>
+
+<table border="0" width="100%">
+  <tr>
+    <td width="50%">One method that we have already encountered is to send a <a "" href="../ch4/c4s5p6.htm">reference signal</a> alongside the data signal from which the
+    source carrier frequency and phase can be measured. Here we shall consider an alternative
+    technique that recovers the carrier from the modulated data signal itself. By locking an
+    oscillator to the phase of the incoming carrier when a carrier-on symbol is sent, and
+    holding this oscillator phase when the carrier is off, it is possible to produce the
+    required coherent reference. A technique that is well suited to this task is the <a "" href="c5s3p8.htm">phase-locked loop (PLL)</a>. Unfortunately the carrier reference is not
+    perfect, as the carrier-on symbols are corrupted by incoming noise. However, by averaging
+    the carrier over several on-symbols (equivalent to a narrow bandwidth in the PLL system),
+    a cleaner reference can be obtained. </td>
+    <td width="50%"><img src="ch5figs/sec2/ask_pll.gif" align="right" WIDTH="300" HEIGHT="199"></td>
+  </tr>
+</table>
+</body>
+</html>

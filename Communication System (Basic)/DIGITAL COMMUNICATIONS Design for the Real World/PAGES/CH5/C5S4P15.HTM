@@ -1,0 +1,76 @@
+<html>
+
+<head>
+<link REL="stylesheet" HREF="../JSCRIPT/STYLES.CSS" TYPE="text/css">
+<script>
+
+pageX=15
+secX=4
+chapX=5
+
+indepthvar="off"
+examplesvar="on"
+questionsvar="on"
+
+e1=e2=e3=0
+e4=1
+e5=e6=e7=0
+q1=q2=q3=q4=0
+q5=1
+q6=q7=0
+
+</script>
+<script SRC="../JScript/textpage.js">
+document.write("js file not found")
+</script>
+
+<title></title>
+</head>
+
+<body BACKGROUND="../EFFECTS/BG.GIF">
+<!--Page Title Here-->
+<!--Body Text Here-->
+<!--proofed by DR 3/7-->
+
+<table border="0" CELLSPACING="4" align="right">
+  <tr>
+    <td VALIGN="top" ALIGN="center"><H4><a CLASS="popup" HREF="javascript:open_examples_window(8,8)"><img SRC="../EFFECTS/EX_ICON.GIF" BORDER="0" VSPACE="4" WIDTH="44" HEIGHT="45"></a><br>
+    <a CLASS="popup" HREF="javascript:open_examples_window(8,8)">Example 5.8</a></h4>
+    </td>
+    <td VALIGN="top" ALIGN="center"><H4><a CLASS="popup" HREF="javascript:open_question_window(12,12)"><img SRC="../EFFECTS/Q_ICON.GIF" BORDER="0" VSPACE="4" WIDTH="44" HEIGHT="45"></a><br>
+    <a CLASS="popup" HREF="javascript:open_question_window(12,12)">Question 5.12</a></h4>
+    </td>
+  </tr>
+</table>
+
+<p>&nbsp;</p>
+
+<h2>BER performance for PSK</h2>
+
+<table border="0" width="100%">
+  <tr>
+    <td width="50%">The <font color="#0080FF">theoretical</font> performance for
+    coherent and differential PSK is shown here for an <a "" href="../ch4/c4s3p6.htm">additive
+    white Gaussian noise</a> limited channel. The BER probability for coherent PSK is exactly
+    the same as that derived for bipolar baseband transmission in Chapter 3, and the PSK
+    modulation/demodulation process can be viewed as a convenient mechanism for obtaining a
+    bandpass representation of the equivalent baseband source. It should not be forgotten,
+    however, that the baseband-to-bandpass transformation decreases the maximum bandwidth
+    efficiency of the data link from 2&nbsp;bits/second/Hz to 1&nbsp;bit/second/Hz for binary signalling in
+    both cases. (We will see in Chapter 6 that <a "" href="../ch6/c6s4p1.htm">Quadrature Phase
+    Shift Keying (QPSK)</a> &#150; a four-symbol PSK scheme can allow us to get back to an
+    efficiency of 2&nbsp;bits/second/Hz for the bandpass case without degrading the performance
+    compared with binary PSK.) <br>
+    <br>
+    It can be seen that there is little performance penalty between fully coherent PSK
+    (assuming a perfect 'jitter-free' reference) and the simpler DPSK implementation. This
+    margin reduces further if <a "" href="c5s4p10.htm">differential encoding and decoding</a>
+    is used with coherent PSK to overcome the phase ambiguity within the carrier recovery
+    process which introduces some double bit errors. </td>
+    <td width="50%"><img src="ch5figs/sec4/probpsk.gif" align="right" WIDTH="300" HEIGHT="334"></td>
+  </tr>
+</table>
+
+
+</body>
+</html>

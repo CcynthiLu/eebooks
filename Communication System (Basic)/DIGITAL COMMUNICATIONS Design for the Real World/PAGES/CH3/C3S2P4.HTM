@@ -1,0 +1,68 @@
+<html>
+
+<head>
+<link REL="stylesheet" HREF="../JSCRIPT/STYLES.CSS" TYPE="text/css">
+<script>
+
+pageX=4
+secX=2
+chapX=3
+
+indepthvar="off"
+examplesvar="off"
+questionsvar="off"
+
+</script>
+<script SRC="../JScript/textpage.js">
+document.write("js file not found")
+</script>
+
+<title></title>
+</head>
+
+<body BACKGROUND="../EFFECTS/BG.GIF">
+<!--Page Title Here-->
+
+<p>&nbsp;</p>
+
+<h2>Achieving a Nyquist channel response </h2>
+<!--Body Text Here-->
+<!--proofed by DR 25/5-->
+
+<table border="0" width="100%">
+  <tr>
+    <td width="100%"><h4>It is <font color="#0080FF">very unlikely</font> that the
+    communications channel will inherently exhibit a Nyquist transfer response. This means
+    that the system designer must add compensating filtering to achieve the desired response.</h4>
+    </td>
+  </tr>
+</table>
+
+<table border="0" width="100%">
+  <tr>
+    <td width="100%"><p align="center"><img src="ch3figs/sec2/telephne.gif" align="center" border="0" WIDTH="450" HEIGHT="122"></td>
+  </tr>
+</table>
+
+<table border="0" width="100%">
+  <tr>
+    <td width="100%"><h4>A telephone line modem presents a significant challenge for a zero
+    ISI design as the <a href="../Ch4/c4s4p1.htm">transmission channel</a> itself may well
+    introduce significant filter distortion which will compromise any carefully engineered
+    Nyquist response between the sending and receiving hardware. In this scenario, it is
+    necessary to try to correct for the channel distortion, or reconfigure the TX/RX filters
+    so that the overall response is Nyquist. </h4>
+    <h4>Usually, <a href="../Ch4/c4s5p9.htm">adaptive channel equalizers</a> are employed
+    which attempt to flatten the channel transfer function so that the symbol shaping in the
+    sending and receiving units predominates. For zero ISI performance, it is necessary to
+    make sure that the <font color="#0080FF">overall transfer function of these compound filters
+    is Nyquist</font>. Most modern telephone modems operating at speeds above 4.8 kbps employ
+    adaptive equalization using a 'training sequence' in the handshaking at the start of each
+    call to measure the non-ideal channel response.<br>
+    <br>
+    A good text on the subject of adaptive filters and equalizers is <a href="../Ch10/c10s1p1.htm#Ifeachor">Ifeachor and Jervis (1993)</a>. </h4>
+    </td>
+  </tr>
+</table>
+</body>
+</html>

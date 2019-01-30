@@ -1,0 +1,89 @@
+<html>
+
+<head>
+<link REL="stylesheet" HREF="../JSCRIPT/STYLES.CSS" TYPE="text/css">
+<script>
+
+pageX=7
+secX=1
+chapX=7
+
+indepthvar="on"
+examplesvar="off"
+questionsvar="on"
+
+q1=q2=q3=0
+q4=1
+q5=q6=q7=0
+
+
+
+</script>
+<script SRC="../JScript/textpage.js">
+document.write("js file not found")
+</script>
+
+<title></title>
+</head>
+
+<body BACKGROUND="../EFFECTS/BG.GIF">
+<!--Page Title Here-->
+<!--Body Text Here-->
+
+<!--proofed by DR 7/6-->
+<table border="0" CELLSPACING="4" align="right">
+  <tr>
+    <td VALIGN="top" ALIGN="center"><h4><a CLASS="popup" HREF="javascript:open_indepth_window(1)">
+    <img SRC="../EFFECTS/IND_ICON.GIF" BORDER="0" VSPACE="4" WIDTH="44" HEIGHT="45"></a><br>
+    <a CLASS="popup" HREF="javascript:open_indepth_window(1)">In-depth</a></h4>
+    </td>
+  </tr>
+</table>
+
+<table border="0" CELLSPACING="4" align="right">
+  <tr>
+    <td VALIGN="top" ALIGN="center"><H4>    <a CLASS="popup" HREF="javascript:open_question_window(4,10)">
+    <img SRC="../EFFECTS/Q_ICON.GIF" BORDER="0" VSPACE="4" WIDTH="44" HEIGHT="45"></a><br>
+    <a CLASS="popup" HREF="javascript:open_question_window(4,10)">Question 7.4</a></h4>
+    </td>
+  </tr>
+</table>
+
+<p>&nbsp;</p>
+
+<h2>Quantization noise</h2>
+
+<table border="0" width="100%">
+  <tr>
+    <td width="50%">Another very important parameter in any source encoding scheme is the
+    level of noise and distortion introduced by the coding process. For waveform encoding, the
+    main noise source is quantization error, that is, the amplitude errors which the A/D and
+    D/A conversion process introduces into the signal by not having infinite precision. The
+    level of quantization noise is dependent on how close any particular sample is to
+    one of the <i>M</i> levels in the converter. For a speech input, this quantization error
+    will be manifest as a noise-like disturbance at the output of a D/A converter.</td>
+    <td width="50%"><img SRC="ch7figs/sec1/quantise.gif" align="right" WIDTH="350" HEIGHT="224"></td>
+  </tr>
+</table>
+<div align="center"><center>
+
+<table BGCOLOR="#99ccff" cellpadding="10" border="0" width="70%">
+  <tr>
+    <td width="100%"><h4 CLASS="defleaderline">The <font color="#0080FF">signal to quantization
+    noise ratio</font> for an A/D converter is thus clearly a function of the number of bits
+    used and is given by (see <a CLASS="popup" HREF="javascript:open_indepth_window(1)">in-depth</a>): </h4>
+    <h4 class="def"><i>Peak S</i>/<i>N ratio</i> =&nbsp;3<i>M</i><sup>2</sup>&nbsp;/&nbsp;2</h4>
+    </td>
+  </tr>
+</table>
+</center></div>
+
+<table border="0" width="100%">
+  <tr>
+    <td width="100%">An 8-bit converter thus has a signal to quantization noise ratio of
+    approximately 50 dB for a full-scale input signal. </td>
+  </tr>
+</table>
+
+</body>
+</html>

@@ -1,0 +1,55 @@
+<html>
+
+<head>
+<link REL="stylesheet" HREF="../JSCRIPT/STYLES.CSS" TYPE="text/css">
+<script>
+
+pageX=3
+secX=6
+chapX=3
+
+indepthvar="off"
+examplesvar="off"
+questionsvar="off"
+
+</script>
+<script SRC="../JScript/textpage.js">
+document.write("js file not found")
+</script>
+
+<title></title>
+</head>
+
+<body BACKGROUND="../EFFECTS/BG.GIF">
+<!--Page Title Here-->
+<!--Body Text Here-->
+<!--proofed by DR 25/5>
+
+<h2>Duo-binary signalling (cont)</h2>
+
+<table border="0" width="100%">
+  <tr>
+    <td width="50%"><h4>The receiver for a duo-binary encoded signal simply involves the
+    subtraction of the current decoded binary digit from the delayed previously decoded binary
+    digit in an inverse process to the transmitter encoder. There is, however, a major problem
+    with this technique if an error occurs in the decoding process. Because the output data
+    bits are decoded using a previous data bit, if this is in error then the new output will
+    be in error, and so on. In other words, errors will <font color="#0080FF">propagate</font>
+    through the system.<br>
+    </h4>
+    </td>
+    <td width="50%"><img src="ch3figs/sec6/duo_rx.gif" align="right" border="0" WIDTH="300" HEIGHT="171"></td>
+  </tr>
+</table>
+
+<h4>A clever technique for overcoming this error propagation problem is to
+    use a <font color="#0080FF">pre-coder</font> in the transmitter based on an exclusive-or
+    gate as shown. The receiver then surprisingly becomes a simple rectifier followed by a
+    threshold detector set at <i>+V </i>volts with no error propagation problem. For more
+    information on this technique see <a href="../CH10/c10s1p1.htm#carlson">Carlson (1986)</a>.</h4>
+<h4 align="center"><img src="ch3figs/sec6/duo_pre.gif" align="center" border="0" WIDTH="450" HEIGHT="111"></h4>
+
+
+
+</body>
+</html>

@@ -1,0 +1,73 @@
+<html>
+
+<head>
+<link REL="stylesheet" HREF="../JSCRIPT/STYLES.CSS" TYPE="text/css">
+<script>
+
+pageX=12
+secX=4
+chapX=5
+
+indepthvar="off"
+examplesvar="on"
+questionsvar="off"
+
+e1=0
+e2=1
+e3=e4=e5=e6=e7=0
+
+
+</script>
+<script SRC="../JScript/textpage.js">
+document.write("js file not found")
+</script>
+
+<title></title>
+</head>
+
+<body BACKGROUND="../EFFECTS/BG.GIF">
+<!--Page Title Here-->
+<!--Body Text Here-->
+<!--proofed by DR 3/7-->
+
+<table border="0" CELLSPACING="4" align="right">
+  <tr>
+    <td VALIGN="top" ALIGN="center"><H4><a CLASS="popup" HREF="javascript:open_examples_window(6,8)"><img SRC="../EFFECTS/EX_ICON.GIF" BORDER="0" VSPACE="4" WIDTH="44" HEIGHT="45"></a> <br>
+    <a CLASS="popup" HREF="javascript:open_examples_window(6,8)">Example 5.6</a></h4>
+    </td>
+  </tr>
+</table>
+
+<p>&nbsp;</p>
+
+<h2>Differential PSK (DPSK)</h2>
+
+<table border="0" width="100%">
+  <tr>
+    <td width="50%"><font color="#0080FF">Differential PSK (DPSK)</font> is based on the same 'change
+    of state' encoding/decoding methodology as used in <a href="c5s4p10.htm">DEPSK</a>, but
+    improves upon it by incorporating the differential decoding task as part of the data
+    demodulation task, and at the same time does away with the need for a 'carrier recovery'
+    mechanism.</td>
+    <td width="50%"><img src="ch5figs/sec4/dpsk_gen.gif" align="right" WIDTH="500" HEIGHT="145"></td>
+  </tr>
+</table>
+
+<table border="0" width="100%">
+  <tr>
+    <td width="100%">The differential encoding block and PSK modulator is common to both DPSK
+    and DEPSK, but the receiver operates by comparing the phase of the current incoming
+    carrier symbol with that of the previous carrier symbol. In this process, it rolls
+    'coherent detection' and 'differential decoding' into one operation.<br>
+    <br>
+    Clearly, this detection process is much simpler than that required for true coherent PSK
+    and consequently DPSK is widely used in wired and radio modems for medium-rate signalling
+    (up to 4800&nbsp;bps). DPSK, however, has a slightly poorer noise immunity than PSK since the
+    phase reference for DPSK is now a <font color="#0080FF">noisy delayed version</font> of the input signal rather
+    than potentially a well-filtered, virtually noiseless reference from a carrier recovery
+    process. </td>
+  </tr>
+</table>
+
+</body>
+</html>

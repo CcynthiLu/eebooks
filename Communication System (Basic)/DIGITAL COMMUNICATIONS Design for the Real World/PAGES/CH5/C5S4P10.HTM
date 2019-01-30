@@ -1,0 +1,55 @@
+<html>
+
+<head>
+<link REL="stylesheet" HREF="../JSCRIPT/STYLES.CSS" TYPE="text/css">
+<script>
+
+pageX=10
+secX=4
+chapX=5
+
+indepthvar="off"
+examplesvar="off"
+questionsvar="off"
+
+</script>
+<script SRC="../JScript/textpage.js">
+document.write("js file not found")
+</script>
+
+<title></title>
+</head>
+
+<body BACKGROUND="../EFFECTS/BG.GIF">
+<!--Page Title Here-->
+<!--Body Text Here-->
+<!--proofed by DR 3/7-->
+<p>&nbsp;</p>
+
+<h2>Differential data encoding</h2>
+
+<table border="0" width="100%">
+  <tr>
+    <td width="50%">An alternative and more frequently used method of coping with phase
+    ambiguity in the carrier recovery process is to use <font color="#0080FF">differential
+    encoding and decoding</font> of the input and received data stream. This process is termed
+    <font color="#0080FF">Differentially Encoded Phase Shift Keying (DEPSK)</font>. The
+    challenge is to come up with&nbsp; an encoding/decoding scheme that will give the same
+    decoded output regardless of whether the received data is inverted.<br>
+    <br>
+    Shown here is such an encoder based on an exclusive-or gate. This circuit operates by
+    translating the input data into a coded data stream where a logic 1 at the input is coded
+    as a <font color="#0080FF">change of logic state</font> from the previous coded bit, and a
+    logic 0 at the input as <font color="#0080FF">no change of state</font> from the previous
+    coded bit. Implementation of the 1-bit delay block can be achieved very simply using a
+    clocked shift register.<br>
+    <br>
+    This encoding process is very efficient as it does not introduce any extra data bits and
+    hence does not affect the throughput of the data modem. </td>
+    <td width="50%"><img src="ch5figs/sec4/diff_enc.gif" align="right" WIDTH="350" HEIGHT="194"></td>
+  </tr>
+</table>
+
+<h4>&nbsp;</h4>
+</body>
+</html>

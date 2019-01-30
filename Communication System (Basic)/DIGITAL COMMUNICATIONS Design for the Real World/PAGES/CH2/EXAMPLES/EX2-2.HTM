@@ -1,0 +1,50 @@
+<html>
+
+<head>
+<link REL="stylesheet" HREF="../../JSCRIPT/STYLES.CSS" TYPE="text/css">
+<meta HTTP-EQUIV="Content-Type" CONTENT="text/html; charset=windows-1252">
+<meta NAME="GENERATOR" CONTENT="Microsoft FrontPage 3.0">
+</head>
+<body LINK="#0000FF" VLINK="#800080" background="../../EFFECTS/popups/BG_ex.GIF">
+<!--proofed by DR 7/6-->
+<h2>Examples 2.2</h2>
+
+<h4 CLASS="technical">The specification for a Class&nbsp;1 telephone link is a
+guaranteed flat bandwidth of 300&nbsp;Hz to 3400&nbsp;Hz and a minimum signal to noise ratio of 40&nbsp;dB. 
+The specification for a Class&nbsp;2 telephone link is a guaranteed flat bandwidth from 
+600&nbsp;Hz to 2800&nbsp;Hz and a minimum signal to noise ratio of 30&nbsp;dB. A company has a requirement to
+send data over a telephone link at a bit rate of 20&nbsp;kbps without error. Would you advise
+the company to rent the more expensive Class&nbsp;1 service or the cheaper Class&nbsp;2 service?
+Justify your decision.</h4>
+
+<h3>Solution</h3>
+
+<h4 CLASS="technical">The Shannon&#150;Hartley equation gives us the required
+relationship between channel capacity in bps, bandwidth and signal to noise ratio as
+follows:
+<BR><BR>
+Channel capacity <i>C</i> = <i>B</i>.log<sub>2</sub>(<i>S</i>/<i>N</i>&nbsp;+&nbsp;1)&nbsp;bps
+<BR><BR>
+
+For the Class&nbsp;1 line, <i>B</i>&nbsp;=&nbsp;3400&nbsp;&#150;&nbsp;300&nbsp;=&nbsp;3100&nbsp;Hz
+ and <i>S</i>/<i>N</i>&nbsp;=&nbsp;40&nbsp;dB, thus:<BR><BR>
+
+<i>C</i>&nbsp;=&nbsp;3100.log<sub>2</sub>(10000&nbsp;+&nbsp;1)
+ =&nbsp;41.2&nbsp;kbps<BR><BR>
+
+Note, it is essential to convert the <i>S</i>/<i>N</i> value
+from dB to a ratio for use in the Shannon&#150;Hartley expression.<br><BR>
+
+For the Class&nbsp;2 line, <i>B</i> =&nbsp;2800&nbsp;&#150;&nbsp;600&nbsp;=&nbsp;2200&nbsp;Hz
+ and <i>S</i>/<i>N</i>&nbsp;=&nbsp;30&nbsp;dB, thus<BR><BR>
+
+<i>C</i>&nbsp;=&nbsp;2200.log<sub>2</sub>(1000&nbsp;+&nbsp;1)&nbsp;bps
+ =&nbsp;21.9&nbsp;kbps<BR><BR>
+
+These calculations show that both the Class&nbsp;1 and Class&nbsp;2 line will meet the 
+specification of 20&nbsp;kbps error-free transmission however, the
+performance of the Class&nbsp;2 line is very close to the Shannon bound, and allows little
+margin for error. In practice, it is unlikely that a modem could be realized that would
+give the desired result on the Class&nbsp;2 line.</h4>
+</body>
+</html>

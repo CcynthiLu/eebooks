@@ -1,0 +1,91 @@
+<html>
+
+<head>
+<link REL="stylesheet" HREF="../../JSCRIPT/STYLES.CSS" TYPE="text/css">
+<meta HTTP-EQUIV="Content-Type" CONTENT="text/html; charset=windows-1252">
+<meta NAME="GENERATOR" CONTENT="Microsoft FrontPage 3.0">
+</head>
+<body LINK="#0000FF" VLINK="#800080" background="../../EFFECTS/popups/BG_ex.GIF">
+<!--proofed by DR 6/6-->
+<h2>Example 1.5</h2>
+
+<h4 CLASS="technical">A vector modulator is fed with a perfect quadrature
+sinewave at the input, but there is a small phase error of 5<sup>o</sup> between the
+notional quadrature inputs of the carrier signal. What will be the ratio in dB between the
+sum and difference outputs of the vector modulator as a result of this phase error?</h4>
+
+<h3>Solution</h3>
+
+<h4 CLASS="technical">Let us write the input to the vector modulator as:<BR><BR>
+
+<blockquote>
+  cos(<SPAN CLASS=greek>w</SPAN><sub>0</sub><i>t</i>), and sin(<SPAN CLASS=greek>w</SPAN><sub>0</sub><i>t</i>)
+</blockquote>
+
+and the carrier inputs as:<BR><BR>
+
+<blockquote>
+  cos(<SPAN CLASS=greek>w</SPAN><sub>c</sub><i>t</i>), and 
+  sin(<SPAN CLASS=greek>w</SPAN><sub>c</sub><i>t</i>&nbsp;+&nbsp;<SPAN CLASS=greek>f</SPAN>)
+</blockquote>
+
+where <SPAN CLASS=greek>f</SPAN> is the phase error. Now:<br><BR>
+
+<blockquote>
+  sin(<SPAN CLASS=greek>w</SPAN><sub>c</sub><i>t</i>&nbsp;+&nbsp;<SPAN CLASS=greek>f</SPAN>)
+   =&nbsp;sin<SPAN CLASS=greek>w</SPAN><sub>c</sub><i>t</i>&nbsp;cos<SPAN CLASS=greek>f</SPAN>
+   &nbsp;&#150;&nbsp;cos<SPAN CLASS=greek>w</SPAN><sub>c</sub><i>t</i>&nbsp;sin<SPAN CLASS=greek>f</SPAN>
+</blockquote>
+
+and for small phase errors this can be approximated to:<BR>
+<BR>
+<blockquote>
+  sin(<SPAN CLASS=greek>w</SPAN><sub>c</sub><i>t</i>&nbsp;+&nbsp;<SPAN CLASS=greek>f</SPAN>)
+   =&nbsp;sin<SPAN CLASS=greek>w</SPAN><sub>c</sub><i>t</i>.cos<SPAN CLASS=greek>f</SPAN>
+</blockquote>
+
+The mixer outputs then become:<br>
+<BR>
+<blockquote>
+  cos(<SPAN CLASS=greek>w</SPAN><sub>0</sub><i>t</i>).cos(<SPAN CLASS=greek>w</SPAN><sub>c</sub><i>t</i>)
+   =&nbsp;0.5cos(<SPAN CLASS=greek>w</SPAN><sub>c</sub>&nbsp;+&nbsp;<SPAN CLASS=greek>w</SPAN><sub>0</sub>)<i>t</i>
+   &nbsp;+&nbsp;0.5cos(<SPAN CLASS=greek>w</SPAN><sub>c</sub>&nbsp;&#150;&nbsp;<SPAN CLASS=greek>w</SPAN><sub>0</sub>)<i>t</i> 
+</blockquote>
+
+and<BR><BR>
+
+<blockquote>
+  sin(<SPAN CLASS=greek>w</SPAN><sub>0</sub><i>t</i>).sin(<SPAN CLASS=greek>w</SPAN><sub>c</sub><i>t</i>&nbsp;+&nbsp;<SPAN CLASS=greek>f</SPAN>)
+   =&nbsp;&#150;0.5cos(<SPAN CLASS=greek>w</SPAN><sub>c</sub>&nbsp;+&nbsp;<SPAN CLASS=greek>w</SPAN><sub>0</sub>)<i>t</i>.cos&nbsp;<SPAN CLASS=greek>f</SPAN>
+   +&nbsp;0.5cos(<SPAN CLASS=greek>w</SPAN><sub>c</sub>&nbsp;&#150;&nbsp;<SPAN CLASS=greek>w</SPAN><sub>0</sub>)<i>t</i>.cos&nbsp;<SPAN CLASS=greek>f</SPAN> 
+</blockquote>
+
+At the output of the summing device we get a wanted
+term at the difference frequency and an unwanted term (usually referred to as the image)
+at the sum frequency as follows:<BR><BR>
+
+&nbsp;&nbsp;Difference term:<BR><BR>
+
+<blockquote>
+  0.5{1&nbsp;+&nbsp;cos&nbsp;<SPAN CLASS=greek>f</SPAN>}cos(<SPAN CLASS=greek>w</SPAN><sub>c</sub>&nbsp;&#150;&nbsp;<SPAN CLASS=greek>w</SPAN><sub>0</sub>)<i>t</i>
+</blockquote>
+
+&nbsp;&nbsp;Sum term:<BR><BR>
+
+<blockquote>
+  0.5{1&nbsp;&#150;&nbsp;cos&nbsp;<SPAN CLASS=greek>f</SPAN>}cos(<SPAN CLASS=greek>w</SPAN><sub>c</sub>&nbsp;+&nbsp;<SPAN CLASS=greek>w</SPAN><sub>0</sub>)<i>t</i>
+</blockquote>
+
+The ratio of the amplitude of the wanted to unwanted
+terms is thus:<BR><BR>
+
+<blockquote>
+  <i>Amplitude ratio (image supression)</i> =&nbsp;{1&nbsp;+&nbsp;cos<SPAN CLASS=greek>f</SPAN>}
+  &nbsp;/&nbsp;{1&nbsp;&#150;&nbsp;cos<SPAN CLASS=greek>f</SPAN>}
+</blockquote>
+
+For a phase error of 5<sup>o</sup>, the amplitude ratio of wanted to unwanted signals is thus 
+525:1, or a relative power level of approximately 27&nbsp;dB</h4>
+
+</body>
+</html>

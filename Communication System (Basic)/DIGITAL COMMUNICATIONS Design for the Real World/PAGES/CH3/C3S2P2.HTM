@@ -1,0 +1,78 @@
+<html>
+
+<head>
+<link REL="stylesheet" HREF="../JSCRIPT/STYLES.CSS" TYPE="text/css">
+<script>
+
+pageX=2
+secX=2
+chapX=3
+
+indepthvar="off"
+examplesvar="off"
+questionsvar="on"
+
+q1=1
+q2=q3=q4=q5=q6=q7=0
+
+</script>
+<script SRC="../JScript/textpage.js">
+document.write("js file not found")
+</script>
+
+<title></title>
+</head>
+
+<body BACKGROUND="../EFFECTS/BG.GIF">
+<!--Body Text Here-->
+<!--proofed by DR 24/5-->
+<!--icons added MS 28/5-->
+
+<table border="0" width="100%">
+  <tr>
+    <td width="80%"><h2>Pulse shaping for zero ISI: Nyquist channel filtering</h2>
+    </td>
+    <td>
+		<table border="0" ALIGN=right CELLSPACING=4>
+		  <tr>
+		    <td VALIGN=top ALIGN=center><A HREF="javascript:open_question_window(1,6)"><IMG ALT="Questions" SRC="../EFFECTS/Q_ICON.GIF" WIDTH="44" HEIGHT="45" BORDER="0" VSPACE="4"></A>
+		    	<BR><A CLASS="popup" HREF="javascript:open_question_window(1,6)">Question 3.1</A>
+		    </td>       
+		  </tr>
+		</table>    
+    </td>
+  </tr>
+</table>
+
+
+
+<table border="0" width="100%">
+  <tr>
+    <td width="50%">&nbsp;<h4>By carefully manipulating the filtering characteristics of the channel
+    (and any TX or RX processing), it is possible to control the intersymbol interference such
+    that it <font color="#0080FF">does not degrade</font><font color="#FF0080"> </font>the bit
+    error rate performance of the link. This is achieved by making sure that the overall
+    channel filter transfer function has what is termed a <font color="#0080FF">Nyquist</font>
+    frequency response. <br>
+    <br>
+    A Nyquist channel response is characterized by the transfer function having a <font color="#0080FF">transition band between passband and stopband that is symmetrical about a
+    frequency equal to 0.5 x 1/<I>T<sub>s</sub></I></font>. </h4>
+    </td>
+    <td width="50%"><img src="ch3figs/sec2/nyquist.gif" align="right" border="0" WIDTH="250" HEIGHT="191"></td>
+  </tr>
+</table>
+
+<table border="0" width="100%">
+  <tr>
+    <td width="53%"><img src="ch3figs/sec2/nyq_plse.gif" align="left" border="0" WIDTH="400" HEIGHT="140"></td>
+    <td width="47%">&nbsp;<h4 align="left">For this type of channel response, the data symbols are
+    still smeared, but the waveform <font color="#0080FF">passes through zero </font>at
+    multiples of the symbol period <br>
+    </h4>
+    </td>
+  </tr>
+</table>
+
+<p>&nbsp;</p>
+</body>
+</html>

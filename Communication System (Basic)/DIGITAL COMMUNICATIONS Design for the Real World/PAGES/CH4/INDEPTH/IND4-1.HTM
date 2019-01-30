@@ -1,0 +1,146 @@
+<html>
+
+<head>
+<link REL="stylesheet" HREF="../../JSCRIPT/STYLES.CSS" TYPE="text/css">
+<meta HTTP-EQUIV="Content-Type" CONTENT="text/html; charset=windows-1252">
+<meta NAME="GENERATOR" CONTENT="Microsoft FrontPage 3.0">
+</head>
+<body LINK="#0000FF" VLINK="#800080" background="../../EFFECTS/popups/BG_ind.GIF">
+<!--proofed by DR 6/6-->
+<h2>Linear amplifiers/transmitters</h2>
+
+<h4 CLASS="technical">At the heart of many of today's high
+performance digital wireless products is a transmitter whose linearity specification is
+becoming more and more exacting. Not only are these specifications calling for excellent
+linearity, but the close-in and wideband noise performance is also becoming more stringent
+and the anticipated/expected efficiency of transmitters is rising.<br><BR>
+
+Techniques for linearizing amplifiers or
+transmitters fall largely into two categories &#150; feedback or feedforward topologies. A
+short description of each of these techniques is given here, highlighting the applications
+of each.</h4>
+
+<h3>Cartesian Loop</h3>
+
+<h4 ALIGN="CENTER"><a TARGET="_blank" href="cart_blk.jpg"><img SRC="cart_blk.jpg" WIDTH="480" HEIGHT="360"></a></h4>
+
+<h3 ALIGN="CENTER"><font color="#0080FF">Cartesian Loop Block Diagram</font></h3>
+
+<h4 CLASS="technical">One of the most widely used linearization techniques
+in the market-place is based on Cartesian feedback which controls the linearity of an
+entire transmit chain, including the up-converter and amplifier stages. This technique is
+well suited to integration with a few Cartesian ICs already available in the market-place.</h4>
+
+<h4 ALIGN="CENTER"><img SRC="../ch4figs/sec2/tetra~1.gif" WIDTH="261"
+HEIGHT="252"></h4>
+
+<h3 ALIGN="CENTER"><font color="#0080FF">Output of Cartesian loop
+amplifier with TETRA modulation input</font></h3>
+
+<h4 CLASS="Technical" ALIGN="CENTER">(plot courtesy of <a ClASS="external"
+TARGET="_blank" href="http://www.wsil.com">Wireless Systems International Ltd</a>)</h4>
+
+<h4 CLASS="Technical">The nature of the feedback process means that the
+amount of correction afforded by the control system decreases with increasing modulation
+bandwidth. Typically, intermodulation improvement in the order of 30&nbsp;dB is possible over a
+25&nbsp;kHz modulation bandwidth, and more than 10&nbsp;dB improvement has been demonstrated for
+CDMA-type bandwidths in excess of 1&nbsp;MHz. Solutions that meet the ETSI TETRA specifications
+have been designed. Efficiencies of Cartesian loop transmitters can be as high as 70%.
+Further information can be found in Wilkinson and Bateman (1989).</h4>
+
+<h3>RF synthesis/CALLUM</h3>
+
+
+<h4 ALIGN="CENTER"><A TARGET="_blank" href="call_blk.jpg"><img SRC="call_blk.jpg" WIDTH="480"
+HEIGHT="360"></a></h4>
+
+<h3 ALIGN="CENTER"><font color="#0080FF">Callum transmitter block diagram</font></h3>
+
+<h4 CLASS="technical">The RF synthesis approach to transmitter
+linearization is a relatively new method which has the potential to achieve levels of
+efficiency approaching 80% without sacrificing intermodulation suppression or noise
+performance. CALLUM (Combined Analogue Locked Loop Universal Modulator) is a recent
+invention allowing closed loop control of the RF synthesis process. Simulation of this new
+technique suggests that this method can exceed the performance of Cartesian loop in all
+respects. Further information can be found in Bateman (1992).</h4>
+
+<h4 ALIGN="CENTER"><a TARGET="_blank" href="callum_a.jpg"><img SRC="callum_a.jpg" WIDTH="148"
+HEIGHT="106"></a></h4>
+
+<h3 ALIGN="CENTER"><font color="#0080FF">Implementation of CALLUM transmitter</font></h3>
+
+<h4 CLASS="Technical" ALIGN="CENTER">(picture courtesy of <a ClASS="external"
+TARGET="_blank" href="http://www.wsil.com">Wireless Systems International Ltd</a>)</h4>
+
+<h3>Pre-distortion</h3>
+
+<h4 ALIGN="CENTER"><img SRC="pre_di~1.jpg" WIDTH="350"
+HEIGHT="208"></h4>
+
+<h3 ALIGN="CENTER"><font color="#0080FF">Pre-distortion amplifier block
+diagram</font></h3>
+
+<h4 CLASS="technical">Fixed and controlled pre-distortion of a signal
+prior to amplification is a well established technique for improving amplifier performance
+and recently a range of sophisticated adaptive pre-distortion designs have been published
+which aim to extend the capability of pre-distortion significantly. <br>
+<br>
+Baseband adaptive pre-distortion techniques operate
+by attempting to generate a transfer function in the pre-distorter block that is
+complementary to the transfer function of the amplifier to be linearized, such that the
+combination has a linear input-output power characteristic. This approach is very similar
+to the channel equalization methods for overcoming gain and phase distortion on telephone
+channels or mobile radio channels. Further information can be found in Mansell and
+Bateman (1997.)</h4>
+
+<h3>Feedforward</h3>
+
+<h4 ALIGN="CENTER"><img SRC="ffblock.jpg" WIDTH="350"
+    HEIGHT="208"></h4>
+
+<h3 ALIGN="CENTER"><font color="#0080FF">Block diagram of feedforward
+amplifier</font></h3>
+
+<h4 CLASS="technical">A rapidly expanding application of linear amplifiers
+is in multi-carrier applications, where flexibility of channel allocation,
+cost/performance benefit and modulation independence make this approach much more
+attractive than several single carrier amplifiers feeding a high power lossy tuned
+combiner network. The specification of linearity for GSM or PCS multi-carrier amplifiers
+is in excess of &#150;75&nbsp;dBc which requires very accurate intermodulation cancellation
+techniques.</h4>
+
+<h4 ALIGN="CENTER"><a TARGET="_blank" href="iffa.jpg"><img SRC="iffa.jpg"
+WIDTH="163" HEIGHT="111"></a></h4>
+
+<h3 ALIGN="CENTER"><font color="#0080FF">Implementation of feedforward
+amplifier</font></h3>
+
+<h4 CLASS="Technical" ALIGN="CENTER">(picture courtesy of <a ClASS="external"
+TARGET="_blank" href="http://www.wsil.com">Wireless Systems International Ltd</a>)</h4>
+
+<h4 CLASS="technical">Single channel feedforward amplifiers are also of
+importance for wideband modulation formats such as IS-95&nbsp;CDMA, where the challenge is to
+achieve linearity for minimal cost and high reliability. Further information can be found
+in Parsons and Kenington (1994.)</h4>
+
+<h4 ALIGN="CENTER"><A TARGET="_blank" href="corky_~1.jpg"><img SRC="corky_~1.jpg"
+    WIDTH="256" HEIGHT="222"></a></h4>
+
+<h3 ALIGN="CENTER"><font color="#0080FF">Feedforward
+amplifier output for &#150;75&nbsp;dBc performance</font></h3>
+
+<h4 CLASS="Technical" ALIGN="CENTER">(plot courtesy of <a ClASS="external"
+TARGET="_blank" href="http://www.wsil.com">Wireless Systems International Ltd</a>)</h4>
+
+<h3>Other techniques</h3>
+    <h4 ALIGN="CENTER"><a TARGET="_blank" href="eeandr.jpg"><img SRC="eeandr.jpg" WIDTH="480"
+    HEIGHT="360"></a></h4>
+
+<h3 ALIGN="CENTER"><font color="#0080FF">Block diagram of envelope elimination
+and restoration technique</font></h3>
+
+<h4 CLASS="Technical">Less well known methods of amplifier and transmitter
+linearization include, envelope elimination and restoration, polar loop correction, and
+LINK vector feedback. Further information can be found in Petrovic (1983.)</h4>
+</body>
+</html>

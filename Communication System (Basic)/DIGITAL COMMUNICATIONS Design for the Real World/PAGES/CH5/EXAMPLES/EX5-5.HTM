@@ -1,0 +1,42 @@
+<html>
+
+<head>
+<link REL="stylesheet" HREF="../../JSCRIPT/STYLES.CSS" TYPE="text/css">
+<meta HTTP-EQUIV="Content-Type" CONTENT="text/html; charset=windows-1252">
+<meta NAME="GENERATOR" CONTENT="Microsoft FrontPage 3.0">
+</head>
+<body LINK="#0000FF" VLINK="#800080" background="../../EFFECTS/popups/BG_ex.GIF">
+<!--proofed by DR 3/7-->
+<h2>Example 5.5</h2>
+
+<h4 CLASS="technical">A coherent PSK demodulator uses a carrier recovery
+circuit which introduces a time delay in the recovered reference equal to 7% of the
+carrier period. What will be the degradation in noise power immunity for this system
+compared with an ideal demodulator?</h4>
+
+<h3>Solution</h3>
+
+<h4 CLASS="technical">A time delay of 7% of the carrier period results in
+a phase error in the recovered carrier of 7% or 360<sup>o</sup>&nbsp;=&nbsp;25.2<sup>o</sup>.<BR><BR>
+
+The <font color="#0080FF">voltage</font> output of the mixer used to compare the
+incoming symbol <i>a</i>(<i>t</i>)&nbsp;cos&nbsp;<SPAN CLASS=greek>w</SPAN><sub>c</sub><i>t</i>
+with the reference cos(<SPAN CLASS=greek>w</SPAN><sub>c</sub><i>t</i>&nbsp;+&nbsp;25.2<sup>o</sup>)
+will be reduced by a factor cos(25.2<sup>o</sup>) from its maximum
+value as a result of the carrier phase error.<br><BR>
+
+This in turn equates to a reduction in symbol energy
+at the input to the receiver of cos<sup>2</sup>(25.2<sup>o</sup>). (Symbol energy is
+proportional to power x symbol length or voltage<sup>2</sup> x symbol length.)</font></small></small></p>
+
+<p><small><small><font face="Verdana">The noise components passing through the mixer will
+also be affected by the phase error in the carrier reference, but since the noise vectors
+are assumed to be randomly distributed through 360<sup>o</sup>, the carrier phase error
+will reduce the effect of some noise vectors and enhance others with the net effect that
+the average noise voltage at the mixer output will remain unchanged. Hence it is only the
+symbol energy that is truly affected by carrier reference phase error and not the noise
+power. This means that the effective received symbol energy to noise power density will be
+reduced by a factor 1&nbsp;/&nbsp;cos<sup>2</sup>(25.2<sup>o</sup>)&nbsp;=&nbsp;1.22, or 0.87&nbsp;dB, as a result of
+the phase error.</h4>
+</body>
+</html>

@@ -1,0 +1,51 @@
+<html>
+
+<head>
+<link REL="stylesheet" HREF="../JSCRIPT/STYLES.CSS" TYPE="text/css">
+<script>
+
+pageX=3
+secX=5
+chapX=6
+
+indepthvar="off"
+examplesvar="off"
+questionsvar="off"
+
+</script>
+<script SRC="../JScript/textpage.js">
+document.write("js file not found")
+</script>
+
+<title></title>
+</head>
+
+<body BACKGROUND="../EFFECTS/BG.GIF">
+<!--Page Title Here-->
+<!--Body Text Here-->
+<!--proofed by DR 30/5-->
+
+<p>&nbsp;</p>
+
+<h2>QAM detection</h2>
+
+<table border="0" width="100%">
+  <tr>
+    <td width="50%"><h4>QAM can be decoded using <font color="#0080FF">coherent</font> or <font color="#0080FF">differentially coherent
+    detection</font> just as for PSK systems. We shall&nbsp; concern ourselves here only with
+    true coherent detection. Details of differential detection systems can be found in <a href="../ch10/c10s1p1.htm#Proakis1989">Proakis (1989)</a>. Just as for QPSK, a QAM demodulator requires
+    the recovery of quadrature carriers in the receiver. Very similar <a "" href="c6s4p3.htm">Nth
+    power carrier recovery circuits</a> can be used, although the problem of dealing with <a "" href="../ch5/c5s4p9.htm">phase ambiguity</a> in the recovered carrier is greatly
+    complicated by the presence of the amplitude component of the data symbols.<br>
+    </td>
+    <td width="50%"><img src="ch6figs/sec5/16qamdct.gif" align="right" WIDTH="400" HEIGHT="228"></td>
+  </tr>
+</table>
+
+<h4>    The output of each demodulator is a baseband multi-level symbol set. Ideally this should
+    undergo <a "" href="../ch3/c3s5p3.htm">matched filtering</a> for optimum performance in
+    noise, before being passed through a bank of comparators to determine the level from each
+    demodulator at the sampling instant, and hence decode the corresponding bit pattern. </h4>
+</h4>
+</body>
+</html>

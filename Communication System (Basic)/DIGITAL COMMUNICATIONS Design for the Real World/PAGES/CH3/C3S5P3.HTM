@@ -1,0 +1,56 @@
+<html>
+
+<head>
+<link REL="stylesheet" HREF="../JSCRIPT/STYLES.CSS" TYPE="text/css">
+<script>
+
+pageX=3
+secX=5
+chapX=3
+
+indepthvar="off"
+examplesvar="off"
+questionsvar="off"
+
+</script>
+<script SRC="../JScript/textpage.js">
+document.write("js file not found")
+</script>
+
+<title></title>
+</head>
+
+<body BACKGROUND="../EFFECTS/BG.GIF">
+<!--Page Title Here-->
+<!--Body Text Here-->
+<!--proofed by DR 25/5-->
+
+<p>&nbsp;</p>
+
+<h2>The concept of an optimum (matched) filter </h2>
+
+<table border="0" width="100%">
+  <tr>
+    <td width="55%"><h4>It is prudent to ask the question: 'What type of averaging filter will
+    give the best <i>S</i>/<i>N</i> ratio at the sampling point?' The answer is that it depends
+    entirely on the symbol shape being used.<br>
+    <br>
+    Consider the two symbol shapes shown here, one a square (unshaped pulse) and the
+    other a rounded pulse. For the square pulse, the <i>S</i>/<i>N</i> ratio at each point in the
+    symbol is approximately constant, and an averaging process that gives equal weight to each
+    point would be optimum. This in fact is exactly what an <a "" href="C3s5p2.htm">integrate
+    and dump filter</a> does. For the rounded pulse, however, it is evident that the <i>S</i>/<i>N</i>
+    ratio is greater in the centre of the pulse than at the edges, and it would thus make
+    sense to give more weight to averaging the central region rather than the edges of the
+    symbol. Hence the integrate and dump filter would not be optimum for this shape of symbol.
+    </h4>
+    <h4>A detection filter that does optimize the <i>S</i>/<i>N</i> ratio for a symbol is called a <font color="#0080FF">matched filter</font> because its averaging effect is matched to the pulse
+    shape. The integrate and dump filter is thus a matched filter for a rectangular pulse
+    shape, but would not be matched to a root raised cosine pulse, for example. </h4>
+    </td>
+    <td width="45%"><p align="center"><img src="ch3figs/sec5/opt_avge.gif" align="center" border="0" WIDTH="200" HEIGHT="278"></td>
+  </tr>
+</table>
+
+</body>
+</html>

@@ -1,0 +1,71 @@
+<html>
+
+<head>
+<link REL="stylesheet" HREF="../JSCRIPT/STYLES.CSS" TYPE="text/css">
+<script>
+
+pageX=9
+secX=2
+chapX=4
+
+indepthvar="off"
+examplesvar="off"
+questionsvar="off"
+
+</script>
+<script SRC="../JScript/textpage.js">
+document.write("js file not found")
+</script>
+
+<title></title>
+</head>
+
+<body BACKGROUND="../EFFECTS/BG.GIF">
+<!--Page Title Here-->
+<!--Body Text Here-->
+<!--proofed by DR 7/6-->
+<p>&nbsp;</p>
+
+<h3>Local oscillator error</h3>
+
+<table border="0" width="100%">
+  <tr>
+    <td width="100%"><h4>For any bandpass modulation process it is necessary to generate
+    sinewaves in both transmitter and receiver systems, ideally with precisely the same
+    frequency and phase. This begs the question: Is it possible to implement two or more
+    sinewave generators with perfect frequency and phase accuracy under realistic operating
+    conditions (temperature variation, supply variation, ageing, and so on)? </h4>
+    </td>
+  </tr>
+</table>
+
+<table border="0" width="100%">
+  <tr>
+    <td width="50%"><h4>A reasonably cost-effective crystal oscillator (&lt;$10) may have the
+    stablity of 1&nbsp;ppm (part per million) over a given temperature range. This means that for a
+    telephone modem with a carrier of say 2&nbsp;kHz, the oscillators at each end of the link could
+    have an error of +/&#150;1.10<sup>&#150;6</sup>&nbsp;x&nbsp;2.10<sup>3</sup> =&nbsp;0.002&nbsp;Hz. If we could
+    ensure that both transmit and receiver carrier oscillators begin with the same phase, then
+    we could expect the phase error between them to reach 360<sup>o</sup> after 1&nbsp;/&nbsp;0.004
+    =&nbsp;250&nbsp;seconds, and 90<sup>o</sup>, giving zero output, after 75&nbsp;seconds.
+    These figures suggest that, providing an initial phase correction can be achieved,
+    near phase-coherent detection can be ensured for a few seconds without further phase
+    correction being required.</h4>
+    </td>
+    <td width="50%"><img src="ch4figs/sec2/crystal.gif" border="0" align="right" WIDTH="200" HEIGHT="128"></td>
+  </tr>
+</table>
+
+<table border="0" width="100%">
+  <tr>
+    <td width="100%"><h4>If we now consider the case of a cellular radio modem operating with
+    a carrier of 1&nbsp;GHz, then the oscillator frequency error for a 1-ppm source is +/&#150;1000&nbsp;Hz. Here, it is clear that simply achieving a correct starting phase will not
+    allow us to ensure adequate coherency for more than a few microseconds. In this
+    application, it is necessary to find a method of correcting the receiver carrier
+    oscillator frequency and phase to match that of the transmitter. This process is termed <a "" href="../ch5/c5s2p11.htm">carrier recovery</a>.</h4>
+    </td>
+  </tr>
+</table>
+
+</body>
+</html>

@@ -1,0 +1,58 @@
+<html>
+
+<head>
+<link REL="stylesheet" HREF="../JSCRIPT/STYLES.CSS" TYPE="text/css">
+<script>
+
+pageX=1
+secX=2
+chapX=4
+
+indepthvar="off"
+examplesvar="off"
+questionsvar="off"
+
+</script>
+<script SRC="../JScript/textpage.js">
+document.write("js file not found")
+</script>
+
+<title></title>
+</head>
+
+<body BACKGROUND="../EFFECTS/BG.GIF">
+<!--Page Title 
+Here-->
+<!--proofed by DR 6/6-->
+
+<h1>4.2 Gain, phase and group delay distortion </h1>
+<!--Body Text Here-->
+
+<h2>Gain distortion &#150; filters</h2>
+
+<table border="0" width="100%">
+  <tr>
+    <td width="50%"><h4>Most communications hardware &#150; filters, mixers, amplifiers, and so on,
+    and most channel types, cable, fibre, radio, infra red, introduce amplitude distortion
+    into a signal, usually with a frequency-dependent response.<br>
+    <br>
+    Filters, for example, are never perfectly 'flat' in the passband but all exhibit some
+    degree of 'amplitude ripple'. Some filter types such as Elliptic or Chebychev filters have
+    very high passband ripple, but also achieve very fast roll-off. Other filters such as
+    Butterworth or Bessel filters have much less ripple but also much slower roll-off. <br>
+    <br>
+    The <a HREF="../Ch3/C3s4p1.htm">raised cosine</a> filter also exhibits passband ripple,
+    depending on the length (number of taps) used in the filter implementation. The degree of
+    ripple can be made arbitrarily small with very long filter length, but at the expense of
+    processing delay and complexity. In practice, the amplitude ripple in a digital raised
+    cosine filter does not significantly degrade modem performance; however, other filtering
+    within the communications system such as the crystal or ceramic filters used in radio IF
+    (intermediate frequency) circuits can exhibit gross levels of amplitude distortion and
+    this effect cannot be ignored. </h4>
+    </td>
+    <td width="50%"><img src="ch4figs/sec2/filters.gif" border="0" width="300" align="right"></td>
+  </tr>
+</table>
+
+</body>
+</html>

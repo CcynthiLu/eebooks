@@ -1,0 +1,70 @@
+<html>
+
+<head>
+<link REL="stylesheet" HREF="../JSCRIPT/STYLES.CSS" TYPE="text/css">
+<script>
+
+pageX=8
+secX=4
+chapX=3
+
+indepthvar="off"
+examplesvar="off"
+questionsvar="off"
+
+</script>
+<script SRC="../JScript/textpage.js">
+document.write("js file not found")
+</script>
+
+<title></title>
+</head>
+
+<body BACKGROUND="../EFFECTS/BG.GIF">
+<!--Page Title Here-->
+<!--Body Text Here-->
+<!--proofed by DR 25/5-->
+
+<h2>Symbol timing circuits</h2>
+
+<table border="0" width="100%">
+  <tr>
+    <td width="100%"><h4>The main drawback with using an <SPAN CLASS=greek>a</SPAN>&nbsp;=&nbsp;1
+    data system to achieve symbol timing is the sacrifice in bandwidth that such a large <SPAN CLASS=greek>a
+    </SPAN> entails. Also, when the received signal is accompanied by noise,
+    individual zero-crossings may be corrupted by the noise and some form of averaging is
+    desirable over many zero-crossings if accurate timing is to be achieved.</h4>
+    </td>
+  </tr>
+</table>
+
+<table border="0" width="100%">
+  <tr>
+    <td width="50%"><h4>One circuit that can average the effects of noise as well as the
+    non-perfect zero-crossings caused by smaller values of <SPAN CLASS=greek>a</SPAN> is
+    the feedback timing control loop shown here. The circuit operates by using a
+    mono-stable to create pulses of duration <i>T<sub>s</sub></i>/2 at each zero-crossing, which are
+    then compared in a digital mixer with a locally generated clock running close to the
+    symbol rate. The output of the mixer is integrated and filtered in order to produce a
+    smoothed dc control voltage that is used to nudge the clock on to the correct symbol rate.
+    The loop filtering process also serves to average out the noise accompanying the input
+    signal and zero-crossing variations due to the small values of <SPAN CLASS=greek>a</SPAN>.</h4>
+    <p>&nbsp;</p>
+    </td>
+    <td width="50%"><img src="ch3figs/sec4/zero_pll.gif" align="right" border="0" WIDTH="350"
+    HEIGHT="240"></td>
+  </tr>
+</table>
+
+<table border="0" width="100%">
+  <tr>
+    <td width="100%"><h4>In practice, there is a compromise between wishing to quickly acquire
+    the symbol timing for rapid data decoding, and having a long averaging time to minimize
+    'timing jitter'. Two excellent references on timing and carrier recovery circuits are <a
+    href="../Ch10/c10s1p1.htm#Lindsey">Lindsey and Simon (1972)</a> and <a href="../Ch10/C10s1p1.htm#Gardner">Gardner
+    (1966)</a>. </h4>
+    </td>
+  </tr>
+</table>
+</body>
+</html>

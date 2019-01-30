@@ -1,0 +1,86 @@
+<html>
+
+<head>
+<link REL="stylesheet" HREF="../JSCRIPT/STYLES.CSS" TYPE="text/css">
+<script>
+
+pageX=5
+secX=2
+chapX=1
+
+indepthvar="on"
+examplesvar="on"
+questionsvar="on"
+
+e1=0
+e2=1
+e3=e4=e5=e6=e7=0
+q1=q2=0
+q3=1
+q4=q5=q6=q7=0
+
+</script>
+<script SRC="../JScript/textpage.js">
+document.write("js file not found")
+</script>
+
+<title></title>
+</head>
+
+<body BACKGROUND="../EFFECTS/BG.GIF">
+<!--Page Title Here-->
+
+<table border="0" CELLSPACING="4" align="right">
+  <tr>
+    <td VALIGN="top" ALIGN="center"><H4><a CLASS="popup" HREF="javascript:open_examples_window(5,5)">
+    <img     SRC="../EFFECTS/EX_ICON.GIF" BORDER="0" VSPACE="4" WIDTH="44" HEIGHT="45"></a> <br>
+    <a CLASS="popup" HREF="javascript:open_examples_window(5,5)">Example 1.5</a></h4>
+    </td>
+    <td VALIGN="top" ALIGN="center"><H4><a CLASS="popup" HREF="javascript:open_question_window(10,10)">
+    <img     SRC="../EFFECTS/Q_ICON.GIF" BORDER="0" VSPACE="4" WIDTH="44" HEIGHT="45"></a> <br>
+    <a CLASS="popup" HREF="javascript:open_question_window(10,10)">Question 1.10</a></h4>
+    </td>
+    <td VALIGN="top" ALIGN="center"><H4><a CLASS="popup" HREF="javascript:open_indepth_window(3)">
+    <img SRC="../EFFECTS/IND_ICON.GIF" BORDER="0" VSPACE="4" WIDTH="44" HEIGHT="45"></a><br>
+    <a CLASS="popup" HREF="javascript:open_indepth_window(3)">In-depth</a></h4>
+    </td>
+  </tr>
+</table>
+
+<p>&nbsp;</p>
+
+<h2>The vector modulator</h2>
+
+<table border="0" width="100%">
+  <tr>
+    <td width="50%"><h4>The arrangement of mixers and a combiner (summing device) shown here
+    forms an extremely useful building block in digital communications systems. It achieves a
+    linear frequency translation of all components in the input signal (represented by its
+    in-phase and quadrature components) by a carrier frequency component (also represented by
+    its in-phase and quadrature components). This building block is often referred to as a <font
+    color="#0080FF">vector modulator</font> or <font color="#0080FF">quadrature modulator</font>
+    and, as we shall see, can be used for both frequency <font color="#0080FF">up-conversion</font>
+    and <font color="#0080FF">down-conversion</font>.</h4>
+    </td>
+    <td width="50%"><img SRC="ch1figs/sec2/quad_gen.gif" align="right" WIDTH="250"
+    HEIGHT="184"></td>
+  </tr>
+</table>
+<!--Body Text Here-->
+
+<table border="0" width="100%">
+  <tr>
+    <td width="100%"><h4>The output of the two mixing processes is
+    given by:</h4>
+    <h4 style="line-height: 0px"><img SRC="ch1figs/sec2/quadmix1.gif" WIDTH="340" HEIGHT="17"></h4>
+    <h4 style="line-height: 0px">and&nbsp;&nbsp; </h4>
+    <h4 style="line-height: 0px"><img SRC="ch1figs/sec2/quadmix2.gif" WIDTH="336" HEIGHT="17"></h4>
+    <h4 style="line-height: 0px">which when subtracted from each other result in a single
+    up-converted component:</h4>
+    <h4 style="line-height: 0px"><img SRC="ch1figs/sec2/quadmix3.gif" WIDTH="80" HEIGHT="17"></h4>
+    <h4 style="line-height: 0px">and when summed give a down-converted component:</h4>
+    <p style="line-height: 0px"><img SRC="ch1figs/sec2/quadmix4.gif" WIDTH="80" HEIGHT="17"></td>
+  </tr>
+</table>
+</body>
+</html>

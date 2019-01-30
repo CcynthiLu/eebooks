@@ -1,0 +1,87 @@
+<html>
+
+<head>
+<link REL="stylesheet" HREF="../JSCRIPT/STYLES.CSS" TYPE="text/css">
+<script>
+
+pageX=4
+secX=4
+chapX=3
+
+indepthvar="on"
+examplesvar="off"
+questionsvar="off"
+
+i1=1
+
+</script>
+<script SRC="../JScript/textpage.js">
+document.write("js file not found")
+</script>
+
+<title></title>
+</head>
+
+<body BACKGROUND="../EFFECTS/BG.GIF">
+<!--Page Title Here-->
+<!--proofed by DR 25/5-->
+<!--icons added MS 28/5-->
+
+<table border="0" width="100%">
+  <tr>
+    <td width="50%"><h2>The <i>root</i> raised cosine filter </h2>
+    </td>
+    <td>
+		<table border="0" ALIGN=right CELLSPACING=4>
+		  <tr>   
+		    <td VALIGN=top ALIGN=center><A HREF="javascript:open_indepth_window(2)"><IMG ALT="In Depth" SRC="../EFFECTS/IND_ICON.GIF" WIDTH="44" HEIGHT="45" BORDER="0" VSPACE="4"></A><BR>
+		    	<A CLASS="popup" HREF="javascript:open_indepth_window(2)">In-depth</A>
+		    </td>      
+		  </tr>
+		</table>    
+    </td>
+  </tr>
+</table>
+
+
+
+
+<!--Body Text Here-->
+
+<table border="0" width="100%">
+  <tr>
+    <td width="100%"><h4>Given that the Nyquist filter response must apply to the <font color="#0080FF">whole transmission link</font> including TX and RX sections to achieve
+    zero ISI performance, it is necessary to consider where best to place the filtering within
+    the transmission system. <br>
+    <br>
+    Filtering is almost always mandatory in the transmission unit, particularly in the case of
+    wireless communications, to constrain the <a href="../Ch4/C4s5p1.htm">'on-air
+    bandwidth'</a> of the signal to that dictated by <a "" href="../Ch2/C2s1p4.htm">regulation</a>
+    or by the practical necessity to co-habit with users on adjacent channel frequencies. Good
+    receiver filtering is also vital (again especially in wireless applications), in order to
+    remove strong signal interferers from overloading the demodulator circuitry, and also to
+    reject as much noise as possible that does not fall within the modulation passband. For
+    these reasons, it is necessary for the Nyquist filter function to be shared between TX and
+    RX units (assuming that the channel response itself is flat or has been <a "" href="../Ch4/C4s5p9.htm">equalized</a> in some way). <br>
+    </h4>
+    </td>
+  </tr>
+</table>
+
+<table border="0" width="100%">
+  <tr>
+    <td width="50%"><h4>It is common practice to split the filtering function of a raised
+    cosine filter equally between transmitter and receiver so that each unit ends up with what
+    is termed a <a "" href="C3s4p1.htm">root raised cosine</a> transfer characteristic. Under
+    these circumstances, the peak to mean ratio of the transmitted signal must be evaluated
+    for a <font color="#0080FF">root</font> raised cosine response, not a raised cosine response as is often
+    mistakenly thought.</h4>
+    </td>
+    <td width="50%"><img src="ch3figs/sec4/Tx&amp;rxflt.gif" align="right" border="0" WIDTH="400" HEIGHT="119"></td>
+  </tr>
+</table>
+
+<h4><br>
+</h4>
+</body>
+</html>

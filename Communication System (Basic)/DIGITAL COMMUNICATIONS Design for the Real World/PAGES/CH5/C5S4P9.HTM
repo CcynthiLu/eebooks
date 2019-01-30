@@ -1,0 +1,67 @@
+<html>
+
+<head>
+<link REL="stylesheet" HREF="../JSCRIPT/STYLES.CSS" TYPE="text/css">
+<script>
+
+pageX=9
+secX=4
+chapX=5
+
+indepthvar="off"
+examplesvar="off"
+questionsvar="off"
+
+</script>
+<script SRC="../JScript/textpage.js">
+document.write("js file not found")
+</script>
+
+<title></title>
+</head>
+
+<body BACKGROUND="../EFFECTS/BG.GIF">
+<!--Page Title Here-->
+<!--Body Text Here-->
+
+<p>&nbsp;</p>
+
+<h2>Phase ambiguity in PSK carrier recovery</h2>
+
+<table border="0" width="100%">
+  <tr>
+    <td width="50%">The 'squarer'-based form of carrier recovery looks ideal, but
+    unfortunately it suffers from one significant drawback &#150; the process of halving the
+    frequency of the twice carrier term introduces a 180<sup>o</sup> <font color="#0080FF">phase
+    ambiguity</font> into the carrier reference. </td>
+    <td width="50%"><img src="ch5figs/sec4/phas_amb.gif" align="right" WIDTH="300" HEIGHT="52"></td>
+  </tr>
+</table>
+
+<table border="0" width="100%">
+  <tr>
+    <td width="100%">Consider the case of a 1,&nbsp;0,&nbsp;1,&nbsp;0,&nbsp;1,&nbsp;0,&nbsp;... 
+    filtered data stream entering the
+    squaring circuit. The output will be a twice carrier term, with zero-crossings at twice
+    the rate of the input. Feeding this signal to a 'divide by two' circuit, it is clear that
+    the divider logic can be triggered by either of the zero-crossings in the twice carrier
+    waveform, and can have no knowledge of which one relates to the correct zero crossing (and
+    hence phase) of the input. The result is that the recovered carrier may be coherent with 0<sup>o</sup>
+    phase error, or it may be inverted with 180<sup>o</sup> phase error. Feeding the inverted
+    reference to the coherent detector will result in all of the detected data being inverted!<br>
+    <br>
+    This problem can be resolved by sending a <font color="#0080FF">training sequence</font>
+    known to the receiver from which it can deduce that data inversion has occurred and
+    correct accordingly. The training sequence approach does not work well, however, if the
+    channel is frequently interrupted (for example, in a <a href="../ch4/c4s5p2.htm">fading
+    mobile environment</a>), resulting in periodic loss of carrier reference. Each time the
+    carrier reference is re-established, an unknown phase ambiguity will again be present,
+    requiring a repeated retransmission of the training sequence. This phase ambiguity problem
+    is also present within the <a "" href="c5s4p8.htm">Costas loop</a> even though it does not
+    have an implicit divider circuit. </td>
+  </tr>
+</table>
+
+<h4>&nbsp;</h4>
+</body>
+</html>

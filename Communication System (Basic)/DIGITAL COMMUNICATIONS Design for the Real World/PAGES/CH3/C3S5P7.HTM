@@ -1,0 +1,77 @@
+<html>
+
+<head>
+<link REL="stylesheet" HREF="../JSCRIPT/STYLES.CSS" TYPE="text/css">
+<script>
+
+pageX=7
+secX=5
+chapX=3
+
+indepthvar="on"
+examplesvar="off"
+questionsvar="off"
+
+</script>
+<script SRC="../JScript/textpage.js">
+document.write("js file not found")
+</script>
+
+<title></title>
+</head>
+
+<body BACKGROUND="../EFFECTS/BG.GIF">
+<!--Page Title Here-->
+<!--Body Text Here-->
+<!--proofed by DR 25/5-->
+
+<table border="0" width="100%">
+  <tr>
+    <td width="80%"><h2>BER performance for matched filter detection (cont) </h2>
+    </td>
+    <td>
+		<table border="0" ALIGN=right CELLSPACING=4>
+		  <tr>   
+		    <td VALIGN=top ALIGN=center><A HREF="javascript:open_indepth_window(5)"><IMG ALT="In Depth" SRC="../EFFECTS/IND_ICON.GIF" WIDTH="44" HEIGHT="45" BORDER="0" VSPACE="4"></A><BR>
+		    	<A CLASS="popup" HREF="javascript:open_indepth_window(5)">In-depth</A>
+		    </td>       
+		  </tr>
+		</table>    
+    </td>
+  </tr>
+</table>
+
+
+<table border="0" width="100%">
+  <tr>
+    <td width="50%"><h4>The statistics of the integrated noise at the output of the integrate
+    and dump detector are such that the probability density of the noise samples follows a
+    Gaussian distribution as shown here. The probability of making a decision error is thus
+    the probability of the noise sample being more negative than <i>-V·T</i>/2&nbsp;volts.</h4>
+    </td>
+    <td width="50%"><img src="ch3figs/sec5/gaussian.gif" align="right" border="0" WIDTH="250" HEIGHT="113"></td>
+  </tr>
+</table>
+
+<TABLE CELLPADDING="10" BORDER="0" ALIGN="center">
+<TR>
+	<TD BGCOLOR="#99ccff" VALIGN="middle">
+        <h4 align="left">The <i>probability of symbol error P<sub>s</sub></i> (see
+        <a HREF="javascript:open_indepth_window(5)">in-depth</a> section) is therefore given by the expression:</h4>
+        <h4 align="center"><i>P<sub>s</sub></i> (symbol error probability)&nbsp;=&nbsp;(0.5·<i>erfc</i>)(0.25·<i>E<sub>s</sub></i>/<i>N</i><sub>0</sub>)<sup>1/2</sup></h4>
+        <h4 align="left">where <i>E<sub>s</sub></i> is the energy in the logic 1
+        symbol, and <i>N</i><sub>0</sub> is the noise power density.</h4></TD>
+</TR></TABLE>
+<BR>
+<table border="0" width="100%">
+  <tr>
+    <td width="100%"><h4>If the symbol to be detected were a logic 0 (that is, 0&nbsp;volts) rather
+    than a logic 1, then exactly the same reasoning can be applied, except we need to evaluate
+    the probability that the noise sample produces a positive value greater than <i>+V·T</i>/2&nbsp;volts
+    for an error to occur. Owing to the symmetry of the Gaussian distribution about 0&nbsp;volts,
+    this probability of error is identical to that for the logic 1 case. </h4>
+    </td>
+  </tr>
+</table>
+</body>
+</html>

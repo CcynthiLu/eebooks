@@ -1,0 +1,58 @@
+<html>
+
+<head>
+<link REL="stylesheet" HREF="../JSCRIPT/STYLES.CSS" TYPE="text/css">
+<script>
+
+pageX=4
+secX=1
+chapX=7
+
+indepthvar="off"
+examplesvar="off"
+questionsvar="off"
+
+</script>
+<script SRC="../JScript/textpage.js">
+document.write("js file not found")
+</script>
+
+<title></title>
+</head>
+
+<body BACKGROUND="../EFFECTS/BG.GIF">
+<!--Page Title Here-->
+<!--proofed by DR 7/6-->
+
+<h2>Nyquist sampling </h2>
+
+<table border="0" width="100%">
+  <tr>
+    <td width="100%">One of the key goals in waveform sampling is to digitize only the minimum
+    number of samples necessary to represent the waveform accurately and hence allow
+    accurate reconstruction on reception. </td>
+  </tr>
+</table>
+<h4><img SRC="ch7figs/sec1/nyq_samp.gif" align="right" WIDTH="500" HEIGHT="213"></h4>
+<h4>The minimum rate at which an arbitrary waveform can be sampled <font color="#0080FF">without loss of information</font> is in fact twice the bandwidth of
+    the input waveform. </h4>
+<h4>This is known as the <font color="#0080FF">Nyquist sampling criterion</font>. Sampling
+    at less than twice the bandwidth of the input signal (equivalent to twice the maximum
+    modulation frequency for baseband signals) results in what is termed <font color="#0080FF">aliasing</font>.
+    </h4>
+<table border="0" width="100%">
+  <tr>
+    <td width="100%">The Nyquist sampling requirement can be derived intuitively from our
+    knowledge of <a "" href="../ch1/c1s1p3.htm">Fourier Series</a> summarized in Chapter 1. We
+    can view the sampling process as the mixing of the input signal with a train of very
+    narrow data sampling pulses which will result in sum and difference components appearing
+    at the mixer output for each harmonic of the pulse waveform mixing with the signal
+    waveform as shown. This is the spectrum that would effectively appear at the output of a
+    D/A converter. In order to reconstruct the input waveform correctly, the D/A output
+    needs to be filtered so that only the spectral components present within the source signal
+    remain. </td>
+  </tr>
+</table>
+
+</body>
+</html>

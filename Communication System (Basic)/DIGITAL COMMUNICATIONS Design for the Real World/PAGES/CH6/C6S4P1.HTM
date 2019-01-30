@@ -1,0 +1,64 @@
+<html>
+
+<head>
+<link REL="stylesheet" HREF="../JSCRIPT/STYLES.CSS" TYPE="text/css">
+<script>
+
+pageX=1
+secX=4
+chapX=6
+
+indepthvar="off"
+examplesvar="off"
+questionsvar="off"
+
+</script>
+<script SRC="../JScript/textpage.js">
+document.write("js file not found")
+</script>
+
+<title></title>
+</head>
+
+<body BACKGROUND="../EFFECTS/BG.GIF">
+<!--Page Title Here-->
+<!--Body Text Here-->
+<!--proofed by DR 29/5-->
+
+<h1>6.4 M-ary Phase Shift Keying (M-ary PSK) </h1>
+<h2>Quadrature Phase Shift Keying (QPSK)</h2>
+
+<table border="0" width="100%">
+  <tr>
+    <td width="50%"><h4>We have already seen in the case of M-ary FSK that an <a "" href="c6s3p2.htm">orthogonal symbol set</a><i> </i>makes it possible to send two or more
+    symbols simultaneously over a channel, without their affecting the coherent detection
+    performance of any individual symbol. It turns out that as well as the M-ary FSK
+    orthogonal symbol set, there is orthogonality between a <font color="#0080FF">cosine</font>
+    and <font color="#0080FF">sine</font> carrier term when averaged over a full number of
+    carrier cycles. This would imply that if we were to signal using binary PSK on the <font color="#0080FF">cosine</font>
+    of a carrier, and <font color="#0080FF">simultaneously</font> send a second PSK signal
+    using the <font color="#0080FF">sine</font> of a carrier, then it would be possible to detect each one
+    independently of the other, (as if the other were not there), providing that each detector
+    averaged over a symbol period that contained a whole number of carrier cycles.</h4>
+    </td>
+    <td width="50%"><img src="ch6figs/sec4/qpskcons.gif" align="right" WIDTH="250" HEIGHT="215"></td>
+  </tr>
+</table>
+
+<table border="0" width="100%">
+  <tr>
+    <td width="100%"><h4><br>
+    We can thus envisage a PSK modulation scheme with four phase states, <font color="#0080FF">0<sup>o</sup></font>,
+    <font color="#0080FF">90<sup>o</sup></font>, <font color="#0080FF">180<sup>o</sup></font> and <font color="#0080FF">270<sup>o</sup></font>, 
+    which are in phase quadrature
+    with each other. This 4-ary PSK scheme is thus called <font color="#0080FF">Quadrature
+    Phase Shift Keying (QPSK)</font>. The orthogonality property of QPSK means that it can be
+    used to send information at <font color="#0080FF">twice the speed of BPSK </font>in the
+    same bandwidth, without compromising the detection performance over BPSK. </h4>
+    </td>
+  </tr>
+</table>
+
+<p>&nbsp;</p>
+</body>
+</html>

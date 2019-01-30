@@ -1,0 +1,63 @@
+<html>
+
+<head>
+<link REL="stylesheet" HREF="../../JSCRIPT/STYLES.CSS" TYPE="text/css">
+<meta HTTP-EQUIV="Content-Type" CONTENT="text/html; charset=windows-1252">
+<meta NAME="GENERATOR" CONTENT="Microsoft FrontPage 3.0">
+</head>
+<body LINK="#0000FF" VLINK="#800080" background="../../EFFECTS/popups/BG_ex.GIF">
+<!--proofed by DR 3/7-->
+<h2>Example 5.1</h2>
+
+<h4 CLASS="technical">An Amplitude Shift Keying format is used for
+transmitting data at a rate of 28.8&nbsp;kbps over a telephone channel with bandwidth extending
+from 300&nbsp;Hz to 3400&nbsp;Hz.<br>
+
+<oL TYPE="a">
+<li CLASS="paddedlist">How many symbol states are required in order to
+  achieve this level of performance?</li>
+<li CLASS="paddedlist">What would be the equivalent number of symbol
+  states needed if the channel passband extended from 0&nbsp;Hz to 3100&nbsp;Hz and baseband M-ary
+  signalling was used?</li>
+<li CLASS="paddedlist">What is the theoretical capacity for the ASK
+  system if the <i>S</i>/<i>N</i> ratio on the telephone link is 33&nbsp;dB?</li>
+</ol></h4>
+
+<h3>Solution</h3>
+
+<h4 CLASS="technical"><oL TYPE="a">
+
+<li CLASS="paddedlist">
+The capacity of a bandpass ASK channel is given by:<BR><BR>
+<I>C</i><sub>ASK</sub> =&nbsp;<i>B</i>&nbsp;log<sub>2</sub><i>M</i><BR><BR>
+compared with<BR><BR>
+<I>C</i><sub>baseband</sub> =&nbsp;2<i>B</i>&nbsp;log<sub>2</sub><i>M</i><BR><BR>
+Hence,<BR><BR>
+28800&nbsp;=&nbsp;(3400&nbsp;&#150;&nbsp;300)&nbsp;log<sub>2</sub><i>M</i><BR><BR>
+and<BR><BR>
+<I>M</i>&nbsp;=&nbsp;626.1 or 1024 states to nearest power of 2.
+</li>
+<li CLASS="paddedlist">
+For the baseband equivalent,<BR><BR>
+28800&nbsp;=&nbsp;2&nbsp;x&nbsp;3100&nbsp;log<sub>2</sub><i>M</i><BR><BR>
+Thus<BR><BR>
+<i>M</i>&nbsp;=&nbsp;25.02 or 32 states to the nearest power of 2.
+</li>
+
+<li CLASS="paddedlist">
+Applying the Shannon-Hartley equation,<BR><BR>
+<i>C</i>&nbsp;=&nbsp;<i>B</i>&nbsp;log<sub>2</sub>(<i>S</i>/<i>N</i>&nbsp;+&nbsp;1)<BR><BR>
+we obtain:<BR><BR>
+<I>C</i>&nbsp;=&nbsp;(3400&nbsp;&#150;&nbsp;300)&nbsp;log<sub>2</sub>(10<sup>3.3</sup>&nbsp;+&nbsp;1) 
+=&nbsp;33.996&nbsp;kbps.
+</li>
+
+</ol>
+
+Note:&nbsp;The Shannon-Hartley expression is valid for both baseband and bandpass channels 
+&#150; it is the number of symbol states that must be increased on a bandpass channel, 
+but as we will see for QPSK, this does not necessarily imply that the 
+<I>E<sub>b</sub></i>/<i>N</i><sub>0</sub> performance will be degraded compared to a
+baseband link.</h4>
+</body>
+</html>

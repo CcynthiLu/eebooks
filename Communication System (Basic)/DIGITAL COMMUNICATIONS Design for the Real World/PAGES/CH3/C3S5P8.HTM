@@ -1,0 +1,83 @@
+<html>
+
+<head>
+<link REL="stylesheet" HREF="../JSCRIPT/STYLES.CSS" TYPE="text/css">
+<script>
+
+pageX=8
+secX=5
+chapX=3
+
+indepthvar="on"
+examplesvar="off"
+questionsvar="off"
+
+</script>
+<script SRC="../JScript/textpage.js">
+document.write("js file not found")
+</script>
+
+<title></title>
+</head>
+
+<body BACKGROUND="../EFFECTS/BG.GIF">
+<!--Page Title Here-->
+<!--Body Text Here-->
+<!--proofed by DR 25/5-->
+<!--icons added MS 28/5-->
+
+<table border="0" width="100%">
+  <tr>
+    <td width="80%"><h2>Unipolar vs bipolar symbols </h2>
+    </td>
+    <td>
+		<table border="0" ALIGN=right CELLSPACING=4>
+		  <tr>   
+		    <td VALIGN=top ALIGN=center><A HREF="javascript:open_indepth_window(4)"><IMG ALT="In Depth" SRC="../EFFECTS/IND_ICON.GIF" WIDTH="44" HEIGHT="45" BORDER="0" VSPACE="4"></A><BR>
+		    	<A CLASS="popup" HREF="javascript:open_indepth_window(4)">In-depth</A>
+		    </td>       
+		  </tr>
+		</table>    
+    </td>
+  </tr>
+</table>
+
+
+
+<h4 align="left">The energy per symbol for the <a href="../Ch1/c1s4p7.htm">unipolar</a>
+    waveform considered thus far is different depending on whether a logic 0 or logic 1 is
+    sent, having a zero value for the logic 0 case. Assuming an equal likelihood of 1s and 0s
+    being transmitted, the <font color="#0080FF">average energy per symbol</font> sent
+    is <i>E<sub>s</sub></i>/2 where <i>E<sub>s</sub></i>, as before, is the energy of the
+    logic 1 symbol. </h4>
+<table CELLPADDING="10" border="0" width="100%">
+  <tr>
+    <td width="62%" BGCOLOR="#99ccff">
+    <h4 align="left">The symbol error probability for a <font color="#0080FF">unipolar</font> binary
+    data system with matched filtering is thus: </h4>
+    <h4 align="center"><i>P<sub>s&nbsp; unipolar</sub></i>&nbsp;=&nbsp;0.5·<i>erfc</i>(0.5·<i>E<sub>s&nbsp;average</sub></i>/<i>N</i><sub>0</sub>)<sup>1/2</sup>
+    </h4>
+    <h4 align="left">If we now look at the <a href="../Ch1/C1s4p7.htm">bipolar</a> data
+    waveform where a logic 1 is conveyed as <i>+V</i> volts and a logic 0 as <i>-V</i> volts,
+    we can show (see <a HREF="javascript:open_indepth_window(4)">in-depth</a>) that:</h4>
+    <h4 align="left">The symbol error probability for a <font color="#0080FF">bipolar</font> waveform
+    is given by:</h4>
+    <h4 align="center"><i>P<sub>s&nbsp; bipolar</sub></i>&nbsp;=&nbsp;0.5·<i>erfc</i>(<i>E<sub>s&nbsp;average</sub></i>/<i>N</i><sub>0</sub>)<sup>1/2</sup>
+    </h4>
+    </td>
+    <td width="38%"><img src="ch3figs/sec5/ber_crve.gif" align="right" border="0" WIDTH="200" HEIGHT="225"></td>
+  </tr>
+</table>
+<table border="0" width="100%">
+  <tr>
+    <td width="100%"><h4><BR>It is immediately apparent that the bipolar signalling method
+    requires only half the average symbol energy for a given probability of error compared
+    with the unipolar case. </h4>
+    </td>
+  </tr>
+</table>
+
+<table border="0" width="100%">
+</table>
+</body>
+</html>

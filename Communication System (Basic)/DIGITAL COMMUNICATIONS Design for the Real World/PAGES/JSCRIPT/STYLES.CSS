@@ -1,0 +1,76 @@
+H1
+{	font-family: arial, helvetica;
+	font-size: 20px;
+}
+
+H2
+{	font-family: arial, helvetica;
+	font-size: 18px;
+}
+
+H3
+{	font-family: arial, helvetica;
+	font-size: 14px;
+}
+
+H4, TD
+{	font-family: verdana, arial, helvetica;
+	font-size: 11px;
+	font-weight:normal;
+}
+
+H4.technical, TD.technical
+{	font-family: verdana, arial, helvetica;
+	font-size: 10px;
+	font-weight:normal;
+}
+
+STRONG, B
+{	font-weight: bold;
+}
+
+A.external:link, .external:visited
+{	color: maroon;
+}
+
+A.external.active
+{	color: red;
+}
+
+A:link, A:visited
+{	color: blue;
+}
+
+A:active
+{	color: purple;
+}
+
+A.popup
+{	font-family: verdana, arial, helvetica;
+	font-size: 9px;
+	font-weight: normal;
+}
+
+.greek
+{	font-family: symbol;
+}
+
+.def
+{	font-family: verdana, helvetica;
+	color: black;
+	font-size: 11px;
+	text-align: center;
+	background-color: "#99ccff";
+}
+
+.defleaderline
+{	font-family: verdana, helvetica;
+	color: black;
+	font-size: 11px;
+	text-align: left;
+	background-color: "#99ccff";
+}
+
+.paddedlist
+{	margin: 10px;
+}

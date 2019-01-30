@@ -1,0 +1,207 @@
+<HTML>
+<HEAD>
+
+<SCRIPT language="javascript">
+<!--
+
+// 0=preface
+// 9=contents
+// 10=refs
+// 11=index
+// 12=glossary
+
+
+// ------------------------------------------------
+// Global variables
+current_chapter = -1; // -1 signifies no chapter highlighted.
+
+hist = new Array();
+histindex = -1;
+
+var last_slash = this.location.href.lastIndexOf('/');
+var last_backslash = this.location.href.lastIndexOf('\\');
+base_href = this.location.href.substring(0, last_slash > last_backslash ? last_slash : last_backslash);
+
+HTML_list_header = '<HTML><HEAD><STYLE TYPE="text/css"> .section {font-family: arial, helvetica; font-size: 20px; line-height: 50%; color: white; font-weight: bold;} .number {font-family: arial, helvetica; font-size: 90px; color: "#9999cc"; } H3 {font-family: arial, helvetica; font-size: 16px} BODY, LI {font-family: verdana, helvetica; font-size: 12px; } </STYLE></HEAD>';
+
+
+
+// ------------------------------------------------
+// Preload images for chapter buttons
+
+chap_images_on = new Array(11);
+chap_images_off = new Array(11);
+
+for (i=0; i<13; i++)
+{	chap_images_on[i] = new Image();
+	chap_images_on[i].src = "EFFECTS/CHAPNOS/CH" + i + "_ON.GIF";
+	chap_images_off[i] = new Image();
+	chap_images_off[i].src = "EFFECTS/CHAPNOS/CH" + i + "_OFF.GIF";
+}
+
+
+// ------------------------------------------------
+// Array for chapter headings.
+// These are only needed to display correct header info in 'head' frame.
+chap_headings = new Array("How to Use & Preface","Background Material","Data Transmission Fundamentals","Baseband Data Transmission","Sources and Examples of Channel Degradation","Bandpass Digital Modulation","Multi-level Digital Modulation","Coding Theory and Practice","Multi-user Digital Modulation Techniques","Contents","References","Index","Glossary");
+
+
+// ------------------------------------------------
+// Array for section headings: [chapter][section].
+// There are no sections numbered 0, so leave that element blank.
+sec_headings = new Array(11);
+sec_headings[0] = new Array("","How to use","Preface");
+sec_headings[1] = new Array("","Time/frequency representation of digital signals","Trigonometric relationships","Communications networks and signalling protocols","Definition of terms");
+sec_headings[2] = new Array("","Factors affecting system design","Data transmission fundamentals","Multi-level signalling (M-ary signalling)","Calculation of channel capacity");
+sec_headings[3] = new Array("","Introduction","Intersymbol interference (ISI)","Eye diagrams","Raised cosine filtering","Matched filtering","Partial response signalling");
+sec_headings[4] = new Array("","Introduction","Gain, phase and group delay distortion","Interference and noise","The telephone channel","The wireless channel");
+sec_headings[5] = new Array("","Introduction","Amplitude shift keying (ASK)","Frequency shift keying (FSK)","Phase shift keying (PSK)","Comparison of binary modulation schemes");
+sec_headings[6] = new Array("","Introduction","M-ary amplitude shift keying (M-ary ASK)","M-ary frequency shift keying (M-ary FSK)","M-ary phase shift keying (M-ary PSK)","Combined amplitude and phase keying","Relative performance of multi-level bandpass modulation formats");
+sec_headings[7] = new Array("","Source coding","Channel coding","Block coding","Advanced block coding","Convolutional coding","Combined coding and modulation");
+sec_headings[8] = new Array("","Introduction","Frequency division multiple access (FDMA)","Time division multiple access (TDMA)","Code division multiple access (CDMA)","Combined multiple access systems");
+sec_headings[9] = "";	// Contents
+sec_headings[10] = "";	// References
+sec_headings[11] = "";	// Index
+sec_headings[12] = "";	// Glossary
+
+   function update(new_chap)
+// ===================================
+// Turns the old chapter image off and highlights the new one.
+{
+	// Turn off the old image if there is one to turn off
+	if (current_chapter >= 0)
+		document.images[("img"+current_chapter)].src = chap_images_off[current_chapter].src;
+		
+	// Turn on the new image
+	if (new_chap >= 0)
+		document.images[("img"+new_chap)].src = chap_images_on[new_chap].src;
+}
+
+
+   function clear_head()
+// ===================================
+// Erases contents of head frame.
+// Can't be done from within head frame because its contents are constantly being altered.
+{	parent.head.document.write('<HTML><HEAD><TITLE></TITLE></HEAD><BODY BACKGROUND="',base_href,'/EFFECTS/BG.GIF">&nbsp;</BODY></HTML>');
+	parent.head.document.close();
+}
+
+
+   function update_head(new_chap,new_sec)
+// =======================================
+// Updates contents of head frame with appropriate chapter/section details.
+// Can't be done from within head frame because its contents need to be rewritten all the time.
+{	if (new_chap > 8)
+		parent.head.document.write('<HTML><HEAD><STYLE TYPE="text/css"> BODY { font-family: verdana, helvetica; font-size: 10px; text-align: right } </STYLE></HEAD><BODY BACKGROUND="',base_href,'/EFFECTS/BG.GIF">',chap_headings[new_chap],'</BODY></HTML>');
+	else
+		parent.head.document.write('<HTML><HEAD><STYLE TYPE="text/css"> BODY { font-family: verdana, helvetica; font-size: 10px; text-align: right } </STYLE></HEAD><BODY BACKGROUND="',base_href,'/EFFECTS/BG.GIF"><B>',new_chap,'.',new_sec,'</B> ',sec_headings[new_chap][new_sec],'</BODY></HTML>');
+	parent.head.document.close();
+}
+
+
+   function update_history(new_chap,new_sec,new_page)
+// ==================================================
+// Creates a new element of the hist array to store the page just loaded, for use with foot.back_history().
+// histindex always points to the current page in the array.
+// History.back() doesn't seem to work properly - something to do with two frames changing simultaneously.
+{	
+	// Don't update history array if this page is the same as the previous one.
+	if (histindex >= 0)
+		if (hist[histindex].chap == new_chap && hist[histindex].sec == new_sec && hist[histindex].page == new_page ) 
+			return;
+			
+	hist[++histindex] = new Array(3);
+	hist[histindex].chap = new_chap;
+	hist[histindex].sec = new_sec;
+	hist[histindex].page = new_page;
+	//alert("updated history with " +new_chap+","+new_sec+","+new_page);
+}
+
+
+   function load_section_list(chap_chosen)
+// =======================================
+// When this function is called, a chapter button has been clicked.
+// Displays (on the fly) the list of sections pertaining to the chapter selected.
+{	
+	parent.main.document.write(HTML_list_header,'<BODY BACKGROUND="',base_href,'/EFFECTS/BG.GIF"><TABLE WIDTH="200" HEIGHT="286" ALIGN=right BACKGROUND="',base_href,'/EFFECTS/CONPIC.JPG"><TR><TD ALIGN=right VALIGN=bottom>');
+	if (chap_chosen != 0)
+		parent.main.document.write('<BR><SPAN CLASS="section">Chapter</SPAN><BR><SPAN CLASS="number">',chap_chosen,'</SPAN>' );
+	parent.main.document.write('</TD></TR></TABLE><H3>',chap_headings[chap_chosen],'<BR><IMG SRC="',base_href,'/EFFECTS/LINE.GIF" WIDTH="350" HEIGHT="5"></H3>Choose a section to browse:<UL STYLE="line-height: 250%">');
+
+	for (var i=1; i<sec_headings[chap_chosen].length; i++)
+		parent.main.document.write(
+			"<LI><A HREF='javascript:top.secs.load_page_list(",chap_chosen,",",i,")'>",chap_chosen,".",i," ",sec_headings[chap_chosen][i],"</A>");
+	parent.main.document.write("</UL></BODY></HTML>");
+	parent.main.document.close();
+
+	// Update contents of other frames as appropriate.
+	this.update(chap_chosen);
+	top.secs.update(chap_chosen,0);
+	this.clear_head();
+	this.update_history(chap_chosen,0,0);
+	
+	current_chapter = chap_chosen;
+	top.secs.current_section = 0; 	// To signify that we're on a 'virtual' section listing page.
+	top.foot.current_page = 0;		//		
+}
+
+
+
+//-->
+</SCRIPT>
+
+
+</HEAD>
+
+<BODY BACKGROUND="EFFECTS/CHAPNOS/BG.GIF">
+
+<!--
+	Start the HTML page by loading the unhighlighted chapter images - no chapter is chosen yet.
+	When the user clicks on a chapter image the appropriate section listing is loaded.
+-->  
+
+<A HREF="javascript:load_section_list(0)"
+><IMG NAME="img0" SRC="EFFECTS/CHAPNOS/CH0_OFF.GIF" ALT="How to Use & Preface" WIDTH="69" HEIGHT="36" BORDER="0" HSPACE="0" VSPACE="0"></A>
+
+<A HREF="javascript:top.foot.load_page(9,1,1)"
+><IMG NAME="img9" SRC="EFFECTS/CHAPNOS/CH9_OFF.GIF" ALT="Contents" WIDTH="69" HEIGHT="17" BORDER="0" HSPACE="0" VSPACE="0"></A>                  
+
+<A HREF="javascript:load_section_list(1)"
+><IMG NAME="img1" SRC="EFFECTS/CHAPNOS/CH1_OFF.GIF" ALT="Chapter 1" WIDTH="69" HEIGHT="26" BORDER="0" HSPACE="0" VSPACE="0"></A>
+
+<A HREF="javascript:load_section_list(2)"
+><IMG NAME="img2" SRC="EFFECTS/CHAPNOS/CH2_OFF.GIF" ALT="Chapter 2" WIDTH="69" HEIGHT="46" BORDER="0" HSPACE="0" VSPACE="0"></A>
+
+<A HREF="javascript:load_section_list(3)"
+><IMG NAME="img3" SRC="EFFECTS/CHAPNOS/CH3_OFF.GIF" ALT="Chapter 3" WIDTH="69" HEIGHT="35" BORDER="0" HSPACE="0" VSPACE="0"></A>
+
+<A HREF="javascript:load_section_list(4)"
+><IMG NAME="img4" SRC="EFFECTS/CHAPNOS/CH4_OFF.GIF" ALT="Chapter 4" WIDTH="69" HEIGHT="44" BORDER="0" HSPACE="0" VSPACE="0"></A>
+
+<A HREF="javascript:load_section_list(5)"
+><IMG NAME="img5" SRC="EFFECTS/CHAPNOS/CH5_OFF.GIF" ALT="Chapter 5" WIDTH="69" HEIGHT="36" BORDER="0" HSPACE="0" VSPACE="0"></A>
+
+<A HREF="javascript:load_section_list(6)"
+><IMG NAME="img6" SRC="EFFECTS/CHAPNOS/CH6_OFF.GIF" ALT="Chapter 6" WIDTH="69" HEIGHT="36" BORDER="0" HSPACE="0" VSPACE="0"></A>
+
+<A HREF="javascript:load_section_list(7)"
+><IMG NAME="img7" SRC="EFFECTS/CHAPNOS/CH7_OFF.GIF" ALT="Chapter 7" WIDTH="69" HEIGHT="37" BORDER="0" HSPACE="0" VSPACE="0"></A>
+
+<A HREF="javascript:load_section_list(8)"
+><IMG NAME="img8" SRC="EFFECTS/CHAPNOS/CH8_OFF.GIF" ALT="Chapter 8" WIDTH="69" HEIGHT="45" BORDER="0" HSPACE="0" VSPACE="0"></A>
+
+<A HREF="javascript:top.foot.load_page(12,1,1)"
+><IMG NAME="img12" SRC="EFFECTS/CHAPNOS/CH12_OFF.GIF" ALT="Glossary" WIDTH="69" HEIGHT="21" BORDER="0" HSPACE="0" VSPACE="0"></A>
+
+<A HREF="javascript:top.foot.load_page(10,1,1)"
+><IMG NAME="img10" SRC="EFFECTS/CHAPNOS/CH10_OFF.GIF" ALT="References" WIDTH="69" HEIGHT="17" BORDER="0" HSPACE="0" VSPACE="0"></A>
+
+<A HREF="javascript:top.foot.load_page(11,1,1)"
+><IMG NAME="img11" SRC="EFFECTS/CHAPNOS/CH11_OFF.GIF" ALT="Index" WIDTH="69" HEIGHT="18" BORDER="0" HSPACE="0" VSPACE="0"></A>
+
+</BODY>
+
+</HTML>
+
+
+

@@ -1,0 +1,68 @@
+<html>
+
+<head>
+<link REL="stylesheet" HREF="../JSCRIPT/STYLES.CSS" TYPE="text/css">
+<script>
+
+pageX=12
+secX=3
+chapX=1
+
+indepthvar="off"
+examplesvar="off"
+questionsvar="off"
+
+</script>
+<script SRC="../JScript/textpage.js">
+document.write("js file not found")
+</script>
+
+<title></title>
+</head>
+
+<body BACKGROUND="../EFFECTS/BG.GIF">
+<!--Page Title Here-->
+<!--Body Text Here-->
+<!--proofed by DR 6/6-->
+<p>&nbsp;</p>
+
+<h2>ASCII character format</h2>
+
+<table border="0" width="100%">
+  <tr>
+    <td width="100%"><h4>The asynchronous method of transmission is very effective when the
+    information to be sent is generated at irregular intervals, for example, entering letters
+    from a keyboard, where there is no prior knowledge of when the keys will be pressed. The
+    data receiver must therefore be alerted to the fact that a new data message is arriving
+    and also when the message ends so that it can enter an idle mode (often called marking).<br>
+    </h4>
+    </td>
+  </tr>
+</table>
+
+<table border="0" width="100%">
+  <tr>
+    <td width="50%"><h4>Shown here is the common format used for sending ASCII characters over
+    a modem link. When the link is inactive, the data line is kept high; it is pulled low for
+    one bit period to bring the data receiver out of its idle mode. This is called the 'start
+    bit'. Following the start bit are the seven bits representing the ASCII character set,
+    followed by a parity check bit. Finally, one or more stop bits are added forcing the data
+    line high, mimicking the idle state, such that the receiver is then ready to detect the
+    presence of a new start bit.</h4>
+    </td>
+    <td width="50%"><img src="ch1figs/sec3/ascii.gif" align="right" WIDTH="300" HEIGHT="251"></td>
+  </tr>
+</table>
+
+<table border="0" width="100%">
+  <tr>
+    <td width="100%"><h4>In an asynchronous receiver, the data bits are sampled at a rate many
+    times the bit rate with typically 16 clock cycles per data bit. Once a transition from
+    high to low representing a start bit is detected, the data is then sampled on the eighth
+    clock cycle, with the expectation that this will be close to the centre of the bit period
+    and hence a reliable measure. </h4>
+    </td>
+  </tr>
+</table>
+</body>
+</html>

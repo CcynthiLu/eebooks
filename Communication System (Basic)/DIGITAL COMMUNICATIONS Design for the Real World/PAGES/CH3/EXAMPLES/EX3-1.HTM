@@ -1,0 +1,45 @@
+<html>
+
+<head>
+<link REL="stylesheet" HREF="../../JSCRIPT/STYLES.CSS" TYPE="text/css">
+<meta HTTP-EQUIV="Content-Type" CONTENT="text/html; charset=windows-1252">
+<meta NAME="GENERATOR" CONTENT="Microsoft FrontPage 3.0">
+</head>
+
+<body LINK="#0000FF" VLINK="#800080" BACKGROUND="../../EFFECTS/POPUPS/BG_EX.GIF">
+<!--proofed by DR 25/5-->
+
+<h2>Example 3.1</h2>
+
+<h4 class=technical>&nbsp;A four-level baseband data stream has a symbol
+period of 100&nbsp;<SPAN CLASS=greek>m</span>s.&nbsp; 
+
+<ol TYPE="a">
+  <li CLASS="paddedlist">What is the minimum bandwidth required for
+    transmission, assuming a root raised cosine filter is used with&nbsp;<SPAN CLASS=greek>a</SPAN>&nbsp;=&nbsp;0.3?&nbsp;</li>
+  <li CLASS="paddedlist">What is the time taken to transmit 1&nbsp;million
+    bits?</li>
+  <li CLASS="paddedlist">If it is required to transmit the information in half
+    the time, how many symbol states would be required using the same transmission bandwidth?</li>
+</ol>
+
+<h3>Solution</h3>
+
+<ol TYPE="a">
+<li CLASS="paddedlist">The minimum bandwidth required for transmission 
+is&nbsp;half&nbsp;the symbol period for baseband signalling, assuming brick-wall filtering
+(<SPAN CLASS=greek>a</SPAN>&nbsp;=&nbsp;0). For <SPAN CLASS=greek>a</SPAN>&nbsp;=&nbsp;0.3, this bandwidth must be increased by a
+factor of (1&nbsp;+&nbsp;<SPAN CLASS=greek>a</SPAN>). Thus for a symbol
+period of 100&nbsp;<SPAN CLASS=greek>m</SPAN>s, the symbol rate
+is 10&nbsp;000 symbols/second, and the bandwidth required is 5000(1&nbsp;+&nbsp;<SPAN CLASS=greek>a</SPAN>) =&nbsp;65&nbsp;000&nbsp;Hz.</li>
+
+<li CLASS="paddedlist">With a four-level signalling scheme, there can be
+two bits encoded in each symbol, hence the bit rate is twice the symbol rate, i.e. 20&nbsp;kbps. 
+The time taken to send 1&nbsp;million bits is thus 1&nbsp;000&nbsp;000/20&nbsp000 =&nbsp;50&nbsp;seconds.</li>
+
+<li CLASS="paddedlist">To halve the transmission time, we need to encode
+double the number of bits in each symbol. Thus 4&nbsp;bits/symbol requires 16 symbol states.</li>
+</ol>
+
+</body>
+</html>

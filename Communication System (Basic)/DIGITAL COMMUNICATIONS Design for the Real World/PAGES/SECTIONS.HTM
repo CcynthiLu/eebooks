@@ -1,0 +1,205 @@
+<HTML>
+<HEAD>
+
+
+<SCRIPT language="javascript">
+<!--
+
+current_section = -1; // -1 signifies no section chosen; all section images blank.
+
+//-----------------------------------------------
+// Preload images for section buttons.
+
+sec_images_on = new Array(7);
+sec_images_off = new Array(7);
+
+for (i=1; i<7; i++)
+{	sec_images_on[i] = new Image();
+	sec_images_on[i].src = "EFFECTS/SECNOS/SC" + i + "_ON.GIF";
+	sec_images_off[i] = new Image();
+	sec_images_off[i].src = "EFFECTS/SECNOS/SC" + i + "_OFF.GIF";
+}
+
+// Load a blank image to fill the gap(s) if there are fewer than 6 sections.
+sec_images_off[0] = new Image();
+sec_images_off[0].src = "EFFECTS/SECNOS/BLANKSEC.GIF";
+
+
+//-------------------------------------------------
+// Preload complete list of page headings: [chapter][section][page].
+// Since there are no sections numbered 0, the array has no zeroth element for the [section] bit.
+// The same goes for pages - page_headings[c][s][0] is always empty.
+
+page_headings = new Array(11);
+
+page_headings[0] = new Array(3); // how to use and preface
+page_headings[0][1] = new Array("","How to Use");
+page_headings[0][2] = new Array("","Preface");
+
+page_headings[1] = new Array(5);
+page_headings[1][1] = new Array("","Introduction to Chapter 1","Time/frequency representation of digital signals","Fourier series","Fourier series (cont.)","The frequency domain","Spectrum of a periodic pulse train","Spectrum of a data pulse","Spectrum of a baseband binary data stream","Factors affecting signal bandwidth","Factors affecting signal bandwidth (cont.)","The Fourier transform");
+page_headings[1][2] = new Array("","The basic mixing process","The basic mixing process (cont.2)","The basic mixing process (cont.3)","Complex mixing processes","The vector modulator");
+page_headings[1][3] = new Array("","What is a network?","A typical network configuration","Network hierarchy","Transmission standards","Integrated Services Digital Network (ISDN)","What is a protocol?","The seven-layer OSI model","Network types: circuit and packet switched network operation","Network management","Network link layer","Synchronous/asynchronous communications","ASCII character format","Advantages and disadvantages of synchronous data communications");
+page_headings[1][4] = new Array("","Characteristics of message type","Elements of a communications link","Sources of link degradation: Distortion","Sources of link degradation: Interference","Sources of link degradation: Noise","Transmission protocols","Unipolar vs bipolar waveforms");
+
+page_headings[2] = new Array(5);
+page_headings[2][1] = new Array("","Introduction to Chapter 2","Technological limitations","Power consumption","Government regulations and standards","Commercial realities");
+page_headings[2][2] = new Array("","How quickly can information flow?","Methods of communication","Multi-level signalling","Multi-level symbol operation","The bandwidth and noise trade-off","Information transfer rate","Symbol rate (baud rate)","Bandwidth efficiency");
+page_headings[2][3] = new Array("","The relationship between bits and symbols","Example: 8-ary signalling","Advantages and disadvantages of M-art signalling");
+page_headings[2][4] = new Array("","Limitation due to finite bandwidth","Limitation due to finite bandwidth (cont.)","Minimum transmission bandwidth","Channel capacity restriction due to noise &#150; the Shannon-Hartley theorem","Channel capacity restriction due to noise &#150; the Shannon-Hartley theorem (cont.)","Power and bandwidth efficiency","Graphical representation");
+
+page_headings[3] = new Array(7);
+page_headings[3][1] = new Array("","Introduction to Chapter 3");
+page_headings[3][2] = new Array("","The problem of intersymbol interference","Pulse shaping for zero ISI: Nyquist channel filtering","Pulse shaping for zero ISI: Nyquist channel filtering (cont.)","Achieving a Nyquist channel response","Nyquist filtering &#150; example: cellular radio application");
+page_headings[3][3] = new Array("","Generation of eye diagrams","Diagnosis using the eye diagram","Example of complex eye diagram");
+page_headings[3][4] = new Array("","Raised cosine filter family","Impulse response of raised cosine filter","Eye diagrams for raised cosine filtered data","The root raised cosine filter","Implementation of digital Nyquist filters","Care with eye diagrams","Symbol timing recovery","Symbol timing circuits","Symbol timing circuits (cont.)","Summary: choice of  <SPAN STYLE='font-family: symbol'>a</SPAN>");
+page_headings[3][5] = new Array("","Recovery of symbols from noise","Recovery of symbols from noise (cont.)","The concept of an optimum (matched) filter","Designing a matched filter with ISI in mind","Bit error rate (BER) performance for baseband data systems","BER performance for matched filter detection","BER performance for matched filter detection (cont.)","Unipolar vs bipolar symbols","BER performance for M-ary signalling","Bit error rate vs symbol error rate","Gray coding");
+page_headings[3][6] = new Array("","Partial response signalling","Duo-binary signalling","Duo-binary signalling (cont.)","Modified duo-binary signalling ");
+
+page_headings[4] = new Array(6);
+page_headings[4][1] = new Array("","Introduction to Chapter 4");
+page_headings[4][2] = new Array("","Gain distortion &#150; filters","Gain distortion &#150; amplifiers","Gain distortion &#150; the channel","Phase distortion &#150; filters","Group delay &#150; filters","Phase distortion &#150; amplifiers","Phase distortion &#150; the channel","Frequency errors","Local oscillator error","Doppler shift");
+page_headings[4][3] = new Array("","Sources of interference","Dealing with interference","Sources of noise","Thermal noise","Shot, flicker and atmospheric noise","Characteristics of noise");
+page_headings[4][4] = new Array("","AC-coupled channels","NRZ vs Manchester encoding","Bandwidth efficiency of encoded data","Data encoding and the telephone channel");
+page_headings[4][5] = new Array("","Unguided propagation","Multipath distortion","Multipath fading","Frequency flat vs frequency selective fading","Multipath fading &#150; the time domain problem","Coping with multipath fading: Reference sounding","Coping with multipath fading: Parallel transmission","Coping with multipath fading: Spectral spreading","Coping with multipath fading: Channel equalizers","Coping with multipath fading: Directional antenna","Predicting multipath distortion","How propagation changes with operating frequency");
+
+page_headings[5] = new Array(6);
+page_headings[5][1] = new Array("","Introduction to Chapter 5");
+page_headings[5][2] = new Array("","What is ASK?","Symmetry in ASK","Spectral occupancy of ASK: ASK data spectrum","Generation of ASK modulated signals","Bandwidth limited ASK","Baseband filtering method","Non-coherent detection","Coherent detection","Coherent detection vs non-coherent detection","Coherent detection vs non-coherent detection","Carrier recovery for ASK","Matched filtering for ASK","Symbol timing recovery","BER performance of ASK","Constellation diagrams");
+page_headings[5][3] = new Array("","FSK waveforms","FSK generation","The vector modulator","Spectrum of FSK","Spectrum of CPFSK","Filtered FSK","Non-coherent FSK detection","Non-coherent PLL-based FSK detection","Coherent FSK detection","BER performance for FSK","Advantages and disadvantages of FSK");
+page_headings[5][4] = new Array("","Principle of PSK","Spectral occupancy for PSK","PSK generation","The effect of filtering on the PSK waveform","Detection of PSK","Carrier recovery of coherent PSK","Carrier recovery of coherent PSK","The Costas loop","Phase ambiguity in PSK carrier recovery","Differential data encoding","Differential data decoding","Differential PSK (DPSK)","Symbol timing recovery for PSK","Constellation diagram for PSK","BER performance for PSK");
+page_headings[5][5] = new Array("","Relative BER performance","Equal peak symbol energy");
+
+page_headings[6] = new Array(7);
+page_headings[6][1] = new Array("","Introduction to Chapter 6");
+page_headings[6][2] = new Array("","Implementation of M-ary ASK","Performance of M-ary ASK");
+page_headings[6][3] = new Array("","M-ary FSK application","Orthogonal signalling","Properties of orthogonal symbols","Orthogonal FSK detection","BER performance for M-ary orthogonal FSK");
+page_headings[6][4] = new Array("","Quadrature phase shift keying (QPSK)","Implementation of QPSK &#150; modulator","Implementation of QPSK &#150; demodulator","Bit error performance of QPSK","Symbol error performance of QPSK","Differential QPSK (DQPSK)","BER performance of DQPSK","<SPAN STYLE='font-family: symbol'>p</SPAN>/4 QPSK","Offset QPSK (OQPSK)","Spectrum of M-ary PSK","Performance of M-ary PSK");
+page_headings[6][5] = new Array("","Introduction","QAM generation","QAM detection","M-ary QAM vs M-ary PSK","BER performance for QAM","M-ary Amplitude and Phase Keying (M-ary APK)","Gray coding");
+page_headings[6][6] = new Array("","Symbol error curves for M-ary formats","The Shannon limit &#150; how close can we get?","Table of CCITT telephone modem characteristics");
+
+page_headings[7] = new Array(7);
+page_headings[7][1] = new Array("","Coding theory and practice","Source coding","Waveform coding &#150; A/D converters","Nyquist sampling","Nyquist sampling theorem &#150; aliasing","Dynamic range","Quantization noise","Companding","Voice coding","Voice coding (cont.)","Intelligent source coding");
+page_headings[7][2] = new Array("","Introduction","Types of ARQ operation","Parity","Parity (cont.)","Types of FEC coding");
+page_headings[7][3] = new Array("","Basics of block coding","Block coding analogy","Coding efficiency","Hamming codes &#150; an example of a block code","Hamming distance","BER performance for a (7,4) Hamming code","Higher order Hamming codes","Implementation complexity");
+page_headings[7][4] = new Array("","Block code families","Interleaving","Implementation","Reed-Solomon (RS) codes");
+page_headings[7][5] = new Array("","Introduction","Soft decision coding","Trellis diagrams","Soft vs hard decision decoding");
+page_headings[7][6] = new Array("","Introduction","Trellis coded modulation (TCM)","Practical issues with TCM","TCM and the Shannon limit","Source, channel and modulation coding &#150; complete");
+
+page_headings[8] = new Array(6);
+page_headings[8][1] = new Array("","Introduction to Chapter 8");
+page_headings[8][2] = new Array("","Basic system operation","Wireless FDMA operation","Power control in wireless FDMA systems","Advantages of FDMA","Disadvantages of FDMA","Wavelength division multiplexing");
+page_headings[8][3] = new Array("","Basic system operation","TDMA in a wireless environment","Example of a TDMA system","Example of a TDMA system (cont.)","Advantages of TDMA operation","Disadvantages of TDMA operation");
+page_headings[8][4] = new Array("","CDMA systems","Frequency hopped CDMA (FH-CDMA)","Example of frequency hopped CDMA","Direct sequence CDMA","Direct sequence CDMA (cont.)","Example of direct sequence CDMA","Example of direct sequence CDMA (cont.)","Advantages of CDMA","Disadvantages of CDMA");
+page_headings[8][5] = new Array("","Examples of FDMA/TDMA combinations","Examples of FDMA/CDMA and FDMA/FDMA combinations");
+
+
+
+   function update(new_chap, new_sec)
+// ====================================================
+// Unhighlights the old section button and highlights the new one.
+// If the chapter number has changed, it loads a new set of section buttons.
+{
+	if (new_chap != top.chaps.current_chapter)	// If the chapter number has changed, redraw all section images.
+	{	for (var i=1; i<7; i++)
+		{	if (i == new_sec)
+				document.images[i].src = sec_images_on[i].src;		// highlight this section image
+			else if (new_chap == -1 || i >= top.chaps.sec_headings[new_chap].length)
+				document.images[i].src = sec_images_off[0].src; 	// blank out this section image
+			else
+				document.images[i].src = sec_images_off[i].src;		// unhighlight section image
+		}	
+	}
+	else
+	// So the chapter hasn't changed: just unhighlight the old section image and highlight the new one.
+	// If current_section is 0 no sections are currently highlighted.
+	{	if (current_section > 0)
+			document.images[current_section].src = sec_images_off[current_section].src;
+		if (new_sec > 0)
+			document.images[new_sec].src = sec_images_on[new_sec].src;
+	}
+}
+
+
+   function load_page_list(chap_chosen,sec_chosen)
+// ==================================================
+// When this function is called, a new section has been chosen, whether by clicking
+// an image, or clicking on one of the page headings links in the main frame.
+// Displays (on the fly) the list of pages pertaining to the section selected.
+// (Except for chapter 0, which only has one page per section, so it just loads the page instead.)
+// Also tells the header frame to show the title of the section selected.
+// The links in the page list do not point to files; they activate top.foot.load_page().
+{	
+	if (chap_chosen == 0) // Only 1 page in each section for chap0, so just load the page and forget the list.
+	{	top.foot.load_page(0,sec_chosen,1);
+		return;
+	}
+	
+	parent.main.document.write(top.chaps.HTML_list_header,'<BODY BACKGROUND="',top.chaps.base_href,'/EFFECTS/BG.GIF"><TABLE WIDTH="200" HEIGHT="286" ALIGN=right BACKGROUND="',top.chaps.base_href,'/EFFECTS/CONPIC.JPG"><TR><TD ALIGN=right VALIGN=bottom><SPAN CLASS="section">Section</SPAN><BR><SPAN CLASS="number">',chap_chosen,'.',sec_chosen,'</SPAN></TD></TR></TABLE><H3>',top.chaps.sec_headings[chap_chosen][sec_chosen],'<BR><IMG SRC="',top.chaps.base_href,'/EFFECTS//LINE.GIF" WIDTH="350" HEIGHT="5"></H3>Choose a page to start reading from:<UL STYLE="line-height: 200%">');
+	
+		
+	// Write each page heading, a line at a time, as a <LI>
+	for (var p=1; p<page_headings[chap_chosen][sec_chosen].length; p++)
+		parent.main.document.write("<LI><A HREF='javascript:top.foot.load_page(",chap_chosen,",",sec_chosen,",",p,")'>",page_headings[chap_chosen][sec_chosen][p],"</A>" );
+	
+	parent.main.document.write("</UL></BODY></HTML>");
+	parent.main.document.close();
+	
+	// Update contents of this and other frames as appropriate.
+	// Normally textpage.js would deal with this, but this is a virtual page so we must do it ourselves.
+	top.chaps.update(chap_chosen);
+	this.update(chap_chosen,sec_chosen);
+	top.chaps.update_head(chap_chosen,sec_chosen);
+	top.chaps.update_history(chap_chosen,sec_chosen,0);
+	
+	current_section = sec_chosen;
+	top.chaps.current_chapter = chap_chosen;
+	top.foot.current_page = 0;	// To signify that we're on a 'virtual' page listing page.
+}
+
+
+//-->
+</SCRIPT>
+
+
+</HEAD>
+
+
+<BODY BGCOLOR="#0066CC">   
+
+<!--
+	Start the HTML page by loading the completely blank images: no section is chosen yet.
+	When the user clicks on a section image the appropriate page listing is loaded.
+-->           
+
+<IMG SRC="EFFECTS/SECNOS/SECTIONS.GIF" ALT="Sections" WIDTH="27" HEIGHT="70" BORDER="0">
+<BR CLEAR=all>
+
+<A HREF="javascript:if (document.images[1].src != sec_images_off[0].src) { load_page_list(top.chaps.current_chapter,1) }"
+><IMG SRC="EFFECTS/SECNOS/BLANKSEC.GIF" ALT="Section 1" ALIGN=RIGHT WIDTH="27" HEIGHT="53" BORDER="0" HSPACE="0" VSPACE="0"></A>
+<BR CLEAR=all>
+
+<A HREF="javascript:if (document.images[2].src != sec_images_off[0].src) { load_page_list(top.chaps.current_chapter,2) }"
+><IMG SRC="EFFECTS/SECNOS/BLANKSEC.GIF" ALT="Section 2" ALIGN=RIGHT WIDTH="27" HEIGHT="53" BORDER="0" HSPACE="0" VSPACE="0"></A>
+<BR CLEAR=all>
+
+<A HREF="javascript:if (document.images[3].src != sec_images_off[0].src) { load_page_list(top.chaps.current_chapter,3) }"
+><IMG SRC="EFFECTS/SECNOS/BLANKSEC.GIF" ALT="Section 3" ALIGN=RIGHT WIDTH="27" HEIGHT="53" BORDER="0" HSPACE="0" VSPACE="0"></A>
+<BR CLEAR=all>
+
+<A HREF="javascript:if (document.images[4].src != sec_images_off[0].src) { load_page_list(top.chaps.current_chapter,4) }"
+><IMG SRC="EFFECTS/SECNOS/BLANKSEC.GIF" ALT="Section 4" ALIGN=RIGHT WIDTH="27" HEIGHT="53" BORDER="0" HSPACE="0" VSPACE="0"></A>
+<BR CLEAR=all>
+
+<A HREF="javascript:if (document.images[5].src != sec_images_off[0].src) { load_page_list(top.chaps.current_chapter,5) }"
+><IMG SRC="EFFECTS/SECNOS/BLANKSEC.GIF" ALT="Section 5" ALIGN=RIGHT WIDTH="27" HEIGHT="53" BORDER="0" HSPACE="0" VSPACE="0"></A>
+<BR CLEAR=all>
+
+<A HREF="javascript:if (document.images[6].src != sec_images_off[0].src) { load_page_list(top.chaps.current_chapter,6) }"
+><IMG SRC="EFFECTS/SECNOS/BLANKSEC.GIF" ALT="Section 6" ALIGN=RIGHT WIDTH="27" HEIGHT="53" BORDER="0" HSPACE="0" VSPACE="0"></A>
+
+
+</BODY>
+
+</HTML>
+

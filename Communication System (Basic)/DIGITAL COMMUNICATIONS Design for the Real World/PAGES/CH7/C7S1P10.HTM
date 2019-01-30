@@ -1,0 +1,63 @@
+<html>
+
+<head>
+<link REL="stylesheet" HREF="../JSCRIPT/STYLES.CSS" TYPE="text/css">
+<script>
+
+pageX=10
+secX=1
+chapX=7
+
+indepthvar="off"
+examplesvar="off"
+questionsvar="off"
+
+</script>
+<script SRC="../JScript/textpage.js">
+document.write("js file not found")
+</script>
+
+<title></title>
+</head>
+
+<body BACKGROUND="../EFFECTS/BG.GIF">
+<!--Page Title Here-->
+<!--Body Text Here-->
+
+<p>&nbsp;</p>
+
+<h2>Voice coding (cont.)</h2>
+
+<table border="0" width="100%">
+  <tr>
+    <td width="50%">The source coding discussion so far has focused on a particular type of
+    linear waveform encoding which, while very flexible and widely used, leads to a high data
+    transmission rate (64&nbsp;kbps per telephone voice channel), for the encoded signal. In many
+    applications where transmission capacity is limited, often because of restricted channel
+    bandwidth, it is desirable to achieve a much lower data rate for the encoded signal,
+    hopefully without incurring any significant degradation in the perceived (subjective)
+    quality of the signal.</td>
+    <td width="50%"><img SRC="ch7figs/sec1/spch_cod.gif" align="right" WIDTH="350" HEIGHT="136"></td>
+  </tr>
+</table>
+
+<table border="0" width="100%">
+  <tr>
+    <td width="100%">If we are not concerned with preserving the waveform shape perfectly, but
+    rather we wish to maintain the subjective quality of the received signal &#150; visual or audio
+    fidelity &#150; then we can move away from waveform coding and use more sophisticated <font color="#0080FF">frequency domain</font> or <font color="#0080FF">source modelling</font>
+    (parametric) based methods.<br>
+    <br>
+    The subject of voice coding is vast, and falls outside the scope of this book. A good
+    reference is <a href="../Ch10/c10s1p1.htm#Papamichalis">Papamichalis (1987)</a>. A techniques that is proving to give good voice quality
+    and good compression performance is based on <font color="#0080FF">linear predictive
+    coding</font> which in part attempts to model the actual human voice synthesis process.
+    Data rates of the order of 7000&nbsp;bps are now considered to give acceptable voice quality
+    telephone communications (compared with 64&nbsp;kbps for the standard waveform codec), and
+    these techniques are used extensively in modern digital cellular systems. </td>
+  </tr>
+</table>
+
+<p>&nbsp;</p>
+</body>
+</html>

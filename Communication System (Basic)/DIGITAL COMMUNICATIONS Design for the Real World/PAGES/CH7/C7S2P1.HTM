@@ -1,0 +1,65 @@
+<html>
+
+<head>
+<link REL="stylesheet" HREF="../JSCRIPT/STYLES.CSS" TYPE="text/css">
+<script>
+
+pageX=1
+secX=2
+chapX=7
+
+indepthvar="off"
+examplesvar="off"
+questionsvar="off"
+
+</script>
+<script SRC="../JScript/textpage.js">
+document.write("js file not found")
+</script>
+
+<title></title>
+</head>
+
+<body BACKGROUND="../EFFECTS/BG.GIF">
+<!--Page Title Here-->
+
+<h1>7.2 Channel coding </h1>
+<!--Body Text Here-->
+
+<h2>Introduction</h2>
+
+<table border="0" width="100%">
+  <tr>
+    <td width="100%"><font color="#0080FF">Channel coding</font> is most often applied to
+    communications links in order to improve the reliability of the information being
+    transferred. By adding additional bits to the transmitted data stream (which of course
+    increases the amount of data to be sent), it is possible to detect and even correct for
+    errors in the receiver. <br>
+    </td>
+  </tr>
+</table>
+
+<table border="0" width="100%">
+  <tr>
+    <td width="50%"><ul>
+      <li><font color="#0080FF">Error detection schemes</font> &#150; In its most elementary form this involves
+        recognizing that part of the received information is in error and, if appropriate or
+        possible, requesting a repeat transmission &#150; <font color="#0080FF">ARQ (Automatic Repeat
+        Request Systems)</font>. </li>
+    </ul>
+    </td>
+    <td width="50%"><img src="ch7figs/sec2/ARQ.gif" align="right" WIDTH="200" HEIGHT="106"></td>
+  </tr>
+  <tr>
+    <td width="50%"><ul>
+      <li><font color="#0080FF">Error detection and correction</font> &#150; With added complexity, it is possible not only to
+        detect errors, but also to build in the ability to correct errors without recourse to
+        retransmission. This is particularly useful where there is no feedback path to the
+        transmission source with which to request a resend. This process is known as <font color="#0080FF">FEC (Forward Error Correction)</font>. </li>
+    </ul>
+    </td>
+    <td width="50%"><img src="ch7figs/sec2/FEC.gif" align="right" WIDTH="200" HEIGHT="106"></td>
+  </tr>
+</table>
+</body>
+</html>

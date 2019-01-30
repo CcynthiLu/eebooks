@@ -1,0 +1,61 @@
+<html>
+
+<head>
+<link REL="stylesheet" HREF="../JSCRIPT/STYLES.CSS" TYPE="text/css">
+<script>
+
+pageX=2
+secX=4
+chapX=4
+
+indepthvar="off"
+examplesvar="off"
+questionsvar="off"
+
+</script>
+<script SRC="../JScript/textpage.js">
+document.write("js file not found")
+</script>
+
+<title></title>
+</head>
+
+<body BACKGROUND="../EFFECTS/BG.GIF">
+<!--Page Title Here-->
+<!--proofed by DR 7/6-->
+<h2>Data encoding for AC coupled channels </h2>
+<!--Body Text Here-->
+
+<h3>NRZ vs Manchester Encoding</h3>
+
+<table border="0" width="100%">
+  <tr>
+    <td width="50%"><h4>In order to allow unmodulated data symbols to pass uncorrupted through
+    ac-coupled channels, it is necessary to ensure that the symbol stream has very little or
+    no energy at or near 0&nbsp;Hz. This means that&nbsp; the data must be either<font COLOR="#8080FF"><i> </i></font><font color="#0080FF">scrambled</font> or <font color="#0080FF">encoded</font> to ensure that no long strings of 1s or 0s are transmitted.
+    </h4>
+    </td>
+    <td width="50%"><img src="ch4figs/sec4/machster.gif" align="right" border="0" WIDTH="300" HEIGHT="161"></td>
+  </tr>
+</table>
+
+<table border="0" width="100%">
+  <tr>
+    <td width="100%"><h4>Scrambling of the data involves <i>reordering </i>of the data symbols
+    in such a way that the chances of long strings of 1s or 0s occurring in the scrambled
+    waveform is minimized or eliminated. This process introduces a processing overhead and
+    also a latency in the encoding and decoding process which may introduce unacceptable time
+    delay in the communication process &#150; particularly if digital voice is being carried. In
+    most cases, a data encoding process is used in preference to scrambling, albeit at the
+    expense of occupied bandwidth in most cases. There are many data encoding schemes for
+    reducing the dc content of a data signal, the most common of which is <font color="#0080FF">Manchester encoding</font>. It can be seen that compared with the original
+    <font color="#0080FF">non-return-to-zero (NRZ)</font> data stream, the Manchester encoded
+    signal never contains long strings of 1s or 0s.<br>
+    <br>
+    For a more detailed discussion of line coding techniques, see <a href="../Ch10/c10s1p1.htm#Haykin">Haykin (1989)</a>. </h4>
+    </td>
+  </tr>
+</table>
+
+</body>
+</html>

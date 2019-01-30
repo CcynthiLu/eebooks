@@ -1,0 +1,53 @@
+<html>
+
+<head>
+<link REL="stylesheet" HREF="../JSCRIPT/STYLES.CSS" TYPE="text/css">
+<script>
+
+pageX=7
+secX=3
+chapX=5
+
+indepthvar="off"
+examplesvar="off"
+questionsvar="off"
+
+</script>
+<script SRC="../JScript/textpage.js">
+document.write("js file not found")
+</script>
+
+<title></title>
+</head>
+
+<body BACKGROUND="../EFFECTS/BG.GIF">
+<!--Page Title Here-->
+<!--Body Text Here-->
+
+<!--proofed by DR 3/7-->
+
+<h2>Non-coherent FSK detection</h2>
+
+<table border="0" width="100%">
+  <tr>
+    <td width="50%">One of the simplest ways of detecting binary FSK is to pass the signal
+    through two bandpass filters tuned to the two signalling frequencies and detect which has
+    the larger output averaged over a symbol period. This is in essence a <a href="c5s2p7.htm">non-coherent envelope detector</a> for the equivalent two ASK streams
+    with a comparator at the output. Because it takes no account of the phase of the
+    respective symbols, this method, as expected from our discussions on <a href="c5s2p9.htm">ASK detection</a>, will not perform as well as coherent FSK detection
+    systems. </td>
+    <td width="50%"><img src="ch5figs/sec3/fskdect1.gif" align="right" WIDTH="450" HEIGHT="210"></td>
+  </tr>
+</table>
+
+<table border="0" width="100%">
+  <tr>
+    <td width="100%">There are several alternative methods for discriminating between the
+    incoming frequencies. One simple digital method involves counting the zero-crossings of
+    the carrier during a symbol and hence directly estimating the frequency on a
+    symbol-by-symbol basis. A third, often used method involves a <font color="#0080FF">phase-locked
+    loop</font> which is described next. </td>
+  </tr>
+</table>
+</body>
+</html>

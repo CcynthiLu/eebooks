@@ -1,0 +1,64 @@
+<html>
+
+<head>
+<link REL="stylesheet" HREF="../JSCRIPT/STYLES.CSS" TYPE="text/css">
+<title>Digital Communications</title>
+<script>
+
+pageX=2
+secX=2
+chapX=7
+
+indepthvar="off"
+examplesvar="off"
+questionsvar="off"
+
+</script>
+<script SRC="../JScript/textpage.js">
+document.write("js file not found")
+</script>
+</head>
+
+<body BACKGROUND="../EFFECTS/BG.GIF">
+<!--Page Title 
+Here-->
+<!--Body Text Here-->
+
+<p>&nbsp;</p>
+
+<h2>Types of ARQ operation</h2>
+
+<table border="0" width="100%">
+  <tr>
+    <td width="81%"><font color="#0080FF">Stop and Wait ARQ</font> &#150; 
+    This is the simplest ARQ method where the transmitter waits after <font COLOR="#0080FF">each</font>
+    message for an acknowledgement of correct reception (known as an ACK) from the receiver.
+    If the message is received in error, a negative acknowledgment (NAK) is returned. While
+    this process is taking place, any new messages must be stored in a buffer at the
+    transmitter site. <br>
+    </td>
+    <td width="19%"><img src="ch7figs/sec2/ARQ.gif" align="right" width="100"></td>
+  </tr>
+</table>
+
+<table border="0" width="100%">
+  <tr>
+    <td width="100%"> <font color="#0080FF">Go Back <i>N</i> ARQ</font> &#150; 
+    As the name suggests, the transmitter in this case continues to transmit messages in
+    sequence <font COLOR="#0080FF">until</font> a NAK is received. The NAK identifies
+    which message was in error and the transmitter then 'back-tracks' to this message,
+    starting to retransmit all messages in the sequence from when the error occurred. Clearly,
+    this has less signalling overhead (no ACKs used) than the Stop and Wait protocol. <br>
+    <p><br>
+    <font color="#0080FF">Selective ARQ</font><font color="BLUE"> &#150; </font> By making
+    the protocol slightly more complex, and by providing a buffer in the receiver as well as
+    the transmitter, it is of course possible for the receiver to inform the transmitter of
+    the specific message or packet that is in error. The transmitter then needs to only send
+    this specific message which the receiver can reinsert in the correct place in the receiver
+    buffer. Although the most complex, this is also the most efficient type of ARQ protocol
+    and the most widely used. There are several variants of this protocol optimized for a
+    given set of channel characteristics. </td>
+  </tr>
+</table>
+</body>
+</html>

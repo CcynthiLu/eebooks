@@ -1,0 +1,48 @@
+<html>
+
+<head>
+<link REL="stylesheet" HREF="../JSCRIPT/STYLES.CSS" TYPE="text/css">
+<script>
+
+pageX=1
+secX=4
+chapX=7
+
+indepthvar="off"
+examplesvar="off"
+questionsvar="off"
+
+</script>
+<script SRC="../JScript/textpage.js">
+document.write("js file not found")
+</script>
+
+<title></title>
+</head>
+
+<body BACKGROUND="../EFFECTS/BG.GIF">
+<!--Page Title Here-->
+<!--proofed by DR 7/6-->
+<h1>7.4 Advanced block coding </h1>
+<!--Body Text Here-->
+
+<h2>Block code families</h2>
+
+<table border="0" width="100%">
+  <tr>
+    <td width="50%">Hamming codes are in fact a subset of a more general code family called <font color="#0080FF">BCH (Bose-Chaudhuri-Hocquenghem)</font> codes discovered in 1959 and 1960.
+    <br>
+    <br>
+    Whereas the Hamming codes can <font color="#0080FF">only</font> detect up to two errors <font color="#0080FF">or</font> correct one, the general BCH code family can detect and correct <font color="#0080FF">any number of errors</font> if the code word used is long enough. <br>
+    <br>
+    For example, the Hamming (4,7) code corrects only one error, while the BCH (64,127) code
+    corrects 10 errors. For real error correcting power, the (11,1023) code can correct a
+    staggering 255 errors but with a very high coding overhead indeed. This would be used
+    where reliability of transmission is key and data throughput is less important. </td>
+    <td width="50%"><img src="ch7figs/sec4/BCHcodes.gif" align="right" WIDTH="400" HEIGHT="195"></td>
+  </tr>
+</table>
+
+<h4>&nbsp;</h4>
+</body>
+</html>

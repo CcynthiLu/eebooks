@@ -1,0 +1,36 @@
+<html>
+
+<head>
+<link REL="stylesheet" HREF="../../JSCRIPT/STYLES.CSS" TYPE="text/css">
+<meta HTTP-EQUIV="Content-Type" CONTENT="text/html; charset=windows-1252">
+<meta NAME="GENERATOR" CONTENT="Microsoft FrontPage 3.0">
+</head>
+<body LINK="#0000FF" VLINK="#800080" background="../../EFFECTS/popups/BG_ind.GIF">
+<!--proofed by DR 7/6-->
+<h2>Calculation of signal to quantization noise ratio</h2>
+
+<h4 CLASS="technical">The maximum quantization error <i>q</i> that can occur in
+the sampled output of an A/D converter is equal to half the minimum resolution of the
+converter which is given by <i>q</i>&nbsp;=&nbsp;<i>V</i><sub>max</sub>&nbsp;/&nbsp;<i>M</i>, where <i>M</i>&nbsp;=&nbsp;2<sup><i>n</i></sup> is the number
+of quantization levels for the converter. <BR>
+<BR>
+Making the assumption that all values of
+quantization error within the range +<i>q</i>/2 to &#150;<i>q</i>/2 are equally likely, the
+mean-squared value of the quantization error, <i>E<sub>q</sub></i>, can be calculated from:</h4>
+
+<h4><img SRC="Image124.gif" WIDTH="170" HEIGHT="40"></h4>
+
+<h4 CLASS="technical">The rms error is thus <i>q</i>/12<sup>½</sup>.<BR>
+<BR>
+The peak signal voltage for a sinewave input will be
+<i>V</i><sub>max</sub> =&nbsp;<i>Mq</i>/2 (allowing for positive and negative excursions of the sinewave), and the rms
+value is thus <i>Mq</i>/2.2<sup>½</sup>. The signal to quantization noise power ratio can now
+be determined as:</h4>
+
+<h4><img SRC="Image127.gif" WIDTH="170" HEIGHT="43"></h4>
+
+<h4 CLASS="technical">Thus, for an 8-bit converter, the peak signal to
+quantization noise ratio is approximately 3&nbsp;x&nbsp;(2<sup>8</sup>)<sup>2</sup>&nbsp;x&nbsp;0.5 =&nbsp;98.304
+or 50&nbsp;dB.</h4>
+</body>
+</html>

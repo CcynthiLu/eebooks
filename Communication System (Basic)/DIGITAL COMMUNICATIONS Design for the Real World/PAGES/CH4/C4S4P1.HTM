@@ -1,0 +1,64 @@
+<html>
+
+<head>
+<link REL="stylesheet" HREF="../JSCRIPT/STYLES.CSS" TYPE="text/css">
+<script>
+
+pageX=1
+secX=4
+chapX=4
+
+indepthvar="off"
+examplesvar="off"
+questionsvar="off"
+
+</script>
+<script SRC="../JScript/textpage.js">
+document.write("js file not found")
+</script>
+
+<title></title>
+</head>
+
+<body BACKGROUND="../EFFECTS/BG.GIF">
+<!--Page Title Here-->
+
+<h1>4.4 The telephone channel </h1>
+<!--Body Text Here-->
+
+<h2>AC coupled channels</h2>
+
+<table border="0" width="100%">
+  <tr>
+    <td width="50%"><h4>In the discussions so far, we have assumed that the channel is able to
+    pass all frequency components of a data signal from 0&nbsp;Hz up to a bandwidth of <i>B</i>&nbsp;Hz. There
+    are, however, many communications channels that are not able to pass low frequency
+    components, either because they need to be <font COLOR="#0080FF">ac-coupled</font>
+    for practical reasons (such as eliminating unwanted dc-offsets), or because the bandwidth
+    allocated to a given user is in a part of the spectrum well removed from 0&nbsp;Hz, for
+    example, wireless communications. </h4>
+    <h4>The domestic telephone channel is a classic example of a channel which is <font color="#0080FF">bandpass</font> in nature, that is, it has a low frequency and high
+    frequency cut-off in its gain response.</h4>
+    </td>
+    <td width="50%"><img src="ch4figs/sec4/telechan.gif" align="right" border="0" WIDTH="300" HEIGHT="226"></td>
+  </tr>
+</table>
+
+<table border="0" width="100%">
+  <tr>
+    <td width="100%"><h4> The low frequency cut-off (ac-coupling) results from capacitive
+    and/or inductive coupling of the telephone line at both the exchange and subscriber ends
+    allowing dc power for the telephone to be passed over the same cable as the speech or data
+    signal. The high frequency cut-off is a combination of deliberate filtering at the
+    exchange to minimize noise on the channel and also the <a "" href="c4s2p3.htm">transmission
+    line filtering effect</a> of long lengths of cable. <br>
+    <br>
+    A typical telephone channel response is shown here. Notice that even within the channel,
+    the gain response may not be flat and this in itself will introduce further symbol
+    degradation. </h4>
+    </td>
+  </tr>
+</table>
+
+</body>
+</html>

@@ -1,0 +1,69 @@
+<html>
+
+<head>
+<link REL="stylesheet" HREF="../JSCRIPT/STYLES.CSS" TYPE="text/css">
+<script>
+
+pageX=9
+secX=1
+chapX=7
+
+indepthvar="on"
+examplesvar="off"
+questionsvar="off"
+
+</script>
+<script SRC="../JScript/textpage.js">
+document.write("js file not found")
+</script>
+
+<title></title>
+</head>
+
+<body BACKGROUND="../EFFECTS/BG.GIF">
+<!--Page Title Here-->
+<!--Body Text Here-->
+<!--proofed by DR 7/6-->
+<table border="0" CELLSPACING="4" align="right">
+  <tr>
+    <td VALIGN="top" ALIGN="center"><H4><a CLASS="popup" HREF="javascript:open_indepth_window(2)">
+    <img SRC="../EFFECTS/IND_ICON.GIF" BORDER="0" VSPACE="4" WIDTH="44" HEIGHT="45"></a><br>
+    <a CLASS="popup" HREF="javascript:open_indepth_window(2)">In-depth</a></h4>
+    </td>
+  </tr>
+</table>
+
+<h2>Voice coding</h2>
+
+<table border="0" width="97%">
+  <tr>
+    <td width="100%"><p align="center"><img SRC="ch7figs/sec1/64kbps.gif" align="center" WIDTH="450" HEIGHT="270"></td>
+  </tr>
+</table>
+
+<table border="0" width="98%">
+  <tr>
+    <td width="100%">The most widely used form of source encoding to date is in fact based on
+    these <font color="#0080FF"><SPAN CLASS=greek>m</SPAN>-law</font> and <font color="#0080FF">A-law</font> companding A/D and D/A
+    converters, often referred to as <font color="#0080FF">codecs</font>, which form the
+    digital interface for almost every telephone line in the world. At the telephone exchange
+    or switching centre, each analogue signal from the domestic phone is converted using
+    an 8-bit <SPAN CLASS=greek>m</SPAN>-law or A-law codec, with a
+    standardized sampling rate of 8000&nbsp;times per second. (The maximum voice frequency is
+    limited to 3400&nbsp;Hz, hence the Nyquist criterion is met.) This results in a data rate of 64&nbsp;kbps 
+    for each voice link.</td>
+  </tr>
+</table>
+
+<table border="0" width="100%">
+  <tr>
+    <td width="100%">At the exchange, a number of these eight-bit data words from different
+    phone sources are collected (multiplexed) into a <font color="#0080FF">frame</font> (32
+    for <a "" href="../ch1/c1s3p4.htm">E-type systems</a> and 24 for <a "" href="../ch1/c1s3p4.htm">A-type</a> systems), and then sent using either <a "" href="../ch2/c2s4p1.htm">baseband signalling</a> or <a "" href="../ch5/c5s1p1.htm">bandpass
+    signalling</a> methods over the national and international exchange links. In order to
+    keep pace with the codec sampling rate, a new frame must be constructed and sent every 1/8000
+    seconds.</td>
+  </tr>
+</table>
+</body>
+</html>

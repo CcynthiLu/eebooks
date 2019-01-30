@@ -1,0 +1,54 @@
+<html>
+
+<head>
+<link REL="stylesheet" HREF="../../JSCRIPT/STYLES.CSS" TYPE="text/css">
+<meta HTTP-EQUIV="Content-Type" CONTENT="text/html; charset=windows-1252">
+<meta NAME="GENERATOR" CONTENT="Microsoft FrontPage 3.0">
+</head>
+<body LINK="#0000FF" VLINK="#800080" background="../../EFFECTS/popups/BG_ind.GIF">
+<!--proofed by DR 3/7-->
+<h2>Spectrum of Frequency Shift Keying waveforms</H2>
+
+<h4 CLASS="technical">The spectrum of FSK depends on a number of factors,
+including whether the transition between symbol states has a continuous phase or
+discontinuous phase, whether the data waveform driving the modulator (typically a VCO) is
+shaped by filtering, and the frequency separation between symbol states. A good insight
+into the whole topic is given by Lucky et al (1968). </H4>
+
+<h4 CLASS="technical">Only two special cases will be considered here &#150;
+binary FSK with a frequency separation of 1/<i>T<sub>b</sub></i> and no pulse shaping (this is
+often called Sunde's FSK), and binary Continuous Phase FSK with frequency separation of
+0.5&nbsp;x&nbsp;1/<i>T<sub>b</sub></i> and no pulse shaping (usually called Minimum Shift Keying).</h4>
+
+<h3>Power spectral density for Sunde's FSK</h3>
+
+<h4 CLASS="technical"><img SRC="Image100.gif" WIDTH="450" HEIGHT="33"></h4>
+
+<h4 CLASS="technical">where</h4>
+
+<h4 CLASS="technical"><img SRC="Image105.gif" WIDTH="160" HEIGHT="50"></h4>
+
+<h4 CLASS="technical">The characteristic of Sunde's FSK is that it has two
+discrete components in the spectrum at the two symbol frequencies. These are of great
+benefit when recovering a carrier component for coherent detection.</h4>
+
+
+<h3>Power spectral density for Minimum Shift Keying (MSK)</h3>
+
+<h4 CLASS="technical"><img SRC="Image101.gif" WIDTH="200" HEIGHT="50"></h4>
+
+<h4 CLASS="technical">Unlike Sunde's FSK, this spectrum has no discrete
+components, and a much narrower main lobe as would be expected with the narrower frequency
+separation between symbols. Comparing this result with the power spectral density of QPSK,
+given by:<BR><BR>
+
+<img SRC="Image115.gif" WIDTH="200" HEIGHT="22"><BR><BR>
+
+we can see that the side-lobe energy for MSK falls
+off much more quickly than for QPSK, with MSK having a slightly wider main lobe. As both
+formats offer a potential bandwidth efficiency approaching 2&nbsp;bits/second/Hz, MSK is often the
+preferred modulation choice in systems where the constant envelope property of the FSK
+family is important. Where filtered QPSK with its associated amplitude fluctuations
+can be tolerated, this will give the ultimate minimum bandwidth solution.</h4>
+</body>
+</html>

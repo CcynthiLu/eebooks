@@ -1,0 +1,37 @@
+<html>
+
+<head>
+<link REL="stylesheet" HREF="../../JSCRIPT/STYLES.CSS" TYPE="text/css">
+<meta HTTP-EQUIV="Content-Type" CONTENT="text/html; charset=windows-1252">
+<meta NAME="GENERATOR" CONTENT="Microsoft FrontPage 3.0">
+</head>
+<body LINK="#0000FF" VLINK="#800080" background="../../EFFECTS/popups/BG_ind.GIF">
+<!--proofed by DR 6/6-->
+<h2>Frame structure and multiplexing hierarchy for European ITU (CCITT) telephony</h2>
+
+<h4 CLASS="technical">In chapter 7, the method by which individual voice
+channels are digitized at the local telephone exchange or switching centre is discussed.
+Each incoming analogue phone line is sampled at a rate of 8000&nbsp;samples per second, and
+each sample is represented as an 8-bit word.<br><BR>
+
+In order to send these digitized voice samples
+between switching centres, high capacity data links are used, often optical fibres,
+capable of supporting several Gigabits/second. The individual 8-bit words are grouped into
+frames for transmission as shown below, with the addition of an 8-bit signalling word and
+an 8-bit framing/synchronisation word. Thirty-two 8-bit words are used in the E-series ITU
+standard, and twenty-four 8-bit words in the American T-series standard.<BR><BR>
+
+<img SRC="../ch1figs/sec3/eframe.gif" WIDTH="500" HEIGHT="129"><BR><BR>
+
+An E-series frame is thus 8&nbsp;x&nbsp;32 =&nbsp;256&nbsp;bits wide,
+and is sent at a rate of 8000&nbsp;frames per second, to match the voice channel sampling rate.
+The bit rate on the basic E1 channel is thus 256&nbsp;x&nbsp;8000 =&nbsp;2048&nbsp;Mbps.<BR><BR>
+
+E1 channels can be grouped into super frames to give
+E2 channels, E2 into E3 channels and so on. Additional framing and signalling words are
+added at each stage to control routing within the switching network.<br><BR>
+
+<img SRC="../ch1figs/sec3/eseries.gif" WIDTH="500" HEIGHT="222">
+
+</body>
+</html>

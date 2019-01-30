@@ -1,0 +1,66 @@
+<html>
+
+<head>
+<link REL="stylesheet" HREF="../JSCRIPT/STYLES.CSS" TYPE="text/css">
+<script>
+
+pageX=3
+secX=3
+chapX=5
+
+indepthvar="on"
+examplesvar="off"
+questionsvar="off"
+
+</script>
+<script SRC="../JScript/textpage.js">
+document.write("js file not found")
+</script>
+
+<title></title>
+</head>
+
+<body BACKGROUND="../EFFECTS/BG.GIF">
+<!--Page Title Here-->
+<!--Body Text Here-->
+<!--proofed by DR 3/7-->
+
+<table border="0" CELLSPACING="4" align="right">
+  <tr>
+    <td VALIGN="top" ALIGN="center"><H4><a CLASS="popup" HREF="javascript:open_indepth_window(3)"><img SRC="../EFFECTS/IND_ICON.GIF" BORDER="0" VSPACE="4" WIDTH="44" HEIGHT="45"></a><br>
+    <a CLASS="popup" HREF="javascript:open_indepth_window(3)">In-depth</a></h4>
+    </td>
+  </tr>
+</table>
+
+<p>&nbsp;</p>
+
+<h2>The vector modulator</h2>
+
+<table border="0" width="100%">
+  <tr>
+    <td width="50%"><img src="ch5figs/sec3/iq_gen.gif" align="left" WIDTH="200" HEIGHT="125"></td>
+    <td width="50%">A third method of FSK generation uses a <font color="#0080FF">vector or
+    quadrature modulator</font> as shown here. The basic vector modulator was introduced in <a "" href="../ch1/c1s2p5.htm">Chapter 1</a>, and in fact can be used to generate any
+    modulation format with the appropriate choice of in-phase and quadrature drive signals. It
+    operates on the principle that any modulation vector can be realized by summing
+    appropriate amounts of an in-phase (<font color="#0080FF">cos&nbsp;<SPAN CLASS=greek>w</SPAN><sub>c</sub><i>t</i></font>) and quadrature (<font color="#0080FF">sin&nbsp;<SPAN CLASS=greek>w</SPAN><sub>c</sub><i>t</i></font>)
+    version of the carrier signal (see <a CLASS="popup" HREF="javascript:open_indepth_window(3)">in-depth</a> section).<br>
+    </td>
+  </tr>
+  <tr>
+    <td width="50%">To generate ASK, for example, the I-input to the vector modulator would be
+    fed with the data stream and the Q-input tied to zero. To generate FSK requires the
+    generation of two symbols, one at a frequency (<SPAN CLASS=greek>w</SPAN><sub>c</sub>&nbsp;+&nbsp;<SPAN CLASS=greek>w</SPAN><sub>1</sub>) and one at a frequency (<SPAN CLASS=greek>w</SPAN><sub>c</sub>&nbsp;&#150;&nbsp;<SPAN CLASS=greek>w</SPAN><sub>1</sub>), for
+    example. In order to generate a frequency shift of +&nbsp;<SPAN CLASS=greek>w</SPAN><sub>1</sub> at the output of
+    the vector modulator, the I and Q inputs need to be fed with &#150;cos&nbsp;<SPAN CLASS=greek>w</SPAN><sub>1</sub>
+    and sin&nbsp;<SPAN CLASS=greek>w</SPAN><sub>1</sub></i> respectively. To generate a shift
+    of &#150;&nbsp;<SPAN CLASS=greek>w</SPAN><sub>1</sub></i> requires inputs of cos&nbsp;<SPAN CLASS=greek>w</SPAN><sub>1</sub></i> and sin&nbsp;<SPAN CLASS=greek>w</SPAN><sub>1</sub></i>.
+    This approach is now frequently used to generate some of the more elaborate filtered <a href="c5s3p2.htm">CPFSK</a> formats described later in this chapter &#150; particularly in
+    cellular handsets. </td>
+    <td width="50%"><img src="ch5figs/sec3/iq_gen2.gif" align="right" WIDTH="250" HEIGHT="227"></td>
+  </tr>
+</table>
+
+</body>
+</html>

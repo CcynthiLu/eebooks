@@ -1,0 +1,52 @@
+<html>
+
+<head>
+<link REL="stylesheet" HREF="../JSCRIPT/STYLES.CSS" TYPE="text/css">
+<script>
+
+pageX=4
+secX=3
+chapX=7
+
+indepthvar="off"
+examplesvar="off"
+questionsvar="off"
+
+</script>
+<script SRC="../JScript/textpage.js">
+document.write("js file not found")
+</script>
+
+<title></title>
+</head>
+
+<body BACKGROUND="../EFFECTS/BG.GIF">
+<!--Page Title Here-->
+<!--Body Text Here-->
+<!--proofed by DR 7/6-->
+
+
+<h2>Hamming codes &#150; an example of a block code</h2>
+
+<table border="0" width="100%">
+  <tr>
+    <td width="50%"><font color="#0080FF">Hamming codes</font>, named after their discoverer,
+    R.W. Hamming, are a well-known type of block code. <br>
+    <br>
+    A rate <i>R</i>&nbsp;=&nbsp;4&nbsp;/&nbsp;7 Hamming code is illustrated here, with each of the 16 possible four-bit input
+    blocks, coded as seven-bit output blocks. This set of 16 output blocks have been selected
+    from the 2<sup>7</sup>&nbsp;=&nbsp;128 possible seven-bit patterns as being most dissimilar. In this
+    case, each output block can be seen to differ from all the other blocks by at least three
+    bits. Hence, if one or two errors occur in the transmission of a block, the decoder will
+    realize that this is not a valid block and flag an error. In the case of only a single bit
+    error occurring, it is also possible for the receiver to match the received block to the
+    closest valid block and thereby <font color="#0080FF">correct</font> the single error. If three errors occur in
+    a block, the original block may be transformed into a new valid block and all the errors
+    go undetected. </td>
+    <td width="50%"><img SRC="ch7figs/sec3/ham4_7.gif" align="right" WIDTH="400" HEIGHT="298"></td>
+  </tr>
+</table>
+
+
+</body>
+</html>

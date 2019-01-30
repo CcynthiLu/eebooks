@@ -1,0 +1,64 @@
+<html>
+
+<head>
+<link REL="stylesheet" HREF="../../JSCRIPT/STYLES.CSS" TYPE="text/css">
+<meta HTTP-EQUIV="Content-Type" CONTENT="text/html; charset=windows-1252">
+<meta NAME="GENERATOR" CONTENT="Microsoft FrontPage 3.0">
+</head>
+<!--proofed by DR 4/8>
+
+
+<body LINK="#0000FF" VLINK="#800080" BGCOLOR="#FFCC99" background="../../EFFECTS/POPUPS/BG_IND.GIF">
+
+<h2>Probability of symbol error for binary baseband bipolar
+data detection</h2>
+
+
+<h4 class="technical">For an input symbol of voltage <i>V</i>, integrated over
+a period <i>T</i> seconds, the output voltage will be <i>V.T</i> volts.</h4>
+
+<h4 class="technical">For AWGN, the effect of integrating the noise waveform over
+a period <i>T</i> is to create a noise output voltage which has a Gaussian distribution
+with variance <i><SPAN CLASS=greek>s</SPAN><sub>0</sub><sup>2</sup>&nbsp;=&nbsp;N<sub>0</sub>T</i>/2,
+where <i>N<sub>0</sub></i> is the noise power density in Watts/Hz.</h4>
+
+<h4 class="technical">The probability density of the integrated noise, <i>n(t)</i>,
+at the sampling point is thus:</h4>
+
+<h4 class="technical"><img src="i5eqn1.gif" alt="i5eqn1.gif (2393 bytes)" WIDTH="350" HEIGHT="50"></h4>
+
+<h4 class="technical">For the bipolar signal, a detection error will occur when
+the noise sample exceeds a value <i>-V.T</i>.&nbsp; The probability of this occurring
+will thus equal the symbol error probability and is given by:</h4>
+
+<h4 class="technical"><img src="i4eqn2.gif" alt="i5eqn2.gif (2301 bytes)" WIDTH="400" HEIGHT="52"></h4>
+
+<h4 class="technical">Defining,</h4>
+
+<h4 class="technical"><img src="i5eqn3.gif" alt="i5eqn3.gif (791 bytes)" WIDTH="120" HEIGHT="24"></h4>
+
+<h4 class="technical">the error probability, <i>P<sub>s</sub></i>, can be
+written as:</h4>
+
+<h4 class="technical"><img src="i4eqn4.gif" alt="i5eqn4.gif (2517 bytes)" WIDTH="350" HEIGHT="55"></h4>
+
+<h4 class="technical">where <i>erfc(x)</i> is known as the complimentary error
+function and frequently appears in the analysis of digital communications systems.</h4>
+
+<h4 class="technical">We can express this symbol error probability in terms of
+the symbol energy as follows:<br>
+</h4>
+
+<h4 class="technical"><img src="i4eqn5.gif" alt="i5eqn5.gif (2653 bytes)" WIDTH="350" HEIGHT="49"></h4>
+
+<h4 class="technical">The probability of receiving a logic 0 symbol in error
+yields exactly the same result, although in this case we are looking for the probability
+of the noise sample exceeding <i>+V.T</i>.</h4>
+
+<h4 class="technical">Recognizing that the average symbol energy for a bipolar
+data stream is the same for both a logic 0 and a logic 1 symbol, then the symbol error
+probability is unchanged and can be written as:</h4>
+
+<h4 class="technical"><img src="i4eqn6.gif" alt="i5eqn6.gif (791 bytes)" WIDTH="170" HEIGHT="45"></h4>
+</body>
+</html>

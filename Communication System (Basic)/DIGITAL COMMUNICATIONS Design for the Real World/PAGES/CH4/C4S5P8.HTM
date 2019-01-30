@@ -1,0 +1,69 @@
+<html>
+
+<head>
+<link REL="stylesheet" HREF="../JSCRIPT/STYLES.CSS" TYPE="text/css">
+<script>
+
+pageX=8
+secX=5
+chapX=4
+
+indepthvar="off"
+examplesvar="off"
+questionsvar="off"
+
+</script>
+<script SRC="../JScript/textpage.js">
+document.write("js file not found")
+</script>
+
+<title></title>
+</head>
+<!--proofed by DR 7/6-->
+
+<body BACKGROUND="../EFFECTS/BG.GIF">
+<!--Page Title Here-->
+<!--Body Text Here-->
+
+<h2>Coping with multipath fading</h2>
+
+<h3>Spectral spreading</h3>
+
+<table border="0" width="100%">
+  <tr>
+    <td width="66%"><h4>Two alternative methods exist for coping with both flat and frequency
+    selective fading both involve increasing the bandwidth required to send the data.<br>
+    <br>
+    A technique known as <a "" href="../ch8/c8s4p4.htm">direct sequence spread spectrum</a>
+    uses a wideband data sequence to mix with a narrowband data signal and thence <font color="#0080FF">spread</font> the energy well outside the coherence bandwidth for the
+    channel. A small proportion of the spread signal energy will be lost in the frequency
+    selective fades, but the majority will pass with little distortion through the channel. By
+    <font COLOR="#0080FF">de-spreading</font> the signal in the receiver, a reasonable
+    copy of the original transmitted signal can be obtained. Data coding and channel
+    equalization are often employed in addition to the spreading to improve the integrity of
+    the channel.</h4>
+    </td>
+    <td width="34%"><img src="ch4figs/sec5/cdma.gif" align="right" border="0" WIDTH="200" HEIGHT="97"></td>
+  </tr>
+</table>
+
+<table border="0" width="100%">
+  <tr>
+    <td width="33%"><img src="ch4figs/sec5/fh_cdma.gif" align="right" width="200" border="0"></td>
+    <td width="67%"><h4> Instead of spreading the data signal instantaneously (and thinly)
+    over a wide frequency range, an equally effective method is to rapidly change the position
+    of the narrow data signal within a much wider bandwidth. This <a "" href="../ch8/c8s4p2.htm">frequency hopping</a> approach means that for some of the time
+    the signal will fall within a selective fade, but for most of the time, it will be passed
+    within a non-fading portion of the channel. The result, as for direct sequence spreading,
+    is that most of the data signal most of the time reaches the receiver with little
+    distortion, and with extra coding a high integrity communications link can be established.
+    </h4>
+    </td>
+  </tr>
+</table>
+
+<h4>&nbsp;<br>
+<br>
+</h4>
+</body>
+</html>

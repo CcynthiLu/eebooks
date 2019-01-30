@@ -1,0 +1,68 @@
+<html>
+
+<head>
+<link REL="stylesheet" HREF="../JSCRIPT/STYLES.CSS" TYPE="text/css">
+<script>
+
+pageX=4
+secX=4
+chapX=2
+
+indepthvar="off"
+examplesvar="off"
+questionsvar="off"
+
+</script>
+<script SRC="../JScript/textpage.js">
+document.write("js file not found")
+</script>
+
+<title></title>
+</head>
+
+<body BACKGROUND="../EFFECTS/BG.GIF">
+<!--Page Title Here-->
+<!--proofed by DR 7/6-->
+
+<p>&nbsp;</p>
+
+<h2>Channel capacity restriction due to noise &#150; the Shannon&#150;Hartley theorem </h2>
+
+<table border="0" width="100%">
+  <tr>
+    <td width="100%"><h4>As the number of symbol states <i>M</i> increases, the ability of the
+    receiver to distinguish between symbols in the presence of noise and/or
+    interference/distortion decreases. Hence the ratio of <font color="#0080FF">signal power <i>S</i></font>
+    to <font color="#0080FF">noise power <i>N</i></font> will be a crucial factor in determining how
+    many symbol states can be utilized and still achieve error-free communication.</h4>
+    </td>
+  </tr>
+</table>
+<!--Body Text Here-->
+
+<table border="0" width="100%">
+  <tr>
+    <td width="50%"><h4>
+    The 'duration' of each symbol is also key in determining the noise tolerance of a receiver
+    system, with longer symbols giving the receiver more time to average out the effects of
+    noise than shorter symbols.<br>
+    <br>
+    The combined effects of finite bandwidth <i>B</i> and finite signal to noise ratio <i>S</i>/<i>N</i>
+    on channel capacity are governed by a very famous relationship known as the
+    Shannon&#150;Hartley capacity limit. The mathematical basis for this expression was first put
+    forward in Shannon (<a href="../Ch10/c10s1p1.htm#Shannon1948a">1948a</a>, <a href="../Ch10/c10s1p1.htm#Shannon1948b">1948b</a>)</h4>
+    </td>
+    <td width="50%"><img SRC="ch2figs/sec4/average.gif" align="right" WIDTH="150" HEIGHT="147"></td>
+  </tr>
+</table>
+
+<table border="0" width="70%" cellpadding="10" align="center">
+  <tr>
+    <td BGCOLOR="#99ccff" width="100%"><h4 class="defleaderline">The Shannon&#150;Hartley capacity limit for
+    error-free communication is given by: </h4>
+    <h4 class="def"><i>Channel capacity C</i> = <i>B</i>.log<sub>2</sub>(<i>S</i>&nbsp;/&nbsp;<i>N</i>&nbsp;+&nbsp;1)&nbsp;bits/second </font></h4>
+    </td>
+  </tr>
+</table>
+</body>
+</html>

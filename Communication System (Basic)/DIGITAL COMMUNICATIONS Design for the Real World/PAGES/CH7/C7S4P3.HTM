@@ -1,0 +1,62 @@
+<html>
+
+<head>
+<link REL="stylesheet" HREF="../JSCRIPT/STYLES.CSS" TYPE="text/css">
+<script>
+
+pageX=3
+secX=4
+chapX=7
+
+indepthvar="off"
+examplesvar="on"
+questionsvar="off"
+
+e1=1
+e2=e3=e4=e5=e6=e7=0
+
+</script>
+<script SRC="../JScript/textpage.js">
+document.write("js file not found")
+</script>
+
+<title></title>
+</head>
+
+<body BACKGROUND="../EFFECTS/BG.GIF">
+<!--Page Title Here-->
+<!--Body Text Here-->
+<!--proofed by DR 7/6-->
+<table border="0" CELLSPACING="4" align="right">
+  <tr>
+    <td VALIGN="top" ALIGN="center"><H4><a CLASS="popup" HREF="javascript:open_examples_window(3,3)"><img SRC="../EFFECTS/EX_ICON.GIF" BORDER="0" VSPACE="4" WIDTH="44" HEIGHT="45"></a> <br>
+    <a CLASS="popup" HREF="javascript:open_examples_window(3,3)">Example 7.3</a></h4>
+    </td>
+  </tr>
+</table>
+
+<p>&nbsp;</p>
+
+<h2>Implementation</h2>
+
+<table border="0" width="100%">
+  <tr>
+    <td width="50%">One way to accomplish interleaving is to read the encoded data blocks as
+    rows into a matrix. Once the matrix is full (incurring a time delay penalty), the data can
+    be read out in columns, redistributing the data for transmission. <br>
+    <br>
+    At the receiver, a <font color="#0080FF">de-interleaving</font> process is performed using
+    a similar matrix filling and emptying process, reconstituting the original blocks. At the
+    same time the burst errors are uniformly redistributed across the blocks. <br>
+    <br>
+    The number of rows or columns in the matrix is sometimes referred to as the <font color="#0080FF">interleaving depth</font>. The greater the interleaving depth, the greater
+    resistance to long fades, but also the greater the <font color="#0080FF">latency</font> in
+    the decoding process as both the TX and RX matrix must be full before encoding or decoding
+    can occur. </td>
+    <td width="50%"><img src="ch7figs/sec4/interlev.gif" height="350" width="270" align="right"></td>
+  </tr>
+</table>
+
+<p>&nbsp;</p>
+</body>
+</html>

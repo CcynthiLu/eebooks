@@ -1,0 +1,58 @@
+<html>
+
+<head>
+<link REL="stylesheet" HREF="../JSCRIPT/STYLES.CSS" TYPE="text/css">
+<script>
+
+pageX=3
+secX=5
+chapX=7
+
+indepthvar="off"
+examplesvar="off"
+questionsvar="off"
+
+</script>
+<script SRC="../JScript/textpage.js">
+document.write("js file not found")
+</script>
+
+<title></title>
+</head>
+
+<body BACKGROUND="../EFFECTS/BG.GIF">
+<!--Page Title Here-->
+<!--Body Text Here-->
+
+<p>&nbsp;</p>
+
+<h2>Trellis Diagrams</h2>
+
+<table border="0" width="100%">
+  <tr>
+    <td width="50%">A frequently used pictorial representation of the convolutional encoding
+    and decoding process is the <font color="#0080FF">trellis diagram</font>. At each stage in
+    the trellis, a number of valid symbols or bit patterns exist, and over time, the decoder
+    builds up a picture of the path exhibited by the received data through the trellis. <br>
+    <br>
+    With soft decision decoding, each element in the path can be weighted with a confidence
+    factor using the 'side' information. The job of the decoder is, in effect,&nbsp; to check
+    all possible paths through the trellis (not just the most apparent one) and add up all the
+    weights over <i>N</i> sections, to see which path in fact gives the highest confidence rating.
+    This path is then chosen as the correct set of received symbols and is decoded to give the
+    output bit stream. </td>
+    <td width="50%"><img src="ch7figs/sec5/trellisd.gif" align="right" WIDTH="300" HEIGHT="179"></td>
+  </tr>
+</table>
+
+<table border="0" width="100%">
+  <tr>
+    <td width="100%">The Viterbi algorithm is very effective at performing this path search
+    process and in recent years has been effectively fabricated on silicon. More information
+    on trellis coding and the Viterbi algorithm can be found in <a href="../Ch10/c10s1p1.htm#Ziemer">Ziemer and Peterson (1992)</a>. </td>
+  </tr>
+</table>
+
+<h4>&nbsp;</h4>
+</body>
+</html>

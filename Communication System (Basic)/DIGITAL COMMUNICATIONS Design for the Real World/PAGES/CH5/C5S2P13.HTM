@@ -1,0 +1,63 @@
+<html>
+
+<head>
+<link REL="stylesheet" HREF="../JSCRIPT/STYLES.CSS" TYPE="text/css">
+<script>
+
+pageX=13
+secX=2
+chapX=5
+
+indepthvar="off"
+examplesvar="off"
+questionsvar="off"
+
+</script>
+<script SRC="../JScript/textpage.js">
+document.write("js file not found")
+</script>
+
+<title></title>
+</head>
+
+<body BACKGROUND="../EFFECTS/BG.GIF">
+<!--Page Title Here-->
+<!--Body Text Here-->
+<!--proofed by DR 3/7-->
+<p>&nbsp;</p>
+
+<h2>Symbol timing recovery</h2>
+
+<table border="0" width="100%">
+  <tr>
+    <td width="100%">The discussion in Chapter 3 on <a "" href="../ch3/c3s2p2.htm">pulse
+    shaping</a> for minimum intersymbol interference highlighted the need for accurate timing
+    of the sampling point within each symbol. A common <font color="#0080FF">symbol timing
+    circuit</font> is the <font color="#0080FF">early-late gate</font> synchronizer. This
+    circuit works on the basis that the optimum point to sample the signal at the output of a <a "" href="../ch3/c3s5p1.htm">matched filter</a> detector is when the signal is at its
+    maximum. <br>
+    </td>
+  </tr>
+</table>
+
+<table border="0" width="100%">
+  <tr>
+    <td width="50%"><br>
+    The early-late gate approach uses two such detectors, one fed with a slightly advanced
+    timing reference and one fed with a slightly retarded timing reference. The outputs of the
+    two detectors are then periodically compared to see which is the larger. The timing is
+    then advanced in favour of the detector with the larger output in the expectation that it
+    will get bigger. Eventually, the timing will be advanced too far and the detector output
+    begins to fall. The equilibrium point occurs when both detector outputs are equal (one
+    falling away from the peak and one rising towards it), and the optimum sampling point is
+    then known to lie midway between the advanced and retarded references. This optimum timing
+    signal is passed to a third data detector.<br>
+    <br>
+    Two excellent references on timing and carrier recovery circuits are <a href="../Ch10/c10s1p1.htm#Lindsey">Lindsey (1972)</a> and
+    <a href="../Ch10/c10s1p1.htm#Gardner">Gardner (1966)</a>. </td>
+    <td width="50%"><img src="ch5figs/sec2/symbol.gif" align="right" WIDTH="350" HEIGHT="236"></td>
+  </tr>
+</table>
+
+</body>
+</html>

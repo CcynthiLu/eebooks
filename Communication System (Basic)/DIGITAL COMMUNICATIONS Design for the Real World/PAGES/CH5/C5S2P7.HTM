@@ -1,0 +1,59 @@
+<html>
+
+<head>
+<link REL="stylesheet" HREF="../JSCRIPT/STYLES.CSS" TYPE="text/css">
+<script>
+
+pageX=7
+secX=2
+chapX=5
+
+indepthvar="off"
+examplesvar="off"
+questionsvar="off"
+
+</script>
+<script SRC="../JScript/textpage.js">
+document.write("js file not found")
+</script>
+
+<title></title>
+</head>
+
+<body BACKGROUND="../EFFECTS/BG.GIF">
+<!--Page Title Here-->
+<!--Body Text Here-->
+<!--proofed by DR 3/7-->
+<p>&nbsp;</p>
+
+<h2>Non-coherent detection </h2>
+
+<table border="0" width="100%">
+  <tr>
+    <td width="50%">With ASK, the information is conveyed in the amplitude or envelope of the
+    modulated carrier signal and the data can thus be recovered using an envelope detector.
+    The simplest implementation of an envelope detector comprises a diode rectifier and
+    smoothing filter and is classed as a <font color="#0080FF">non-coherent detector.</font><font color="#8080FF"><i> </i></font> The simplicity of this approach is offset by its reduced
+    ability to differentiate the wanted signal from noise when compared with a <a href="c5s2p8.htm">coherent detector</a>. <br>
+    </td>
+    <td width="50%"><img src="ch5figs/sec2/diodedct.gif" align="right" WIDTH="250" HEIGHT="114"></td>
+  </tr>
+  <tr>
+    <td width="50%"><img src="ch5figs/sec2/sqr_add.gif" align="left" WIDTH="250" HEIGHT="112"></td>
+    <td width="50%"> If quadrature versions of the modulated carrier signal are available in
+    the receiver, that is, <BR><font color="#0080FF"><i>a</i>(<i>t</i>)&nbsp;cos&nbsp;<SPAN CLASS=greek>w</SPAN><sub>c</sub><i>t</i></font> and <font color="#0080FF"><i>a</i>(<i>t</i>)&nbsp;sin&nbsp;<SPAN CLASS=greek>w</SPAN><sub>c</sub><i>t</i></font> 
+    (where <i>a</i>(<i>t</i>) represents the data imposed amplitude modulation), then an 
+    alternative form of envelope detector can be used based on squaring and adding the two 
+    quadrature signals and then taking the square root. Mathematically we get:<br>
+    <br>
+    <font color="#0080FF"><i>a</i>(<i>t</i>)<sup>2</sup>&nbsp;cos<sup>2</sup><SPAN CLASS=greek>w</SPAN><sub>c</sub><i>t</i>&nbsp;+&nbsp;<i>a</i>(<i>t</i>)<sup>2</sup>&nbsp;sin<sup>2</sup><SPAN CLASS=greek>w</SPAN><sub>c</sub><i>t</i><BR>
+    =&nbsp;<i>a</i>(<i>t</i>)<sup>2</sup>&nbsp;(cos<sup>2</sup><SPAN CLASS=greek>w</SPAN><sub>c</sub><i>t</i>&nbsp;+&nbsp;sin<sup>2</sup><SPAN CLASS=greek>w</SPAN><sub>c</sub><i>t</i>)
+    =&nbsp;<i>a</i>(<i>t</i>)<sup>2</sup>
+    </td>
+  </tr>
+</table>
+
+<h4 align="center"><br>
+</h4>
+</body>
+</html>

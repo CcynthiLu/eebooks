@@ -1,0 +1,39 @@
+<html>
+
+<head>
+<link REL="stylesheet" HREF="../../JSCRIPT/STYLES.CSS" TYPE="text/css">
+<meta HTTP-EQUIV="Content-Type" CONTENT="text/html; charset=windows-1252">
+<meta NAME="GENERATOR" CONTENT="Microsoft FrontPage 3.0">
+</head>
+<body LINK="#0000FF" VLINK="#800080" background="../../EFFECTS/popups/BG_ex.GIF">
+<!--proofed by DR 3/7-->
+<h2>Example 5.2</h2>
+
+<h4 CLASS="technical">A coherent ASK demodulator has a 5<sup>o</sup> error in its locally 
+generated carrier reference. What will be the degradation in noise power immunity compared 
+with an ideal demodulator?</h4>
+
+<h3>Solution</h3>
+
+<h4 CLASS="technical">The voltage output of the mixer used to compare the incoming symbol 
+<i>a</i>(<i>t</i>)&nbsp;cos&nbsp;<SPAN CLASS=greek>w</SPAN><sub>c</sub><i>t</i>
+with the reference 
+cos(<SPAN CLASS=greek>w</SPAN><sub>c</sub><i>t</i>&nbsp;+&nbsp;5<sup>o</sup>) 
+will be reduced by a factor cos(5<sup>o</sup>) from its maximum value as
+a result of the carrier phase error.</font></small></small></p>
+
+<h4 CLASS="technical">This in turn equates to a reduction in symbol energy
+at the input to the receiver of cos<sup>2</sup>(5<sup>o</sup>). (Symbol energy is proportional to
+power x symbol length or voltage<sup>2</sup> x symbol length.)</h4>
+
+<h4 CLASS="technical">The noise components passing through the mixer will
+also be affected by the phase error in the carrier reference, but since the noise vectors
+are assumed to be randomly distributed through 360<sup>o</sup>, the carrier phase error
+will reduce the effect of some noise vectors and enhance others with the net effect that
+the <font color="#0080FF">average noise voltage</font> at the mixer output will remain unchanged. </h4>
+<h4 class="technical">Hence it is only the symbol energy that is truly affected by carrier reference phase error and not the noise
+power. This means that the effective received symbol energy
+to noise power density will be reduced by a factor 1&nbsp;/&nbsp;cos<sup>2</sup>(5<sup>o</sup>)
+=&nbsp;1.0076, or 0.0033&nbsp;dB as a result of the phase error.</h4>
+</body>
+</html>

@@ -1,0 +1,74 @@
+<html>
+
+<head>
+<link REL="stylesheet" HREF="../../JSCRIPT/STYLES.CSS" TYPE="text/css">
+<meta HTTP-EQUIV="Content-Type" CONTENT="text/html; charset=windows-1252">
+<meta NAME="GENERATOR" CONTENT="Microsoft FrontPage 3.0">
+</head>
+
+<body LINK="#0000FF" VLINK="#800080" background="../../EFFECTS/POPUPS/BG_IND.GIF">
+<!--proofed by DR 25/5; reproofed 4/8-->
+
+<h2>Criteria for matched filtering in AWGN</h2>
+
+<h4 CLASS="technical">Consider the response of a signal <i>S(t)</i>
+plus noise <i>n(t)</i> passing through a detection filter with transfer function <i>H(f)</i>. 
+If the Fourier transform of the signal is <i>S(f)</i> then the time domain output
+of the filter <i>s<sub>o</sub>(t)</i> due to the signal component alone is given by:<BR>
+<BR>
+<img src="i3eqn1.gif" alt="i3eqn1.gif (952 bytes)" WIDTH="200" HEIGHT="28"><BR>
+<BR>
+and the output signal power <i>S</i> is proportional to the square of the signal voltage, 
+thus:<br>
+<BR>
+<img src="i3eqn2.gif" alt="i3eqn2.gif (1248 bytes)" WIDTH="240" HEIGHT="37"><br>
+<BR>
+The power spectral density of the noise at the
+filter output <i>N<sub>0</sub>(f)</i> is given by the squared magnitude of the filter transfer function multiplied by the power spectral density of the input noise. <br>
+<BR>For AWGN, we know the noise spectral density is flat with a value <i>N<sub>0</sub></i>&nbsp;Watts/Hz,
+hence the output noise spectral density is:<br>
+<BR>
+<i>N<sub>0</sub>(f) =&nbsp;N<sub>0</sub>|H(f)|<sup>2</sup></i><BR>
+<BR>
+The average noise power <i>N</i> is found by
+integrating the noise power density over all possible frequencies to give:<BR>
+<BR>
+<img src="i3eqn3.gif" alt="i3eqn3.gif (751 bytes)" WIDTH="120" HEIGHT="29"><BR>
+<BR>
+The goal of the matched filter is to make the signal to
+noise ratio at the sampling time <i>t&nbsp;=&nbsp;T</i> a maximum. A matched filter will thus need to optimise the <i>S</i>/<i>N</i> ratio given by: <BR>
+<BR>
+<img src="i3eqn4.gif" alt="i3eqn4.gif (1602 bytes)" WIDTH="220" HEIGHT="61"><BR>
+<BR>
+In order to find the transfer function <i>H(f)</i>
+which maximises the <i>S</i>/<i>N</i> ratio we need to make use of a result known as Schwarz's inequality. Schwartz's inequality states that: <BR>
+<BR>
+<img src="i3eqn5.gif" alt="i3eqn5.gif (1246 bytes)" WIDTH="240" HEIGHT="39"><BR>
+<BR>
+and also states that for the two sides of this expression to be equal, then: <BR>
+<BR>
+<i>X(f) =&nbsp;Y*(f)</i>exp<i>(-j</i>2<SPAN CLASS=greek>p</SPAN><i>fT)</i><BR>
+<BR>
+Applying this relationship to the <i>S</i>/<i>N</i> expression for the
+filter output we get: <BR>
+<BR>
+<img src="i3eqn6.gif" alt="i3eqn6.gif (740 bytes)" WIDTH="120" HEIGHT="28"><BR>
+<BR>
+where we have made us of the fact that <i>|</i>exp<i>(j</i>2<SPAN CLASS=greek>p</SPAN><i>fT)|=1</i><BR>
+<BR>
+The value of the <i>S</i>/<i>N</i> ratio is maximized when this expression is equal. The Schwartz's inequality thus allows us to conclude that for optimum <i>S</i>/<i>N</i> ratio, that is a matched filter, then: <BR>
+<BR>
+<i>H<sub>matched</sub>(f)=S*(f)</i>exp<i>(-j</i>2<SPAN CLASS=greek>p</SPAN><i>fT)</i><BR>
+<BR>
+The impulse response for this matched filter is thus given by: <BR>
+<BR>
+<img src="i3eqn7.gif" alt="i3eqn7.gif (948 bytes)" WIDTH="230" HEIGHT="24"><BR>
+<BR>
+Given that <i>S*(f)=S(-f)</i> for a real valued signal <i>s(t)</i>
+then: <BR>
+<BR>
+<img src="i3eqn8.gif" alt="i3eqn8.gif (1058 bytes)" WIDTH="280" HEIGHT="25"><BR>
+<BR>
+This result tells us that the impulse response of a matched filter should be a time reversed and delayed version of the input symbol <i>s(t).</i></h4>
+</body>
+</html>

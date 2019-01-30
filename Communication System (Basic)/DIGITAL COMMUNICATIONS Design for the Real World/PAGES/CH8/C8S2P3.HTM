@@ -1,0 +1,70 @@
+<html>
+
+<head>
+<link REL="stylesheet" HREF="../JSCRIPT/STYLES.CSS" TYPE="text/css">
+<script>
+
+pageX=3
+secX=2
+chapX=8
+
+indepthvar="off"
+examplesvar="off"
+questionsvar="off"
+
+</script>
+<script SRC="../JScript/textpage.js">
+document.write("js file not found")
+</script>
+
+<title></title>
+</head>
+
+<body BACKGROUND="../EFFECTS/BG.GIF">
+<!--Page Title Here-->
+<!--proofed by DR 6/6-->
+
+<p>&nbsp;</p>
+
+<h2>Power control in wireless FDMA systems </h2>
+
+<table border="0" width="100%">
+  <tr>
+    <td width="50%">As the <font color="#0080FF">near-far</font> problem can be so dominant in
+    wireless FDMA operation, it is worth looking briefly at techniques for alleviating the
+    problem. The most effective technique over and above maximizing the filtering and spectral
+    shaping within the modem and improving linearity in the TX/RX subsystems is to attempt to
+    level out the signal power from each user at the receiver site. If each user were able to
+    fully control the output power from its own transmitter, and assuming that it knew the
+    path loss to the receiver, then it could adjust its own power to ensure a fixed minimum
+    (yet sufficient) level from all users at the receiving site.<br>
+    </td>
+    <td width="50%"><img src="ch8figs/sec2/fdma_pwr.gif" align="right" WIDTH="300" HEIGHT="184"></td>
+  </tr>
+</table>
+<!--Section Heading-->
+<!--Body Text Here-->
+
+<table border="0" width="100%">
+  <tr>
+    <td width="100%">Determining the path loss is the key problem. Certainly it is possible in
+    a duplex link for the remote user to measure the power received from the base-station site
+    and hence calculate the path loss in the 'downlink'; however, unless the user is
+    stationary and operating on the same frequency for transmit and receive, this does not
+    necessarily translate to the path loss in the 'uplink' direction. For example, the remote
+    user could be receiving in a frequency selective fade, in which case the unit would
+    &nbsp; overestimate the path loss involved. Alternatively the uplink could be subject to a
+    frequency selective fade and the unit not generate sufficient transmit power. A solution
+    to this problem is to operate a <font color="#0080FF">closed loop power control</font>
+    system whereby the base-station unit monitors the signal power from each remote unit and
+    issues commands to increase or decrease TX power accordingly. This can, however, incur a
+    high signalling overhead in the system. It turns out that power control is very critical
+    in CDMA and to a lesser extent TDMA operation, and closed loop power control is common in
+    CDMA applications. </td>
+  </tr>
+</table>
+
+<h4>&nbsp;<br>
+</h4>
+</body>
+</html>

@@ -1,0 +1,26 @@
+<html>
+
+<head>
+<link REL="stylesheet" HREF="../../JSCRIPT/STYLES.CSS" TYPE="text/css">
+<meta HTTP-EQUIV="Content-Type" CONTENT="text/html; charset=windows-1252">
+<meta NAME="GENERATOR" CONTENT="Microsoft FrontPage 3.0">
+</head>
+<body LINK="#0000FF" VLINK="#800080" background="../../EFFECTS/popups/BG_ex.GIF">
+<!--proofed by DR 7/6-->
+<h2>Example 7.3</h2>
+
+<h4 CLASS="technical">A mobile radio data link uses interleaving to spread
+the data errors on reception. If the interleaving depth used is a 10&nbsp;x&nbsp;8 matrix, and the
+bit rate for the signal is 9600&nbsp;bps, what is the latency introduced by the interleaving
+process?</h4>
+<h3>Solution</h3>
+
+<h4 ALIGN="CENTER"><img SRC="../ch7figs/sec4/inter_1.gif" WIDTH="326" HEIGHT="246"></h4>
+<h4 CLASS="technical">The de-interleaving process requires that the matrix
+rows are full up before the data can be read out from the columns, thus 8&nbsp;x&nbsp;10&nbsp;bits
+ =&nbsp;80&nbsp;bits must be read into the matrix before the de-interleaved data can be extracted. The
+data rate is 9600&nbsp;bps, thus the time taken to load the matrix is 80&nbsp;/&nbsp;9600
+ =&nbsp;8.3&nbsp; ms. A further 8.3&nbsp;ms will be used loading the interleaving matrix in the transmitter, giving a
+total latency of 16.6&nbsp;ms.</h4>
+</body>
+</html>

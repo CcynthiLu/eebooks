@@ -1,0 +1,72 @@
+<html>
+
+<head>
+<link REL="stylesheet" HREF="../JSCRIPT/STYLES.CSS" TYPE="text/css">
+<script>
+
+pageX=6
+secX=5
+chapX=3
+
+indepthvar="off"
+examplesvar="off"
+questionsvar="off"
+
+</script>
+<script SRC="../JScript/textpage.js">
+document.write("js file not found")
+</script>
+
+<title></title>
+</head>
+
+<body BACKGROUND="../EFFECTS/BG.GIF">
+<!--Page Title Here-->
+<!--Body Text Here-->
+<!--proofed by DR 25/5-->
+
+<p>&nbsp;</p>
+
+<h2>BER performance for matched filter detection </h2>
+
+<table border="0" width="100%">
+  <tr>
+    <td width="100%"><h4>Let us consider the BER performance for a rectangular baseband pulse
+    using an integrate and dump filter for detection. (We know that this is a matched filter
+    detector for this pulse shape and hence we can infer that this result will apply for all
+    matched filter detectors regardless of the pulse shape.)</h4>
+    </td>
+  </tr>
+</table>
+
+<table border="0" width="100%">
+  <tr>
+    <td width="50%"><h4><BR><BR><BR><BR>If we look at a single symbol <i>s(t)</i> of voltage <i>V</i> passing
+    through the detector, with additive noise <i>n(t)</i>, then the output of the integrator <i>y(t)</i>
+    can be written as:</h4>
+    </td>
+    <td width="50%"><img src="ch3figs/sec5/i_dump.gif" align="right" border="0" WIDTH="350" HEIGHT="134"></td>
+  </tr>
+</table>
+
+<table border="0" width="100%">
+  <tr>
+    <td width="100%"><p align="center"><img src="CH3FIGS/SEC5/c3s5p6_e.gif" WIDTH="260" HEIGHT="29"></td>
+  </tr>
+</table>
+
+<table border="0" width="100%">
+  <tr>
+    <td width="100%"><h4>The contribution at the sampling instant due to the symbol is thus a
+    voltage <i>V·T</i>&nbsp;volts. The symbol will be detected correctly if the contribution due to noise does not take the signal plus noise sample
+    below the decision threshold (<i>V·T</i>/2&nbsp;volts) which is halfway between 0&nbsp;volts
+    for the logic 0 case, and <i>V·T</i>&nbsp;volts for the logic 1 case.</h4>
+    </td>
+  </tr>
+</table>
+
+<p>&nbsp;</p>
+
+
+</body>
+</html>

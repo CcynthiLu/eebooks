@@ -1,0 +1,78 @@
+
+<html>
+
+<head>
+<link REL="stylesheet" HREF="../../JSCRIPT/STYLES.CSS" TYPE="text/css">
+<meta HTTP-EQUIV="Content-Type" CONTENT="text/html; charset=windows-1252">
+<meta NAME="GENERATOR" CONTENT="Microsoft FrontPage 3.0">
+</head>
+<body LINK="#0000FF" VLINK="#800080" background="../../EFFECTS/popups/BG_q.GIF">
+<!--proofed by DR 6/6-->
+<h2>Answer 1.10</h2>
+
+<h4 CLASS="technical">Let us write the inputs to the vector modulator as:
+
+<blockquote>
+  cos(<SPAN CLASS=greek>w</SPAN><sub>0</sub><i>t</i>), and sin(<SPAN CLASS=greek>w</SPAN><sub>0</sub><i>t</i>)
+</blockquote>
+
+and the carrier inputs as:
+
+<blockquote>
+  <I>A</i>.cos(<SPAN CLASS=greek>w</SPAN><sub>c</sub><i>t</i>), and {<I>A</i>&nbsp+&nbsp;<SPAN CLASS=greek>d</SPAN><I>A</i>}.sin(<SPAN CLASS=greek>w</SPAN><sub>c</sub><i>t</i>)
+</blockquote>
+
+where <SPAN CLASS=greek>d</SPAN><I>A</i> is the amplitude error. The mixer outputs then become:
+
+<blockquote>
+  cos(<SPAN CLASS=greek>w</SPAN><sub>0</sub><i>t</i>).<I>A</i>cos(<SPAN CLASS=greek>w</SPAN><sub>c</sub><i>t</i>) =&nbsp;0.5<I>A</i>cos(<SPAN CLASS=greek>w</SPAN><sub>c</sub>&nbsp+&nbsp;<SPAN CLASS=greek>w</SPAN><sub>0</sub>)<i>t</i>&nbsp;+&nbsp;0.5<I>A</i>cos(<SPAN CLASS=greek>w</SPAN><sub>c</sub>&nbsp&#150;&nbsp;<SPAN CLASS=greek>w</SPAN><sub>0</sub>)<i>t</i>
+</blockquote>
+
+and
+
+<blockquote>
+  sin(<SPAN CLASS=greek>w</SPAN><sub>0</sub><i>t</i>).{<I>A</i>&nbsp+&nbsp;<SPAN CLASS=greek>d</SPAN><I>A</i>}.sin(<SPAN CLASS=greek>w</SPAN><sub>c</sub><i>t</i>) =&nbsp&#150;0.5{<I>A</i>&nbsp+&nbsp;<SPAN CLASS=greek>d</SPAN><I>A</i>}cos(<SPAN CLASS=greek>w</SPAN><sub>c</sub>&nbsp+&nbsp;<SPAN CLASS=greek>w</SPAN><sub>0</sub>)<i>t</i>&nbsp;+&nbsp;0.5{<I>A</i>&nbsp+&nbsp;<SPAN CLASS=greek>d</SPAN><I>A</i>}cos(<SPAN CLASS=greek>w</SPAN><sub>c</sub>&nbsp&#150;&nbsp;<SPAN CLASS=greek>w</SPAN><sub>0</sub>)<i>t</i>
+</blockquote>
+
+At the output of the summing device we get a wanted 
+term at the difference frequency and an unwanted term (usually referred to as the image)
+at the sum frequency as follows:<BR><BR>
+
+&nbsp;&nbsp;Difference term:
+
+<blockquote>
+  {<I>A</i>&nbsp+&nbsp;0.5.<SPAN CLASS=greek>d</SPAN><I>A</i>}cos(<SPAN CLASS=greek>w</SPAN><sub>c</sub>&nbsp&#150;&nbsp;<SPAN CLASS=greek>w</SPAN><sub>0</sub>)<i>t</i>
+</blockquote>
+
+&nbsp;&nbsp;Sum term:
+
+<blockquote>
+  0.5.<SPAN CLASS=greek>d</SPAN><I>A</i>cos(<SPAN CLASS=greek>w</SPAN><sub>c</sub>&nbsp+&nbsp;<SPAN CLASS=greek>w</SPAN><sub>0</sub>)t
+</blockquote>
+
+The ratio of the amplitude of the wanted to unwanted terms is thus:
+
+<blockquote>
+  <i>Amplitude ratio (image supression)</i> =&nbsp;{<I>A</i>&nbsp+&nbsp;0.5.<SPAN CLASS=greek>d</SPAN><I>A</i>}&nbsp;/&nbsp;0.5.<SPAN CLASS=greek>d</SPAN><I>A</i>
+</blockquote>
+
+Now the question states that the amplitude error in
+the local oscillator is 0.1&nbsp;dB, hence:
+
+<blockquote>
+  20.log<sub>10</sub>{<i>A</i>&nbsp;/&nbsp;(<i>A</i>&nbsp;+&nbsp;<SPAN CLASS=greek>d</SPAN><I>A</i>)}
+   =&nbsp;0.1&nbsp;dB
+</blockquote>
+
+therefore
+
+<blockquote>
+  <i>A</i>&nbsp;/&nbsp;(<i>A</i>&nbsp;+&nbsp;<SPAN CLASS=greek>d</SPAN><I>A</i>)
+   =&nbsp;0.987, and <SPAN CLASS=greek>d</SPAN><i>A</i>
+   =&nbsp;0.0132<i>A</i>
+</blockquote>
+
+The amplitude ratio of wanted to unwanted signal is
+thus 150.5:1, or a relative power level of approximately 21&nbsp;dB</h4>
+</body>
+</html>

@@ -1,0 +1,32 @@
+<html>
+
+<head>
+<link REL="stylesheet" HREF="../../JSCRIPT/STYLES.CSS" TYPE="text/css">
+<meta HTTP-EQUIV="Content-Type" CONTENT="text/html; charset=windows-1252">
+<meta NAME="GENERATOR" CONTENT="Microsoft FrontPage 3.0">
+</head>
+<body LINK="#0000FF" VLINK="#800080" background="../../EFFECTS/popups/BG_ex.GIF">
+<!--proofed by DR 3/7-->
+<h2>Example 5.4</h2>
+
+<h4 CLASS="technical">A digital radio system uses binary FSK for data
+transmission, with the two symbol frequencies at +1200&nbsp;Hz and &#150;1200&nbsp;Hz with respect
+to the channel centre. The received signal is subject to a Doppler shift of +100&nbsp;Hz due to
+the receiver motion. Sketch the output of a PLL FSK detector for a 1,&nbsp;0,&nbsp;1,&nbsp;0,&nbsp;1,&nbsp;0,&nbsp;.... data
+stream assuming there is no pulse shaping. How can the problem of Doppler shift be
+overcome in a digital FSK radio system?</h4>
+<h3>Solution</h3>
+<h4 CLASS="technical">The effect of the Doppler shift on the receiver
+signal is to make the symbols appear at frequencies of +1300&nbsp;Hz and &#150;1100&nbsp;Hz with
+respect to the notional centre frequency of the PLL detector. The result is that the PLL
+output will have a dc-bias voltage superimposed on the recovered data signal as shown
+below, proportional to the Doppler offset.</font></small></small></p>
+
+<h4 ALIGN="CENTER"><img SRC="../ch5figs/sec3/e1diag.gif" WIDTH="350" HEIGHT="97"></h4>
+
+<h4 CLASS="technical">To eliminate the Doppler shift the output of the PLL
+detector can be ac-coupled, however, this would also affect any low frequency content in
+the data signal itself. A coding scheme such as Manchester encoding (see Section 4.4), 
+could be used here to remove any low frequency content in the data signal.</h4>
+</body>
+</html>

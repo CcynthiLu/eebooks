@@ -1,0 +1,63 @@
+<html>
+
+<head>
+<link REL="stylesheet" HREF="../JSCRIPT/STYLES.CSS" TYPE="text/css">
+<script>
+
+pageX=10
+secX=2
+chapX=5
+
+indepthvar="off"
+examplesvar="off"
+questionsvar="off"
+
+</script>
+<script SRC="../JScript/textpage.js">
+document.write("js file not found")
+</script>
+
+<title></title>
+</head>
+
+<body BACKGROUND="../EFFECTS/BG.GIF">
+<!--Page Title Here-->
+<!--Body Text Here-->
+<!--proofed by DR 3/7-->
+
+<p>&nbsp;</p>
+
+<h2>Coherent detection vs non-coherent detection (cont.)</h2>
+
+<table border="0" width="100%">
+  <tr>
+    <td width="50%">Let us now consider the case of detecting the ASK signal in the presence
+    of noise. For simplicity we will assume that the carrier is in the 'off' state and that we
+    have a specific noise component of length <i>N</i> and phase 60<sup>o</sup>.<br>
+    <br>
+    The non-coherent detector, which is performing amplitude detection, is simply measuring
+    the <font color="#0080FF">length</font> of the composite (ASK + Noise) vector regardless
+    of the vector phase. It would thus produce an output voltage proportional to <i>N</i>, the
+    noise vector length.</td>
+    <td width="50%"><img src="ch5figs/sec2/noise_ch.gif" align="right" WIDTH="200" HEIGHT="190"></td>
+  </tr>
+</table>
+
+<table border="0" width="100%">
+  <tr>
+    <td width="100%">The coherent detector, on the other hand, acts by mixing the incoming
+    signal with the reference carrier cos&nbsp;<SPAN CLASS=greek>w</SPAN><sub>c</sub><i>t</i>. 
+    The result is that the
+    voltage at the detector output due to the noise is reduced by a factor cos(60<sup>o</sup>) 
+    =&nbsp;0.5 and is thus proportional to <i>N</i>/2. If the noise vector happens to be in phase
+    with the carrier reference, there is no reduction in noise, while if the noise vector is
+    90<sup>o</sup> out of phase, the noise is reduced to zero. <BR>
+<BR>
+    On average, the coherent detection method reduces the noise voltage out of the detector by a factor of root 2
+    and the noise power by 2. In other words, coherent detection of ASK can tolerate 3&nbsp;dB more
+    noise than non-coherent ASK for the same likelihood of detection error. </td>
+  </tr>
+</table>
+
+</body>
+</html>

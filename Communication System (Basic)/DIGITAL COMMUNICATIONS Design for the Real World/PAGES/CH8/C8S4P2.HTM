@@ -1,0 +1,61 @@
+<html>
+
+<head>
+<link REL="stylesheet" HREF="../JSCRIPT/STYLES.CSS" TYPE="text/css">
+<script>
+
+pageX=2
+secX=4
+chapX=8
+
+indepthvar="off"
+examplesvar="off"
+questionsvar="off"
+
+</script>
+<script SRC="../JScript/textpage.js">
+document.write("js file not found")
+</script>
+
+<title></title>
+</head>
+
+<body BACKGROUND="../EFFECTS/BG.GIF">
+<!--Page Title Here-->
+<!--Section Heading-->
+<!--proofed by DR 6/6-->
+
+<p>&nbsp;</p>
+
+<h2>Frequency hopped CDMA</h2>
+
+<table border="0" width="100%">
+  <tr>
+    <td width="50%"><font color="#0080FF">Frequency hopping</font><font COLOR="#8080FF"><i> </i></font>involves
+    taking the narrow bandpass signals for individual users and constantly changing their
+    positions in frequency with time. In a frequency selective fading environment, the benefit
+    of changing frequency like this is to ensure that any one user's signal will not remain
+    within a fade for any prolonged period of time. Clearly for frequency hopping to be
+    effective, the users must hop over a bandwidth significantly wider than <font color="#0080FF">notch</font> caused by <a href="../ch4/c4s5p4.htm">frequency selective
+    fading</a>. In order to ensure that individual users never (or rarely) hop onto the same
+    frequency slot at the same time, causing mutual interference, the carrier frequencies are
+    assigned according to a predetermined sequence or <font color="#0080FF">code</font>.</td>
+    <td width="50%"><img src="ch8figs/sec4/fh_cdma.gif" align="right" WIDTH="360" HEIGHT="216"></td>
+  </tr>
+</table>
+<!--Body Text Here-->
+
+<table border="0" width="100%">
+  <tr>
+    <td width="100%">Frequency hopping is most effective if a fast hopping rate is used
+    (several thousand times per second) so that the communications are not corrupted by fading
+    or mutual interference for any length of time. This, however, brings problems in the
+    design of fast switching synthesizers and broadband power amplifiers which in practice put
+    an upper limit on the hopping rate. Also, the narrowband channels are susceptible to <a "" href="../ch4/c4s2p10.htm">Doppler shift</a>, <a "" href="../ch4/c4s2p9.htm">local
+    oscillator error</a> and so on, and compensation techniques are struggling with fast hop
+    rates. Hopping also makes a system less vulnerable to discrete narrowband interference and
+    near-far effect problems. </td>
+  </tr>
+</table>
+</body>
+</html>

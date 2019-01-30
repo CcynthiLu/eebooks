@@ -1,0 +1,397 @@
+<HTML>
+<HEAD>
+
+
+<SCRIPT language="javascript">
+<!--
+
+current_page = -1;
+pos_in_index = 'TOP';
+
+// --------------------------------------------
+// Preload button images
+
+buttons = new Array(5);
+
+buttons.nextpage = new Array(2);
+buttons.nextpage.on = new Image();		buttons.nextpage.on.src = "EFFECTS/PAGES/NEXT_ON.GIF";
+buttons.nextpage.off = new Image();		buttons.nextpage.off.src = "EFFECTS/PAGES/NEXT_OFF.GIF";
+
+buttons.back = new Array(2);
+buttons.back.on = new Image();			buttons.back.on.src = "EFFECTS/PAGES/BACK_ON.GIF";
+buttons.back.off = new Image();			buttons.back.off.src = "EFFECTS/PAGES/BACK_OFF.GIF";
+
+buttons.prevpage = new Array(2);
+buttons.prevpage.on = new Image();		buttons.prevpage.on.src = "EFFECTS/PAGES/PREV_ON.GIF";
+buttons.prevpage.off = new Image();		buttons.prevpage.off.src = "EFFECTS/PAGES/PREV_OFF.GIF";
+
+buttons.bookmark = new Array(2);
+buttons.bookmark.on = new Image();		buttons.bookmark.on.src = "EFFECTS/PAGES/BM_ON.GIF";
+buttons.bookmark.off = new Image();		buttons.bookmark.off.src = "EFFECTS/PAGES/BM_OFF.GIF";
+
+buttons.view_bm = new Array(2);
+buttons.view_bm.on = new Image();		buttons.view_bm.on.src = "EFFECTS/PAGES/VIEW_ON.GIF";
+buttons.view_bm.off = new Image();		buttons.view_bm.off.src = "EFFECTS/PAGES/VIEW_OFF.GIF";
+
+
+
+function change_button(whichbutton,onoroff)
+// =====================================
+{	document.images[whichbutton].src = buttons[whichbutton][onoroff].src;
+}
+
+
+   function load_page(c,s,p)
+// =====================================
+// Displays page CcSsPp in the main frame.
+// Special case is made for contents and index: the user is taken straight
+// to the part of the page they were last looking at, or in the case of contents,
+// the part of the page showing the current chapter.
+{
+	var newloc = top.chaps.base_href + "/CH" + c + "/C" + c + "S" + s + "P" + p + ".HTM";
+	
+	if (c==9)
+		newloc += "#ch" + top.chaps.current_chapter;
+	else if (c==11)
+		newloc += "#" + pos_in_index;	
+	
+	top.main.location = newloc;
+}
+
+
+   function prev_page()
+// =====================================
+// Called when the 'previous page' arrow is pressed
+{	
+	if (top.chaps.current_chapter > 8 || current_page == -1 || top.secs.current_section < 1 || top.chaps.current_chapter == -1)
+		return;	
+			
+	var p = current_page-1;
+	var s = top.secs.current_section;
+	var c = top.chaps.current_chapter;
+	
+	if (p<1)
+	{	if (s<2)	
+		{	if (c<1)		// We're on the first page of chapter 0; do nothing
+				return;
+			else			// Go to last page of last section of previous chapter
+			{	s = top.chaps.sec_headings[--c].length - 1;
+				p = top.secs.page_headings[c][s].length-1;
+			}
+		}
+		else				// Go to last page of previous section of current chapter
+			p = top.secs.page_headings[c][--s].length-1;
+	}
+	
+	change_button("prevpage","on");	
+	load_page(c,s,p);	
+	setTimeout("change_button('prevpage','off')",200);
+}
+
+
+   function next_page()
+// =====================================
+// Called whenever the 'next page' arrow is pressed
+{	
+	if (top.chaps.current_chapter > 8 || current_page == -1 || top.secs.current_section == -1 || top.chaps.current_chapter == -1)
+		return;
+		
+	var p = current_page+1;
+	var s = top.secs.current_section == 0 && current_page == 0 ? 1 : top.secs.current_section;
+	var c = top.chaps.current_chapter;
+	
+	if (p >= top.secs.page_headings[c][s].length)
+	{	if (s >= top.chaps.sec_headings[c].length-1)
+		{	if (c > 7)		// Do nothing: we're on the last page of the last sec of chap 8
+				return;		
+			else			// Go to first page of first section of next chapter
+			{	c++;
+				s = p =1;
+			}
+		}
+		else				// Go to first page of next section of current chapter
+		{	s++;
+			p = 1;
+		}
+	}
+	
+	change_button("nextpage","on");
+	load_page(c,s,p);
+	setTimeout("change_button('nextpage','off')",200);
+}
+
+   function bookmark()
+// =====================================
+// Bookmarks the current location of top.main, by adding current chap,sec,page to the bookmarks array.
+// First calls retrieve_cookie() to create that array, then calls save_cookie() to store it again.
+// Does some checking to see whether the page to be bookmarked is valid.
+{	
+	// Chapters 9 (contents), 10 (refs) & 11 (index) are special cases: for these, the file is named 'S1P1'
+	// but the current_section & current_page variables are zero (to signify that they have no sections).
+	// So in these cases we save the correct filename, otherwise we use the current_section etc. variables.
+	if (top.chaps.current_chapter > 8)
+		var thispage = "C" + top.chaps.current_chapter + "S1P1";
+	else
+		var thispage = "C" + top.chaps.current_chapter + "S" + top.secs.current_section + "P" + current_page;
+	
+	
+	if (top.chaps.current_chapter < 0 || top.secs.current_section < 0 || current_page < 0)
+	{	alert("Sorry - cannot bookmark this page.");
+		return;
+	}	
+	
+	retrieve_cookie(); // Fill the bookmarks array with the current bookmarks info.
+	
+	// Check to see if this page is already bookmarked.
+	for (var i=0; i<bookmarks.length; i++)
+		if (bookmarks[i] == thispage)
+		{	alert("This page is already bookmarked.");
+			return;
+		}
+
+	if (bookmarks.length >= 20)
+	{	alert("Sorry - there is a limit of 20 bookmarks. You can delete bookmarks by pressing the 'view bookmarks' button.");
+		return;
+	}
+	
+	if (bookmarks[0] == "")
+		bookmarks[0] = thispage;
+	else
+		bookmarks[bookmarks.length] = thispage;
+
+	save_cookie();	// Save the new bookmarks.
+
+	change_button("bookmark","on");
+	setTimeout("change_button('bookmark','off')",800);
+}
+
+
+   function view_bookmarks()
+// =========================================
+// Displays user's current bookmarks, by retrieving the cookie which stores them,
+// then creating an HTML page on the fly. Assumes the bookmarks to be relative to the
+// current document's URL, which is stored in 'base_href'. Each bookmark has a delete
+// button next to it, which, when pressed, calls the function 'delete_bookmark' below.
+{
+	change_button("view_bm","on");
+
+	retrieve_cookie();
+	
+	// Update the other frames so they don't show any highlighted info.
+	top.chaps.clear_head();
+	top.chaps.update(-1);
+	top.secs.update(-1,-1);
+	top.chaps.current_chapter = top.secs.current_section = this.current_page = -1;
+	
+	top.main.document.write('<HTML><HEAD><STYLE TYPE="text/css">H1 {font-family: arial, helvetica; font-size: 24px} BODY, TD {font-family: verdana, arial, helvetica; font-size: 12px; }</STYLE><TITLE></TITLE><BODY BACKGROUND="',top.chaps.base_href,'/EFFECTS/BG.GIF"><H1>Bookmarks</H1>Choose a bookmarked page or click <b>Back</b> at the foot of the page to return to the page you were viewing before this one.<P><TABLE CELLPADDING=5>');
+	
+	if (bookmarks[0] == "")
+		top.main.document.write("</TABLE>You have no bookmarks.");
+	else		
+	{	var HREF_string, link_string;
+		for (var i=0; i<bookmarks.length; i++)
+		{	var s_charAt = bookmarks[i].indexOf('S');
+			var p_charAt = bookmarks[i].indexOf('P');
+			var c = bookmarks[i].substring(1, s_charAt); 						// chapter of bookmark
+			var s = bookmarks[i].substring(s_charAt+1, p_charAt);				// section of bookmark
+			var p = bookmarks[i].substring(p_charAt+1, bookmarks[i].length);	// page of bookmark
+			
+			// Write the info for the delete button.
+			top.main.document.write('<TR><TD><A HREF="javascript:top.foot.delete_bookmark(',i,')"><IMG ALIGN="absmiddle" ALT="Delete" WIDTH="65" HEIGHT="20" BORDER="0" SRC="',top.chaps.base_href,'/EFFECTS/PAGES/DEL_BM.GIF"></A></TD>');
+			
+			// Write the bookmark, encased in an anchor tag which takes user to that page.
+			// They may have bookmarked a virtual page (chap/sec listing), in which case the
+			// anchor tag will have to point to a *function* which writes that page.
+			if (p==0) 
+			{	if (s==0)
+				{	HREF_string = "javascript:top.chaps.load_section_list(" + c + ")";
+					link_string = "List of sections in Chapter " + c;
+				}else
+				{	HREF_string = "javascript:top.secs.load_page_list(" + c + "," + s + ")";
+					link_string = "List of topics in Chapter " + c + ", Section " + s;
+				}
+			}
+			else // It's a normal page - not a pesky virtual listing page
+			{	HREF_string = top.chaps.base_href + "/CH" + c + "/" + bookmarks[i] + ".HTM";
+				// If it's a contents, refs or index page, only the 'chapter' title exists to show.
+				if (c>8) 
+					link_string = top.chaps.chap_headings[c];
+				else
+					link_string = top.secs.page_headings[c][s][p];
+			}
+			top.main.document.write("<TD><A HREF='",HREF_string,"'>",link_string,"</A></TD></TR>");
+		}
+		top.main.document.write("</TABLE>");
+	}
+	
+	top.main.document.write("</BODY></HTML>");		
+	top.main.document.close();
+	
+	change_button("view_bm","off");
+}
+
+
+   function delete_bookmark(bookmark_num)
+// ============================================
+// Tags 'bookmark_num' for deletion by setting it to an empty string.
+// Then calls save_cookie(), which won't save blank bookmarks.
+{
+	bookmarks[bookmark_num] = ""; 
+	save_cookie();
+	view_bookmarks();
+}
+
+
+   function save_cookie()
+// ============================================
+// Saves the array 'bookmarks' as one cookie, taking the form:
+// 'bateman=C##S#P##&C##S#P##...' with expiry date a year from now, and path as "/".
+// Not saving entire URL because it'll never change, it takes up too much space, and we can recreate it later.
+// Not saving each bookmark as a separate cookie as we may want more than 20.
+// Any empty element of bookmarks array is considered deleted, and isn't saved in the cookie.
+{
+	// First put the long cookie string together.
+	var cookie_string = "bateman=";
+
+	for (var i=0; i<bookmarks.length; i++)
+	{	if (bookmarks[i] == "")
+			continue;
+		if (cookie_string != "bateman=")
+			cookie_string += '&';
+		cookie_string += bookmarks[i];
+	}
+	 // Append the expiry date.
+	//var one_year_hence = (new Date()).getTime() + 31536000000;	
+	var expiry_date = new Date(2005,11,30,0,0,0);
+	cookie_string += "; expires=" + (expiry_date.toGMTString());
+		
+	document.cookie = cookie_string;	
+}
+
+
+   function delete_all_cookies()
+// ============================================
+// Used for debugging!
+{	document.cookie = "bateman=goaway; path=/; expires=Fri, 02-Jan-1970 00:00:00 GMT";
+}
+
+
+   function retrieve_cookie()
+// ============================================
+// Creates the array 'bookmarks' containing just the values part of the cookie 'bateman'.
+// Each bookmark in the cookie is separated by '&'.
+{
+	bookmarks = new Array("");
+	
+	// First extract cookie 'bateman' from any others there might be. (Unlikely, but you never know.)
+	var cookies = document.cookie;
+		
+	var cookie_start = cookies.indexOf("bateman=");
+	if (cookie_start == -1)
+		 return; // No bateman cookie exists: bookmarks array will be empty.
+	else
+	{	cookie_start += 8;
+		var cookie_end = cookies.indexOf(";",cookie_start);
+		if (cookie_end == -1)
+			cookie_end = cookies.length; // Just in case there's no expiry date.
+		
+		// Load the bookmarks array with the cookie value split at ampersand.
+		var ourcookie = cookies.substring(cookie_start,cookie_end);
+		bookmarks = ourcookie.split('&');
+	}
+}
+
+
+   function back_history()
+// ============================================
+// Use custom history array. history.back() doesn't work.
+// hist_index is always pointing to the current page in the hist array.
+{	
+	
+	if (top.chaps.histindex == -1)		// No pages have been visited yet.
+	{	load_opening_page();
+		return;
+	}
+	
+	// If the current page is a 'view bookmarks' page, it hasn't registered as a page in the hist array,
+	// so we go 'back' to what the hist array thinks is the current page. Otherwise go back one page properly.
+	if (top.chaps.current_chapter == -1 && top.secs.current_section == -1 && this.current_page == -1)
+		var onebefore = top.chaps.histindex; // Go 'back' to the current element of the hist array.
+	else
+	{	if (top.chaps.histindex <= 0) // There is no previous page so display the default opening page.
+		{	load_opening_page();
+			return;
+		}else
+			var onebefore = top.chaps.histindex-1; // Go back to the previous element of the hist array.
+	}
+	
+	change_button("back","on");
+	
+	if (top.chaps.hist[onebefore].chap > 8)			// Contents, index, refs and glossary only have one page.
+		load_page(top.chaps.hist[onebefore].chap, 1, 1);	
+	else if (top.chaps.hist[onebefore].page == 0)	// Deal with the case of section/page listings.
+	{	if (top.chaps.hist[onebefore].sec == 0)
+			top.chaps.load_section_list(top.chaps.hist[onebefore].chap);
+		else
+			top.secs.load_page_list(top.chaps.hist[onebefore].chap, top.chaps.hist[onebefore].sec);
+	} 
+	else	// It's a normal page.
+		load_page(top.chaps.hist[onebefore].chap, top.chaps.hist[onebefore].sec, top.chaps.hist[onebefore].page);
+	
+	top.chaps.histindex = onebefore;
+	
+	setTimeout("change_button('back','off')",500);
+}
+
+
+   function load_opening_page()
+// ============================================
+{
+	top.chaps.histindex = -1;
+	top.main.location = top.chaps.base_href + "/BEGIN.HTM";
+	top.chaps.clear_head();
+	top.chaps.update(-1);
+	top.secs.update(-1,-1);
+	top.chaps.current_chapter = top.secs.current_section = this.current_page = -1;
+}
+
+//-->
+</SCRIPT>
+
+
+</HEAD>
+
+
+<BODY BGCOLOR="#0066CC">              
+<CENTER>
+
+<TABLE WIDTH=95% BORDER=0 CELLPADDING=0 CELLSPACING=0>
+<TR>
+
+<TD ALIGN=left VALIGN=middle>
+	<A HREF="http://www.awl-he.com/engineering/bateman.html" TARGET="_blank"><IMG NAME="feedback" SRC="EFFECTS/PAGES/FEEDBACK.GIF" ALT="Updates & feedback" WIDTH="94" HEIGHT="34" BORDER="0" HSPACE="0" VSPACE="0"></A>
+</TD>
+
+<TD ALIGN=left VALIGN=middle>
+	<A HREF="javascript:view_bookmarks()"><IMG NAME="view_bm" SRC="EFFECTS/PAGES/VIEW_OFF.GIF" ALT="View Bookmarks" WIDTH="95" HEIGHT="34" BORDER="0" HSPACE="0" VSPACE="0"></A>
+	&nbsp;
+	<A HREF="javascript:bookmark()"><IMG NAME="bookmark" SRC="EFFECTS/PAGES/BM_OFF.GIF" ALT="Bookmark this page" WIDTH="91" HEIGHT="34" BORDER="0" HSPACE="0" VSPACE="0"></A>
+</TD>
+
+<TD ALIGN=right VALIGN=middle>
+	<A HREF="javascript:back_history()"><IMG NAME="back" SRC="EFFECTS/PAGES/BACK_OFF.GIF" ALT="Back to the last page you looked at" WIDTH="66" HEIGHT="34" BORDER="0" HSPACE="0" VSPACE="0"></A>
+</TD>
+
+<TD ALIGN=right VALIGN=middle WIDTH=170>
+	<A HREF="javascript:prev_page()"><IMG NAME="prevpage" SRC="EFFECTS/PAGES/PREV_OFF.GIF" ALT="Previous page" WIDTH="82" HEIGHT="36" BORDER="0" HSPACE="0" VSPACE="0"></A>
+	<A HREF="javascript:next_page()"><IMG NAME="nextpage" SRC="EFFECTS/PAGES/NEXT_OFF.GIF" ALT="Next page" WIDTH="67" HEIGHT="36" BORDER="0" HSPACE="0" VSPACE="0"></A>
+</TD>
+
+</TR>
+</TABLE>
+
+</CENTER>
+</BODY>
+
+</HTML>
+

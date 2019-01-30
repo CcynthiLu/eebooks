@@ -1,0 +1,87 @@
+<html>
+
+<head>
+<link REL="stylesheet" HREF="../JSCRIPT/STYLES.CSS" TYPE="text/css">
+<script>
+
+pageX=8
+secX=2
+chapX=5
+
+indepthvar="off"
+examplesvar="on"
+questionsvar="on"
+
+e1=0
+e2=1
+e3=e4=e5=e6=e7=0
+q1=1
+q2=q3=q4=q5=q6=q7=0
+
+</script>
+<script SRC="../JScript/textpage.js">
+document.write("js file not found")
+</script>
+
+<title></title>
+</head>
+
+<body BACKGROUND="../EFFECTS/BG.GIF">
+<!--Page Title Here-->
+<!--Body Text Here-->
+<!--proofed by DR 3/7-->
+
+<table border="0" CELLSPACING="4" align="right">
+  <tr>
+    <td VALIGN="top" ALIGN="center"><H4><a CLASS="popup" HREF="javascript:open_examples_window(2,8)"><img SRC="../EFFECTS/EX_ICON.GIF" BORDER="0" VSPACE="4" WIDTH="44" HEIGHT="45"></a> <br>
+    <a CLASS="popup" HREF="javascript:open_examples_window(2,8)">Example 5.2</a></h4>
+    </td>
+    <td VALIGN="top" ALIGN="center"><H4><a CLASS="popup" HREF="javascript:open_question_window(2,12)"><img SRC="../EFFECTS/Q_ICON.GIF" BORDER="0" VSPACE="4" WIDTH="44" HEIGHT="45"></a> <br>
+    <a CLASS="popup" HREF="javascript:open_question_window(2,12)">Question 5.2</a></h4>
+    </td>
+  </tr>
+</table>
+
+<p>&nbsp;</p>
+
+<h2>Coherent detection</h2>
+
+<table border="0" width="100%">
+  <tr>
+    <td width="50%"><img src="ch5figs/sec2/cohdect.gif" align="left" WIDTH="250" HEIGHT="116"></td>
+    <td width="50%">A <font color="#0080FF">coherent detector</font> operates by mixing the
+    incoming data signal with a locally generated carrier reference and selecting the
+    difference component from the mixer output. Representing the modulated data signal as <font color="#0080FF">
+    <i>a</i>(<i>t</i>)&nbsp;cos&nbsp;<SPAN CLASS=greek>w</SPAN><sub>c</sub><i>t</i>
+    </font> and the reference carrier as <font color="#0080FF">
+    cos(<SPAN CLASS=greek>w</SPAN><sub>c</sub><i>t</i>&nbsp;+&nbsp;<SPAN CLASS=greek>q</SPAN>)
+    </font>, the mixer output becomes: <br>
+    <br>
+    <i>a</i>(<i>t</i>)&nbsp;cos&nbsp;<SPAN CLASS=greek>w</SPAN><sub>c</sub><i>t</i>
+    &nbsp;cos(<SPAN CLASS=greek>w</SPAN><sub>c</sub><i>t</i>&nbsp;+&nbsp;<SPAN CLASS=greek>q</SPAN>)<BR>
+    =&nbsp;0.5&nbsp;<i>a</i>(<i>t</i>)cos(<SPAN CLASS=greek>q</SPAN>)
+    +&nbsp;0.5&nbsp;<i>a</i>(<i>t</i>)cos(2<SPAN CLASS=greek>w</SPAN><sub>c</sub><i>t</i>&nbsp;+&nbsp;<SPAN CLASS=greek>q</SPAN>)<BR>
+    <BR>
+    If the carrier is <font color="#0080FF">phase coherent</font> with the incoming modulated
+    carrier signal (that is, there is no frequency or phase difference between them, <SPAN CLASS=greek>q</SPAN>&nbsp;=&nbsp;0<sup>o</sup>), then the output is proportional to <i>a</i>(<i>t</i>)
+    and perfect detection is achieved. <br>
+    </td>
+  </tr>
+</table>
+
+<table border="0" width="100%">
+  <tr>
+    <td width="100%">If <SPAN CLASS=greek>q</SPAN>&nbsp;=&nbsp;90<sup>o</sup>, however, then cos(90<sup>o</sup>)&nbsp;=&nbsp;0
+    and no output is obtained! It is thus essential to ensure that the carrier
+    oscillator in the receive modem unit is in some way <font color="#0080FF">phase-locked</font>
+    to the carrier oscillator in the transmitter modem.<br>
+    <br>
+    Although coherent detection appears much more complicated than non-coherent detection, it
+    is able to recover the data signal more accurately in the presence of noise. </td>
+  </tr>
+</table>
+
+<h4 align="center"><br>
+</h4>
+</body>
+</html>

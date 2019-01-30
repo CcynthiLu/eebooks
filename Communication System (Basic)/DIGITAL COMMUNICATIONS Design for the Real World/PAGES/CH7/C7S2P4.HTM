@@ -1,0 +1,66 @@
+<html>
+
+<head>
+<link REL="stylesheet" HREF="../JSCRIPT/STYLES.CSS" TYPE="text/css">
+<script>
+
+pageX=4
+secX=2
+chapX=7
+
+indepthvar="off"
+examplesvar="off"
+questionsvar="on"
+
+q1=q2=1
+q3=q4=q5=q6=q7=0
+
+</script>
+<script SRC="../JScript/textpage.js">
+document.write("js file not found")
+</script>
+
+<title></title>
+</head>
+
+<body BACKGROUND="../EFFECTS/BG.GIF">
+<!--Page Title Here-->
+<!--Body Text Here-->
+<!--proofed by DR 7/6-->
+<table border="0" CELLSPACING="4" align="right">
+  <tr>
+    <td VALIGN="top" ALIGN="center"><H4><a CLASS="popup" HREF="javascript:open_question_window(5,10)">
+    <img SRC="../EFFECTS/Q_ICON.GIF" BORDER="0" VSPACE="4" WIDTH="44" HEIGHT="45"></a><br>
+    <a CLASS="popup" HREF="javascript:open_question_window(5,10)">Question 7.5</a><br>
+    <a CLASS="popup" HREF="javascript:open_question_window(6,10)">Question 7.6</a></h4>
+    </td>
+  </tr>
+</table>
+
+<h4>&nbsp;</h4>
+
+
+<h2>Parity (cont.)</h2>
+
+
+
+<table border="0" width="100%">
+  <tr>
+    <td width="50%">On reception, each data word, with appended parity bit, is checked to see
+    how many 1s are present. For an even parity design, the number must be even. If it is
+    found to be odd, it can be concluded that at least one error has occurred during
+    transmission and the ARQ process can begin. Of course, if two bits are in error, the
+    parity check will pass, and the errors will go undetected. <br>
+    <br>
+    The single bit parity check is thus best suited to low noise, low distortion links where
+    the error rate is known to be very low. For links with a high probability of error, more
+    sophisticated error checking methods must be used - the block or convolutional codes
+    described next, requiring the addition of larger numbers of redundant bits.
+    </td>
+    <td width="50%"><img src="ch7figs/sec2/parity2.gif" align="right" WIDTH="400" HEIGHT="263"></td>
+  </tr>
+</table>
+<h4>Shown here is a simple circuit for working out the necessary parity bit for even or odd
+    parity and a seven-bit input data word. </h4>
+</body>
+</html>

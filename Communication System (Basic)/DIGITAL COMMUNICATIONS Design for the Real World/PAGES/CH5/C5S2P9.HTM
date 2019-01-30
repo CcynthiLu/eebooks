@@ -1,0 +1,70 @@
+<html>
+
+<head>
+<link REL="stylesheet" HREF="../JSCRIPT/STYLES.CSS" TYPE="text/css">
+<script>
+
+pageX=9
+secX=2
+chapX=5
+
+indepthvar="off"
+examplesvar="off"
+questionsvar="off"
+
+</script>
+<script SRC="../JScript/textpage.js">
+document.write("js file not found")
+</script>
+
+<title></title>
+</head>
+
+<body BACKGROUND="../EFFECTS/BG.GIF">
+<!--Page Title Here-->
+<!--Body Text Here-->
+<!--proofed by DR 3/7-->
+
+<p>&nbsp;</p>
+
+<h2>Coherent detection vs non-coherent detection</h2>
+
+<table border="0" width="100%">
+  <tr>
+    <td width="100%">In order to understand why coherent detection gives a better noise
+    performance than non-coherent detection, it is helpful to view the <font color="#0080FF">phasor</font>
+    or <font color="#0080FF">vector diagram</font> representation of ASK. A vector diagram
+    maps the amplitude of a signal by the length of the line on the vector diagram, and maps
+    the instantaneous phase by the angle of the line with respect to a horizontal reference
+    frequency and phase (for data modulation, this reference is usually the carrier signal <font color="#0080FF">cos&nbsp;<SPAN CLASS=greek>w</SPAN><sub>c</sub><i>t</i></font>.)&nbsp; 
+    Thus for ASK, we can map the two symbol
+    states (carrier on or off) as two vectors on this diagram, one with length zero
+    corresponding to the carrier-off state, and one with length <i>A</i> in line with the
+    carrier reference, corresponding to the carrier-on state.</td>
+  </tr>
+</table>
+
+<table border="0" width="100%">
+  <tr>
+    <td width="100%"><p align="center"><img src="ch5figs/sec2/ask_vect.gif" align="center" WIDTH="500" HEIGHT="131"></td>
+  </tr>
+</table>
+
+<table border="0" width="100%">
+  <tr>
+    <td width="100%">We can also map noise by recognizing that a noise signal can be written
+    as a vector<BR>
+   <BR>
+    <i>n</i>(<i>t</i>)&nbsp;cos[<SPAN CLASS=greek>w</SPAN><sub>c</sub><i>t</i>&nbsp;+&nbsp;<SPAN CLASS=greek>q</SPAN>(<i>t</i>)] <BR>
+   <BR>
+    where <i>n</i>(<i>t</i>) is a time varying amplitude and <SPAN CLASS=greek>q</SPAN>(<i>t</i>) is a time varying phase. If we were to plot snapshots of
+    the noise on the vector diagram, we would find that they were randomly distributed
+    throughout all four quadrants of the vector space as shown. </td>
+  </tr>
+</table>
+
+<h4><br>
+<br>
+</h4>
+</body>
+</html>

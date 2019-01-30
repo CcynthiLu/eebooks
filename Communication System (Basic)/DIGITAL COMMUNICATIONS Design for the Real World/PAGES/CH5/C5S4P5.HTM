@@ -1,0 +1,59 @@
+<html>
+
+<head>
+<link REL="stylesheet" HREF="../JSCRIPT/STYLES.CSS" TYPE="text/css">
+<script>
+
+pageX=5
+secX=4
+chapX=5
+
+indepthvar="off"
+examplesvar="on"
+questionsvar="off"
+
+e1=1
+e2=e3=e4=e5=e6=e7=0
+
+</script>
+<script SRC="../JScript/textpage.js">
+document.write("js file not found")
+</script>
+
+<title></title>
+</head>
+
+<body BACKGROUND="../EFFECTS/BG.GIF">
+<!--Page Title Here-->
+<!--Body Text Here-->
+
+<table border="0" CELLSPACING="4" align="right">
+  <tr>
+    <td VALIGN="top" ALIGN="center"><H4><a CLASS="popup" HREF="javascript:open_examples_window(5,8)"><img SRC="../EFFECTS/EX_ICON.GIF" BORDER="0" VSPACE="4" WIDTH="44" HEIGHT="45"></a><br>
+    <a CLASS="popup" HREF="javascript:open_examples_window(5,8)">Example 5.5</a></h4>
+    </td>
+  </tr>
+</table>
+
+<p>&nbsp;</p>
+
+<h2>Detection of PSK</h2>
+
+<table border="0" width="100%">
+  <tr>
+    <td width="50%">There is no <font color="#0080FF">non-coherent</font> equivalent detection process for PSK, and
+    various forms of coherent detection must be employed. The ideal detector thus requires
+    perfect knowledge of the unmodulated carrier phase at the receiver. <BR><BR>
+
+As with ASK, any phase error <SPAN CLASS=greek>q</SPAN> of the locally generated carrier reference
+    reduces the signal voltage at the output of the detector by a factor cos(<SPAN CLASS=greek>q</SPAN>).
+    This in turn (see example) degrades the <I>E<sub>s</sub></i>/<i>N</i><sub>0</sub>
+    performance of the detector by a factor cos<sup>2</sup>(<SPAN CLASS=greek>q</SPAN>).
+    Thus we need zero phase error for optimum detection and must re-visit the whole area of <font color="#0080FF">carrier recovery</font>. 
+    Note that if the phase error reaches 90°, the output falls to zero! </td>
+    <td width="50%"><img src="ch5figs/sec4/pskdect1.gif" align="right" WIDTH="400" HEIGHT="150"></td>
+  </tr>
+</table>
+
+</body>
+</html>

@@ -1,0 +1,64 @@
+<html>
+
+<head>
+<link REL="stylesheet" HREF="../JSCRIPT/STYLES.CSS" TYPE="text/css">
+<script>
+
+pageX=1
+secX=3
+chapX=8
+
+indepthvar="off"
+examplesvar="off"
+questionsvar="off"
+
+</script>
+<script SRC="../JScript/textpage.js">
+document.write("js file not found")
+</script>
+
+<title></title>
+</head>
+
+<body BACKGROUND="../EFFECTS/BG.GIF">
+<!--Page Title Here-->
+
+<h1>8.3 Time Division Multiple Access (TDMA) </h1>
+<!--Section Heading-->
+<!--proofed by DR 6/6-->
+
+<h2>Basic system operation</h2>
+
+<table border="0" width="100%">
+  <tr>
+    <td width="50%">The basic principle behind <font color="#0080FF">time division
+    multiplexing</font> is that the user has access to a modem operating at a rate <font color="#0080FF">several times</font> that required to support his own data throughput,
+    such that he can send his information in a time slot that is shorter than his own message
+    transaction. Other users can then be assigned similar time slots on the same channel.
+    Clearly if the data rate on the channel is <i>w</i>&nbsp;bits/second, and each individual user
+    requires only <i>b</i>&nbsp;bits/second, then the system can support <i>w/b</i>&nbsp;simultaneous
+    users.<br>
+    <br>
+    In many TDM systems, users are assigned a time slot for the duration of their call whether
+    they require it or not. So, for example, if the user is generating voice traffic, or
+    typing at a keyboard, a time slot will be assigned regularly regardless of whether the
+    person is speaking or a key has been pressed, and it is very likely that the channel
+    capacity is being 'wasted' (this is equally true of FDMA systems).<br>
+    </td>
+    <td width="50%"><img src="ch8figs/sec3/tdma_bas.gif" align="right" WIDTH="300" HEIGHT="230"></td>
+  </tr>
+</table>
+<!--Body Text Here-->
+
+<table border="0" width="100%">
+  <tr>
+    <td width="100%">In order to maximize the use of a channel resource under these
+    circumstances, <a "" href="../ch1/c1s3p8.htm">packet based transmission</a> is now common
+    on wired links, where the user is not given a fixed repeated time slot, but rather
+    allocated a time slot 'on demand'. This system works well provided time slot availability
+    can be guaranteed for real-time applications &#150; video, voice, and so on. It also involves
+    quite a high penalty in signalling overheads. </td>
+  </tr>
+</table>
+</body>
+</html>

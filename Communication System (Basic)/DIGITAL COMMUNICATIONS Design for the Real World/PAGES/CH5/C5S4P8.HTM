@@ -1,0 +1,53 @@
+<html>
+
+<head>
+<link REL="stylesheet" HREF="../JSCRIPT/STYLES.CSS" TYPE="text/css">
+<script>
+
+pageX=8
+secX=4
+chapX=5
+
+indepthvar="off"
+examplesvar="off"
+questionsvar="off"
+
+</script>
+<script SRC="../JScript/textpage.js">
+document.write("js file not found")
+</script>
+
+<title></title>
+</head>
+
+<body BACKGROUND="../EFFECTS/BG.GIF">
+<!--Page Title Here-->
+<!--Body Text Here-->
+
+<p>&nbsp;</p>
+
+<h2>The Costas loop</h2>
+
+<h4>A commonly used variant of the squaring-based carrier recovery method is
+    the <font color="#0080FF">Costas loop</font> (<a href="../Ch10/c10s1p1.htm#Costas">Costas (1956)</a>).<br>
+    <br>
+    The Costas loop is essentially two <a href="c5s3p8.htm">phase-locked loops</a> operating
+    in parallel, with a common VCO giving quadrature outputs to each loop. The squaring
+    process necessary to make the PSK modulation modulo 2<SPAN CLASS=greek>p</SPAN> is inherent within the
+    Costas loop by virtue of the third mixer.</h4>
+
+<table border="0" width="100%">
+  <tr>
+    <td width="50%">There are two main advantages to the Costas loop. Firstly, it does not implicitly generate
+    a twice carrier frequency component and thus does away with the need for a 'divide by two'
+    circuit. Secondly, it performs the required coherent data detection in one of the branches
+    of the dual PLL system, eliminating the need for extra detection circuitry. (A separate <a href="../ch3/c3s5p1.htm">matched filter</a> is used for data recovery as the
+    filtering within the Costas loop is usually made very narrow in order to achieve good
+    noise averaging of the coherent reference. </td>
+    <td width="50%"><img src="ch5figs/sec4/costas1.gif" align="right" WIDTH="400" HEIGHT="210"></td>
+  </tr>
+</table>
+
+<p>&nbsp;</p>
+</body>
+</html>

@@ -1,0 +1,56 @@
+<html>
+
+<head>
+<link REL="stylesheet" HREF="../JSCRIPT/STYLES.CSS" TYPE="text/css">
+<script>
+
+pageX=4
+secX=4
+chapX=7
+
+indepthvar="off"
+examplesvar="off"
+questionsvar="off"
+
+</script>
+<script SRC="../JScript/textpage.js">
+document.write("js file not found")
+</script>
+
+<title></title>
+</head>
+
+<body BACKGROUND="../EFFECTS/BG.GIF">
+<!--Page Title Here-->
+<!--Body Text Here-->
+
+<p>&nbsp;</p>
+
+<h2>Reed&#150;Solomon (RS) codes</h2>
+<!--proofed by DR 7/6-->
+
+<table border="0" width="100%">
+  <tr>
+    <td width="100%"><p align="center"><img src="ch7figs/sec4/rs_code.gif" WIDTH="500" HEIGHT="58"></td>
+  </tr>
+  <tr>
+    <td width="100%">RS codes are a subset of BCH codes that operate at the block level rather
+    than the bit level. In other words, the incoming data stream is first packaged into small
+    blocks, and these blocks are then treated as a new set of <i>k</i> symbols to be packaged
+    in to a <font color="#0080FF">super-coded</font> block of <i>n</i> symbols. The result is
+    that the decoder is able to detect and correct complete errored blocks. It is thus
+    possible for a whole block to be corrupted owing to a burst of errors in a deep fade, for
+    example, and the receiver still to&nbsp; be able to reinstate the correct information. <br>
+    <br>
+    RS codes are often used in mobile radio systems where burst errors are common, either as
+    an alternative to, or in addition to, interleaving. RS codes are also used as part of the
+    error correcting mechanism in CD players. The inevitable scratches on the disk surface
+    result in bursts of errors coming from the disc, making the RS code ideally suited to this
+    task. </td>
+  </tr>
+</table>
+
+<h4 align="center">&nbsp;<br>
+</h4>
+</body>
+</html>

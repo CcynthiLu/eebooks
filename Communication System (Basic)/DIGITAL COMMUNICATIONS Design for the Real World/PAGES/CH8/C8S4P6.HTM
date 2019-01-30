@@ -1,0 +1,60 @@
+<html>
+
+<head>
+<link REL="stylesheet" HREF="../JSCRIPT/STYLES.CSS" TYPE="text/css">
+<script>
+
+pageX=6
+secX=4
+chapX=8
+
+indepthvar="off"
+examplesvar="off"
+questionsvar="off"
+
+</script>
+<script SRC="../JScript/textpage.js">
+document.write("js file not found")
+</script>
+
+<title></title>
+</head>
+
+<body BACKGROUND="../EFFECTS/BG.GIF">
+<!--Page Title Here-->
+<!--Section Heading-->
+<!--proofed by DR 6/6-->
+
+
+<p>&nbsp;</p>
+
+<h2>Example of direct sequence CDMA</h2>
+
+<table border="0" width="100%">
+  <tr>
+    <td width="100%"><img src="ch8figs/sec4/is95mod1.gif" align="right" WIDTH="550" HEIGHT="133"></td>
+  </tr>
+</table>
+<!--Body Text Here-->
+
+<table border="0" width="100%">
+  <tr>
+    <td width="100%">The most widely adopted CDMA radio system (outside the military), was
+    pioneered by QUALCOM, a California-based company, and is now embodied in the <A CLASS="external" TARGET="_blank" HREF="http://www.cdg.org">IS-95 standard</a> for cellular telephone applications. This 'air
+    interface' is a direct sequence CDMA design, spreading each user voice or data signal over
+    a 1.25&nbsp;MHz channel bandwidth.<BR>
+    <BR>The maximum user data rate per spreading code is 9600&nbsp;bps, (rates of
+    1200, 2400 and 4800 are also possible), which is then channel coded up to 19200&nbsp;bps in the
+    forward channel (base to mobile), and 28800&nbsp;bps in the reverse channel (mobile to base).<br>
+    <br>
+    In the reverse channel, the 28.8&nbsp;kps coded data is mapped onto 64&nbsp;orthogonal symbol states
+    known as <font color="#0080FF">WALSH functions</font>, giving a symbol rate of 4800&nbsp;symbol/second. 
+    This narrowband symbol stream is then spread using a unique identifying
+    spreading code for every mobile unit &#150; called the long code, clocking at a rate of 1.2288&nbsp;million chips/second. 
+    The long code is a pseudo-random sequence of length 2<sup>24</sup>&nbsp;&#150;&nbsp;1&nbsp;bits. 
+    This means that there are <font color="#0080FF">2<sup>24</sup>&nbsp;&#150;&nbsp;1 =&nbsp;4398046511103</font> possible different
+    code sequences, enough for all the mobiles in the world! </td>
+  </tr>
+</table>
+</body>
+</html>

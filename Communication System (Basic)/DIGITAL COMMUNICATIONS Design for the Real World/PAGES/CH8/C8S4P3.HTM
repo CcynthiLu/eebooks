@@ -1,0 +1,59 @@
+<html>
+
+<head>
+<link REL="stylesheet" HREF="../JSCRIPT/STYLES.CSS" TYPE="text/css">
+<script>
+
+pageX=3
+secX=4
+chapX=8
+
+indepthvar="off"
+examplesvar="off"
+questionsvar="off"
+
+</script>
+<script SRC="../JScript/textpage.js">
+document.write("js file not found")
+</script>
+
+<title></title>
+</head>
+
+<body BACKGROUND="../EFFECTS/BG.GIF">
+<!--Page Title Here-->
+<!--Section Heading-->
+
+<p>&nbsp;</p>
+<!--proofed by DR 6/6-->
+<h2>Example of frequency hopped CDMA</h2>
+
+<table border="0" width="100%">
+  <tr>
+    <td width="50%">We have already classed GSM European Digital Cellular as a TDMA system,
+    but it also has provision within the standard to change frequency on a frame-by-frame
+    basis, making it a modest rate (1&nbsp;/&nbsp;4.165 =&nbsp;240 hops/second) frequency hopping CDMA system.<br>
+    <br>
+    The motivation for adding the extra complexity of hopping to GSM is twofold. Firstly, the
+    200 kHz channel bandwidth of GSM is not sufficient to ensure that it will always be
+    significantly wider than the coherence bandwidth of the multipath environment, and thus
+    not corrupted by narrowband fading. Secondly, if there is a strong interference source on
+    any given channel, the hopping process will ensure that frames are only corrupted on an
+    occasional basis.</td>
+    <td width="50%"><img src="ch8figs/sec4/GSM_hop.gif" align="right" WIDTH="350" HEIGHT="173"></td>
+  </tr>
+</table>
+<!--Body Text Here-->
+
+<table border="0" width="100%">
+  <tr>
+    <td width="100%">A further example of an FH-CDMA system is the GTI Geonet radio, a high
+    capacity public and private two-way radio solution. This product uses 25&nbsp;kHz spaced
+    channels transmitting at 36.9&nbsp;kbps with <a href="../ch6/c6s4p8.htm"><SPAN CLASS=greek>p</SPAN>/4&nbsp;QPSK</a>
+    modulation. The hop rate is faster than GSM at 152&nbsp;hops/second, with a TDMA slot width of
+    2.2&nbsp;ms and three slots per frame. </td>
+  </tr>
+</table>
+
+</body>
+</html>

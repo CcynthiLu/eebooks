@@ -1,0 +1,72 @@
+<html>
+
+<head>
+<link REL="stylesheet" HREF="../JSCRIPT/STYLES.CSS" TYPE="text/css">
+<script>
+
+pageX=7
+secX=4
+chapX=5
+
+indepthvar="off"
+examplesvar="off"
+questionsvar="on"
+
+q1=q2=0
+q3=1
+q4=q5=q6=q7=0
+
+</script>
+<script SRC="../JScript/textpage.js">
+document.write("js file not found")
+</script>
+
+<title></title>
+</head>
+
+<body BACKGROUND="../EFFECTS/BG.GIF">
+<!--Page Title Here-->
+<!--Body Text Here-->
+<!--proofed by DR 7/6-->
+
+<table border="0" CELLSPACING="4" align="right">
+  <tr>
+    <td VALIGN="top" ALIGN="center"><H4><a CLASS="popup" HREF="javascript:open_question_window(10,12)"><img SRC="../EFFECTS/Q_ICON.GIF" BORDER="0" VSPACE="4" WIDTH="44" HEIGHT="45"></a><br>
+    <a CLASS="popup" HREF="javascript:open_question_window(10,12)">Question 5.10</a></h4>
+    </td>
+  </tr>
+</table>
+
+<p>&nbsp;</p>
+
+<h2>Carrier recovery for coherent PSK (cont.)</h2>
+
+<table border="0" width="100%">
+  <tr>
+    <td width="100%">For practical filtered PSK, the squared signal contains an envelope
+    modulation component which manifests itself as additional symmetrical frequency components
+    around the twice carrier term. Fortunately a PLL-based filter is insensitive to envelope
+    modulation and this will not significantly affect the performance of the carrier recovery
+    circuit.</td>
+  </tr>
+</table>
+
+<table border="0" width="100%">
+  <tr>
+    <td width="50%"><br>
+    
+    The filtering that is applied to the twice carrier term to reduce the effects of channel
+    noise is, however, very important in reducing the amount of <font color="#0080FF">phase
+    jitter</font> on the recovered carrier reference. There are some applications of digital
+    communications, such as cellular radio, where it is not possible to employ a very narrow
+    filter in the carrier recovery circuit. This is owing to the frequency uncertainty in the
+    location of the twice carrier term caused by <a "" href="../ch4/c4s2p9.htm">local
+    oscillator error</a> and, more directly, variable amounts of <a "" href="../ch4/c4s2p10.htm">Doppler shift</a> resulting from the user's motion. In these
+    cases, the carrier recovery process can often have significant residual 'phase jitter'
+    which degrades the performance for the expected ideal coherent PSK detector. </td>
+    <td width="50%"><img src="ch5figs/sec4/sqr_am.gif" align="right" WIDTH="400" HEIGHT="257"></td>
+  </tr>
+</table>
+
+</body>
+</html>

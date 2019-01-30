@@ -1,0 +1,202 @@
+<HTML>
+
+<!-- Page title and (c) year changed by DR 24/5/98 -->
+<!-- MS added (c) link, start button 5/6/98 -->
+<!-- MS added flash bits and browser version warnings 14/6/98 -->
+<!-- MS added imagemap mailto link 23/7/98 -->
+
+<HEAD>
+<TITLE>Digital Communications: Design for the Real World (title)</TITLE>
+
+<STYLE TYPE="text/css">
+
+BODY
+{	margin-left: 10px;
+	margin-top: 10px;
+}
+
+.copyright
+{	font-family: verdana, arial, helvetica;
+	color: white;
+	font-size: 13px;
+	font-weight: bold;
+}
+</STYLE>
+
+<!--------------------------------------------------------------------->
+
+<SCRIPT language="javascript">
+
+<!-- Show a message for browsers that don't support javascript at all: -->
+
+<!-- --> <CENTER><HR><H1>Important Note</H1>
+<!-- --> This book makes extensive use of Javascript, which your browser does not understand.
+<!-- --> <P>The book is intended for use with the latest version of
+<!-- --> <A HREF="http://www.microsoft.com">Microsoft Internet Explorer</A>.<HR></CENTER>
+
+<!-- Hide javascript...
+
+// Show a warning if the user is running a < version 4 browser:
+if ( Math.round(parseFloat(navigator.appVersion) * 1000) < 4000 )
+{	alert("This book is intended for use with Microsoft Internet Explorer 4. Some functionality may be lost in your browser, and the book may be unusable.");
+}
+
+button1 = new Image();	button1.src = "PAGES/EFFECTS/TITLE/START1.GIF";
+button2 = new Image();	button2.src = "PAGES/EFFECTS/TITLE/START2.GIF";
+button3 = new Image();	button3.src = "PAGES/EFFECTS/TITLE/START3.GIF";
+
+function start_book()
+{	document.start.src = button3.src;
+	setTimeout('bateman=window.open("PAGES/BOOK.HTM","bateman","resizable,width=760,height=560,top=0,left=0")',700);
+}
+
+function button_hello()
+{	document.start.src = button2.src;
+}
+
+function button_goodbye()
+{	document.start.src = button1.src;
+}
+
+currentID=1;
+
+function take_your_place(dancer)
+{   if (document.all)
+	{	document.all(dancer).style.visibility = "visible";
+		action = setTimeout("waltzIE('"+dancer+"')",50);
+	}
+	else if (document.layers)
+	{	document.layers[dancer].visibility = "visible";
+		action = setTimeout("waltzNN('"+dancer+"')",50);
+	}
+}
+
+function waltzIE(dancer)
+{	document.all(dancer).style.pixelTop += 7;
+	if (document.all(dancer).style.pixelTop > 148)
+	{	document.all(dancer).style.visibility = "hidden";
+		clearTimeout(action);
+		if (++currentID <= 15)
+			take_your_place("topic"+ currentID);
+		else button_hello();
+	}
+	else
+		action = setTimeout("waltzIE('"+dancer+"')",50);
+}
+
+function waltzNN(dancer)
+{	document.layers[dancer].top += 7;
+	if (document.layers[dancer].top > 148)
+	{	document.layers[dancer].visibility = "hidden";
+		clearTimeout(action);
+		if (++currentID <= 15)
+			take_your_place("topic"+ currentID);
+		else button_hello();
+	}
+	else
+		action = setTimeout("waltzNN('"+dancer+"')",50);
+}
+
+
+//-->
+</SCRIPT>
+
+</HEAD>
+
+
+<!--------------------------------------------------------------------->
+
+
+<BODY BACKGROUND="PAGES/EFFECTS/TITLE/BLUEBG.JPG" onLoad="take_your_place('topic1')">
+
+
+<TABLE BORDER=0 ALIGN=left CELLPADDING=0 CELLSPACING=0>
+	<TR>
+		<TD ALIGN=left VALIGN=bottom WIDTH=150 >
+			<IMG SRC="PAGES/EFFECTS/TITLE/DIGITAL.GIF" WIDTH="125" HEIGHT="52" BORDER="0">
+		</TD>
+		<TD ALIGN=left VALIGN=bottom>
+
+			<IMG SRC="PAGES/EFFECTS/TITLE/INSET.JPG" WIDTH="450" HEIGHT="150" BORDER="0" HSPACE="0" VSPACE="0">
+			
+			<DIV ID="topic1" STYLE="position:absolute; top:-20; left:380; visibility:hidden; font-family:verdana; font-weight:bold; color: white; font-size: 32px">
+				Coding
+			</DIV>
+			<DIV ID="topic2" STYLE="position:absolute; top:-20; left:200; visibility:hidden; font-family:verdana; font-weight:bold; color: white; font-size: 26px">
+				Communications&nbsp;networks
+			</DIV>
+			<DIV ID="topic3" STYLE="position:absolute; top:-20; left:250; visibility:hidden; font-family:verdana; font-weight:bold; color: white; font-size: 26px">
+				Data&nbsp;transmission
+			</DIV>
+			<DIV ID="topic4" STYLE="position:absolute; top:-20; left:200; visibility:hidden; font-family:verdana; font-weight:bold; color: white; font-size: 26px">	
+			     Digital&nbsp;modulation
+			</DIV>
+			<DIV ID="topic5" STYLE="position:absolute; top:-20; left:380; visibility:hidden; font-family:verdana; font-weight:bold; color: white; font-size: 32px">    
+			     Distortion
+			</DIV>
+			<DIV ID="topic6" STYLE="position:absolute; top:-20; left:300; visibility:hidden; font-family:verdana; font-weight:bold; color: white; font-size: 28px">   
+			     Exciting
+			</DIV>
+			<DIV ID="topic7" STYLE="position:absolute; top:-20; left:230; visibility:hidden; font-family:verdana; font-weight:bold; color: white; font-size: 32px">   
+			     Examples
+			</DIV>
+			<DIV ID="topic8" STYLE="position:absolute; top:-20; left:380; visibility:hidden; font-family:verdana; font-weight:bold; color: white; font-size: 34px">     
+			     Filtering
+			</DIV>
+			<DIV ID="topic9" STYLE="position:absolute; top:-20; left:400; visibility:hidden; font-family:verdana; font-weight:bold; color: white; font-size: 32px">     
+			     In-depth
+			</DIV>
+			<DIV ID="topic10" STYLE="position:absolute; top:-20; left:380; visibility:hidden; font-family:verdana; font-weight:bold; color: white; font-size: 32px">    
+			     Innovative
+			</DIV>
+			<DIV ID="topic11" STYLE="position:absolute; top:-20; left:220; visibility:hidden; font-family:verdana; font-weight:bold; color: white; font-size: 28px">    
+			     Interference
+			</DIV>
+			<DIV ID="topic12" STYLE="position:absolute; top:-20; left:380; visibility:hidden; font-family:verdana; font-weight:bold; color: white; font-size: 32px">     
+			     Practical
+			</DIV>
+			<DIV ID="topic13" STYLE="position:absolute; top:-20; left:290; visibility:hidden; font-family:verdana; font-weight:bold; color: white; font-size: 32px">    
+			     Protocols
+			</DIV>
+			<DIV ID="topic14" STYLE="position:absolute; top:-20; left:250; visibility:hidden; font-family:verdana; font-weight:bold; color: white; font-size: 32px">   
+			     Questions
+			</DIV>
+			<DIV ID="topic15" STYLE="position:absolute; top:-20; left:380; visibility:hidden; font-family:verdana; font-weight:bold; color: white; font-size: 32px">    
+			     Signalling
+			</DIV>
+			     
+						
+			
+			
+			<IMG STYLE="position: relative; top: 0; left: 0; zindex: 1" SRC="PAGES/EFFECTS/TITLE/BLUEBOX.JPG" WIDTH="450" HEIGHT="38" BORDER="0" HSPACE="0" VSPACE="0"></TD>
+		
+	</TR>
+	<TR>
+		<TD COLSPAN=2 ALIGN=left VALIGN=top>
+			<IMG USEMAP="#ABmap" SRC="PAGES/EFFECTS/TITLE/COMMS.GIF" WIDTH="320" HEIGHT="160" BORDER="0" HSPACE="0" VSPACE="0">
+			<A HREF="javascript:start_book()" onMouseOver="button_hello(); window.status='Click to open the book'; return true" onMouseOut="button_goodbye(); window.status=''"><IMG NAME="start" ALIGN=top SRC="PAGES/EFFECTS/TITLE/START1.GIF" WIDTH="151" HEIGHT="100" BORDER="0" HSPACE="70" VSPACE="0"></A>
+		</TD>
+
+	</TR>	
+	<TR>
+		<TD ALIGN=left VALIGN=bottom>
+			<IMG SRC="PAGES/EFFECTS/TITLE/AW_LOGO.GIF" WIDTH="160" HEIGHT="26" BORDER="0">
+		</TD>
+		<TD ALIGN=center VALIGN=bottom>
+			<P>&nbsp;
+			<A HREF="PAGES/COPYR.TXT" CLASS="copyright" >&copy; Addison Wesley Longman 1999</A>
+		</TD>
+	</TR>
+	
+</TABLE>
+
+<MAP NAME="ABmap">
+	<AREA SHAPE="rect" COORDS="155,98,319,147" HREF="mailto:ab@wsi.co.uk"></AREA>
+</MAP>
+
+<BGSOUND SRC='PAGES/EFFECTS/TITLE/BOOK2.WAV'>
+
+
+
+</BODY>
+</HTML>

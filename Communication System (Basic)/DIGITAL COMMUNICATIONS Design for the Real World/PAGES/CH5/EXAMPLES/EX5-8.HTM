@@ -1,0 +1,36 @@
+<html>
+
+<head>
+<link REL="stylesheet" HREF="../../JSCRIPT/STYLES.CSS" TYPE="text/css">
+<meta HTTP-EQUIV="Content-Type" CONTENT="text/html; charset=windows-1252">
+<meta NAME="GENERATOR" CONTENT="Microsoft FrontPage 3.0">
+</head>
+<body LINK="#0000FF" VLINK="#800080" background="../../EFFECTS/popups/BG_ex.GIF">
+<!--proofed by DR 3/7-->
+<h2>Example 5.8</h2>
+
+<h4 CLASS="technical">A radio receiver is limited in its performance by
+thermal noise generated in the receiver front-end. The receiver is capable of decoding
+both coherent binary ASK and binary PSK signals. If the average power rating of the
+transmitter is constant when it is sending both ASK and PSK data, which modulation format
+will be able to send data at the fastest rate for a given bit error probability in the
+receiver, and how much faster can it be?</h4>
+
+<h3>Solution</h3>
+
+<h4 CLASS="technical">The BER equations for coherent ASK and coherent PSK
+are as follows:<BR><BR>
+
+<i>P<sub>e</i>&nbsp;ASK</sub>&nbsp;=&nbsp;0.5erfc[<I>E<sub>b</sub></i>/2<i>N</i><sub>0</sub>]<sup>1/2</sup><BR><BR>
+<i>P<sub>e</i>&nbsp;PSK</sub>&nbsp;=&nbsp;0.5erfc[<I>E<sub>b</sub></i>/<i>N</i><sub>0</sub>]<sup>1/2</sup>
+
+<h4 CLASS="technical">It can be seen that the PSK system can
+tolerate a noise power density that is twice that for ASK or an <I>E<sub>b</sub></i> value that
+is half that for ASK.<br><BR>
+
+In this example, the noise power density at the
+input to the receiver is fixed for both ASK and PSK, and therefore it is possible to halve
+the <I>E<sub>b</sub></i> value for PSK and still match the ASK performance, allowing the
+PSK system to send data at twice the rate for the same average transmitter power.</h4>
+</body>
+</html>
