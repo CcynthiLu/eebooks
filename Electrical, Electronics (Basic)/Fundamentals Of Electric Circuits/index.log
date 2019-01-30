@@ -1,0 +1,185 @@
+01/12/2001 16:47:43: Starting build.
+01/12/2001 16:47:43: Connecting to index.
+01/12/2001 16:47:45: Searching: D:\Pdf
+01/12/2001 16:47:46: Indexing 50 documents.
+01/12/2001 16:47:46: Extracting from D:\Pdf\appc.pdf.
+01/12/2001 16:47:48: Extracting from D:\Pdf\ch02.pdf.
+01/12/2001 16:47:54: Extracting from D:\Pdf\BIBLIO.PDF.
+01/12/2001 16:47:54: Extracting from D:\Pdf\ch04.pdf.
+01/12/2001 16:48:00: Extracting from D:\Pdf\ch09.pdf.
+01/12/2001 16:48:06: Extracting from D:\Pdf\ch12.pdf.
+01/12/2001 16:48:13: Extracting from D:\Pdf\ch15.pdf.
+01/12/2001 16:48:22: Extracting from D:\Pdf\ch17.pdf.
+01/12/2001 16:48:27: Extracting from D:\Pdf\supch01.pdf.
+01/12/2001 16:48:28: Extracting from D:\Pdf\help2.pdf.
+01/12/2001 16:48:28: Extracting from D:\Pdf\index.pdf.
+01/12/2001 16:48:29: Extracting from D:\Pdf\supch03.pdf.
+01/12/2001 16:48:31: Extracting from D:\Pdf\supch04.pdf.
+01/12/2001 16:48:34: Extracting from D:\Pdf\supch07.pdf.
+01/12/2001 16:48:36: Extracting from D:\Pdf\supch09.pdf.
+01/12/2001 16:48:37: Extracting from D:\Pdf\supch12.pdf.
+01/12/2001 16:48:39: Extracting from D:\Pdf\supch14.pdf.
+01/12/2001 16:48:41: Extracting from D:\Pdf\supch16.pdf.
+01/12/2001 16:48:42: Extracting from D:\Pdf\supch18.pdf.
+01/12/2001 16:48:45: Extracting from D:\Pdf\suppreface.pdf.
+01/12/2001 16:48:45: Extracting from D:\Pdf\toc.pdf.
+01/12/2001 16:48:46: Extracting from D:\Pdf\ch10.pdf.
+01/12/2001 16:48:52: Extracting from D:\Pdf\Main.pdf.
+01/12/2001 16:48:52: Extracting from D:\Pdf\supch10.pdf.
+01/12/2001 16:48:54: Extracting from D:\Pdf\preface.pdf.
+01/12/2001 16:48:55: Extracting from D:\Pdf\fm.pdf.
+01/12/2001 16:48:55: Extracting from D:\Pdf\help.pdf.
+01/12/2001 16:48:56: Extracting from D:\Pdf\ch01.pdf.
+01/12/2001 16:48:59: Extracting from D:\Pdf\ch03.pdf.
+01/12/2001 16:49:05: Extracting from D:\Pdf\ch05.pdf.
+01/12/2001 16:49:10: Extracting from D:\Pdf\ch08.pdf.
+01/12/2001 16:49:18: Extracting from D:\Pdf\appe.pdf.
+01/12/2001 16:49:22: Extracting from D:\Pdf\appa.pdf.
+01/12/2001 16:49:23: Extracting from D:\Pdf\appb.pdf.
+01/12/2001 16:49:25: Extracting from D:\Pdf\appd.pdf.
+01/12/2001 16:49:28: Extracting from D:\Pdf\ch06.pdf.
+01/12/2001 16:49:33: Extracting from D:\Pdf\ch07.pdf.
+01/12/2001 16:49:41: Extracting from D:\Pdf\ch11.pdf.
+01/12/2001 16:49:47: Extracting from D:\Pdf\ch13.pdf.
+01/12/2001 16:49:56: Extracting from D:\Pdf\ch16.pdf.
+01/12/2001 16:50:03: Extracting from D:\Pdf\ch18.pdf.
+01/12/2001 16:50:10: Extracting from D:\Pdf\supch02.pdf.
+01/12/2001 16:50:13: Extracting from D:\Pdf\supch05.pdf.
+01/12/2001 16:50:15: Extracting from D:\Pdf\supch06.pdf.
+01/12/2001 16:50:16: Extracting from D:\Pdf\supch08.pdf.
+01/12/2001 16:50:19: Extracting from D:\Pdf\supch11.pdf.
+01/12/2001 16:50:20: Extracting from D:\Pdf\supch13.pdf.
+01/12/2001 16:50:22: Extracting from D:\Pdf\supch15.pdf.
+01/12/2001 16:50:26: Extracting from D:\Pdf\supch17.pdf.
+01/12/2001 16:50:27: Extracting from D:\Pdf\ch14.pdf.
+01/12/2001 16:50:42: Removing index entries for changed or deleted documents.
+01/12/2001 16:50:42: Removing unnecessary index entries.
+01/12/2001 16:50:43: Building Word Assist List.
+01/12/2001 16:50:45: Waiting for about 20 seconds to perform routine index update.
+01/12/2001 16:51:06:   Total Acrobat files in all directories: 50
+01/12/2001 16:51:06:   Total new files: 50
+01/12/2001 16:51:06:   Total pages indexed: 1278
+01/12/2001 16:51:06:   Total number of files skipped: 0
+01/12/2001 16:51:06:   Total deleted files: 0
+01/12/2001 16:51:06: Index Build Successful.
+05/09/2001 16:26:37: Purging index.
+05/09/2001 16:42:29: Resetting document count to reflect actual number of documents in the index.
+05/09/2001 16:42:50: Waiting for about 20 seconds to perform routine index update.
+05/09/2001 16:43:11: Starting build.
+05/09/2001 16:43:11: Connecting to index.
+05/09/2001 16:43:11: Searching: D:\pdf
+05/09/2001 16:43:11: Indexing 50 documents.
+05/09/2001 16:43:11: Extracting from D:\pdf\appa.pdf.
+05/09/2001 16:43:12: Extracting from D:\pdf\appb.pdf.
+05/09/2001 16:43:12: Extracting from D:\pdf\appc.pdf.
+05/09/2001 16:43:12: Extracting from D:\pdf\appd.pdf.
+05/09/2001 16:43:13: Extracting from D:\pdf\appe.pdf.
+05/09/2001 16:43:14: Extracting from D:\pdf\biblio.pdf.
+05/09/2001 16:43:14: Extracting from D:\pdf\ch01.pdf.
+05/09/2001 16:43:15: Extracting from D:\pdf\ch02.pdf.
+05/09/2001 16:43:16: Extracting from D:\pdf\ch03.pdf.
+05/09/2001 16:43:17: Extracting from D:\pdf\ch04.pdf.
+05/09/2001 16:43:19: Extracting from D:\pdf\ch05.pdf.
+05/09/2001 16:43:20: Extracting from D:\pdf\ch06.pdf.
+05/09/2001 16:43:21: Extracting from D:\pdf\ch07.pdf.
+05/09/2001 16:43:23: Extracting from D:\pdf\ch08.pdf.
+05/09/2001 16:43:24: Extracting from D:\pdf\ch09.pdf.
+05/09/2001 16:43:26: Extracting from D:\pdf\ch10.pdf.
+05/09/2001 16:43:27: Extracting from D:\pdf\ch11.pdf.
+05/09/2001 16:43:28: Extracting from D:\pdf\ch12.pdf.
+05/09/2001 16:43:29: Extracting from D:\pdf\ch13.pdf.
+05/09/2001 16:43:31: Extracting from D:\pdf\ch14.pdf.
+05/09/2001 16:43:33: Extracting from D:\pdf\ch15.pdf.
+05/09/2001 16:43:35: Extracting from D:\pdf\ch16.pdf.
+05/09/2001 16:43:37: Extracting from D:\pdf\ch17.pdf.
+05/09/2001 16:43:38: Extracting from D:\pdf\ch18.pdf.
+05/09/2001 16:43:39: Extracting from D:\pdf\fm.pdf.
+05/09/2001 16:43:39: Extracting from D:\pdf\help.pdf.
+05/09/2001 16:43:40: Extracting from D:\pdf\help2.pdf.
+05/09/2001 16:43:40: Extracting from D:\pdf\index.pdf.
+05/09/2001 16:43:40: Extracting from D:\pdf\main.pdf.
+05/09/2001 16:43:40: Extracting from D:\pdf\preface.pdf.
+05/09/2001 16:43:40: Extracting from D:\pdf\supch01.pdf.
+05/09/2001 16:43:40: Extracting from D:\pdf\supch02.pdf.
+05/09/2001 16:43:41: Extracting from D:\pdf\supch03.pdf.
+05/09/2001 16:43:41: Extracting from D:\pdf\supch04.pdf.
+05/09/2001 16:43:42: Extracting from D:\pdf\supch05.pdf.
+05/09/2001 16:43:42: Extracting from D:\pdf\supch06.pdf.
+05/09/2001 16:43:43: Extracting from D:\pdf\supch07.pdf.
+05/09/2001 16:43:43: Extracting from D:\pdf\supch08.pdf.
+05/09/2001 16:43:44: Extracting from D:\pdf\supch09.pdf.
+05/09/2001 16:43:44: Extracting from D:\pdf\supch10.pdf.
+05/09/2001 16:43:45: Extracting from D:\pdf\supch11.pdf.
+05/09/2001 16:43:45: Extracting from D:\pdf\supch12.pdf.
+05/09/2001 16:43:45: Extracting from D:\pdf\supch13.pdf.
+05/09/2001 16:43:46: Extracting from D:\pdf\supch14.pdf.
+05/09/2001 16:43:47: Extracting from D:\pdf\supch15.pdf.
+05/09/2001 16:43:47: Extracting from D:\pdf\supch16.pdf.
+05/09/2001 16:43:48: Extracting from D:\pdf\supch17.pdf.
+05/09/2001 16:43:48: Extracting from D:\pdf\supch18.pdf.
+05/09/2001 16:43:49: Extracting from D:\pdf\suppreface.pdf.
+05/09/2001 16:43:49: Extracting from D:\pdf\toc.pdf.
+05/09/2001 16:44:32: Removing index entries for changed or deleted documents.
+05/09/2001 16:44:32: Removing unnecessary index entries.
+05/09/2001 16:44:32: Building Word Assist List.
+05/09/2001 16:44:32: Waiting for about 20 seconds to perform routine index update.
+05/09/2001 16:44:53:   Total Acrobat files in all directories: 50
+05/09/2001 16:44:53:   Total new files: 50
+05/09/2001 16:44:53:   Total pages indexed: 1278
+05/09/2001 16:44:53:   Total number of files skipped: 0
+05/09/2001 16:44:53:   Total deleted files: 0
+05/09/2001 16:44:53: Index Build Successful.
+05/09/2001 19:07:44: Starting build.
+05/09/2001 19:07:44: Connecting to index.
+05/09/2001 19:07:45: Searching: D:\pdf
+05/09/2001 19:07:46: Indexing 20 documents.
+05/09/2001 19:07:46: Extracting from D:\pdf\appa.pdf.
+05/09/2001 19:07:47: Extracting from D:\pdf\appb.pdf.
+05/09/2001 19:07:47: Extracting from D:\pdf\ch01.pdf.
+05/09/2001 19:07:48: Extracting from D:\pdf\ch02.pdf.
+05/09/2001 19:07:51: Extracting from D:\pdf\ch03.pdf.
+05/09/2001 19:07:52: Extracting from D:\pdf\ch04.pdf.
+05/09/2001 19:07:54: Extracting from D:\pdf\ch05.pdf.
+05/09/2001 19:07:56: Extracting from D:\pdf\ch06.pdf.
+05/09/2001 19:07:58: Extracting from D:\pdf\ch07.pdf.
+05/09/2001 19:08:00: Extracting from D:\pdf\ch08.pdf.
+05/09/2001 19:08:03: Extracting from D:\pdf\ch09.pdf.
+05/09/2001 19:08:05: Extracting from D:\pdf\ch10.pdf.
+05/09/2001 19:08:07: Extracting from D:\pdf\ch11.pdf.
+05/09/2001 19:08:09: Extracting from D:\pdf\ch12.pdf.
+05/09/2001 19:08:11: Extracting from D:\pdf\ch13.pdf.
+05/09/2001 19:08:13: Extracting from D:\pdf\ch14.pdf.
+05/09/2001 19:08:17: Extracting from D:\pdf\ch15.pdf.
+05/09/2001 19:08:20: Extracting from D:\pdf\ch16.pdf.
+05/09/2001 19:08:22: Extracting from D:\pdf\ch17.pdf.
+05/09/2001 19:08:24: Extracting from D:\pdf\ch18.pdf.
+05/09/2001 19:09:09: Removing index entries for changed or deleted documents.
+05/09/2001 19:09:09: Removing unnecessary index entries.
+05/09/2001 19:09:09: Removing D:\pdf\ch18.pdf from index.
+05/09/2001 19:09:09: Removing D:\pdf\ch17.pdf from index.
+05/09/2001 19:09:09: Removing D:\pdf\ch16.pdf from index.
+05/09/2001 19:09:09: Removing D:\pdf\ch15.pdf from index.
+05/09/2001 19:09:09: Removing D:\pdf\ch14.pdf from index.
+05/09/2001 19:09:09: Removing D:\pdf\ch13.pdf from index.
+05/09/2001 19:09:09: Removing D:\pdf\ch12.pdf from index.
+05/09/2001 19:09:09: Removing D:\pdf\ch11.pdf from index.
+05/09/2001 19:09:09: Removing D:\pdf\ch10.pdf from index.
+05/09/2001 19:09:09: Removing D:\pdf\ch09.pdf from index.
+05/09/2001 19:09:09: Removing D:\pdf\ch08.pdf from index.
+05/09/2001 19:09:09: Removing D:\pdf\ch07.pdf from index.
+05/09/2001 19:09:09: Removing D:\pdf\ch06.pdf from index.
+05/09/2001 19:09:09: Removing D:\pdf\ch05.pdf from index.
+05/09/2001 19:09:09: Removing D:\pdf\ch04.pdf from index.
+05/09/2001 19:09:09: Removing D:\pdf\ch03.pdf from index.
+05/09/2001 19:09:09: Removing D:\pdf\ch02.pdf from index.
+05/09/2001 19:09:09: Removing D:\pdf\ch01.pdf from index.
+05/09/2001 19:09:09: Removing D:\pdf\appb.pdf from index.
+05/09/2001 19:09:09: Removing D:\pdf\appa.pdf from index.
+05/09/2001 19:09:09: Building Word Assist List.
+05/09/2001 19:09:10: Waiting for about 20 seconds to perform routine index update.
+05/09/2001 19:09:31:   Total Acrobat files in all directories: 50
+05/09/2001 19:09:31:   Total new files: 20
+05/09/2001 19:09:31:   Total pages indexed: 845
+05/09/2001 19:09:31:   Total number of files skipped: 0
+05/09/2001 19:09:31:   Total deleted files: 20
+05/09/2001 19:09:31: Index Build Successful.
