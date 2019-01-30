@@ -1,0 +1,453 @@
+<HTML>
+<HEAD>
+<META name=vsisbn content="0849320690">
+<META name=vstitle content="Practical Applications of Computational Intelligence for Adaptive Control">
+<META name=vsauthor content="Charles Karr">
+<META name=vsimprint content="CRC Press">
+<META name=vspublisher content="CRC Press LLC">
+<META name=vspubdate content="04/01/99">
+<META name=vscategory content="Web and Software Development: Artificial Intelligence: Fuzzy Logic,Web and Software Development: Artificial Intelligence: Other">
+
+
+
+
+<TITLE>Practical Applications of Computational Intelligence for Adaptive Control:Genetic Algorithm for Model Tuning</TITLE>
+
+<!-- HEADER -->
+
+<STYLE type="text/css"> 
+ <!--
+ A:hover  {
+ 	color : Red;
+ }
+ -->
+</STYLE>
+
+<META NAME="ROBOTS" CONTENT="NOINDEX, NOFOLLOW">
+<script>
+<!--
+function displayWindow(url, width, height) {
+         var Win = window.open(url,"displayWindow",'width=' + width +',height=' + height + ',resizable=1,scrollbars=yes');
+	if (Win) {
+		Win.focus();
+	}
+}
+//-->
+</script>
+<SCRIPT>
+<!--
+function popUp(url) {
+        var Win = window.open(url,"displayWindow",'width=400,height=300,resizable=1,scrollbars=yes');
+	if (Win) {
+		Win.focus();
+	}
+}
+//-->
+</SCRIPT>
+
+<script language="JavaScript1.2">
+<!--
+function checkForQuery(fm) {
+  /* get the query value */
+  var i = escape(fm.query.value);
+  if (i == "") {
+      alert('Please enter a search word or phrase');
+      return false;
+  }                  /* query is blank, dont run the .jsp file */
+  else return true;  /* execute the .jsp file */
+}
+//-->
+</script>
+
+<SCRIPT LANGUAGE="JavaScript">
+<!--
+var axel = Math.random() + "";
+var ord = axel * 1000000000000000000 + "?";
+
+//This part of script alleviates a Netscape document.write bug
+<!-- 
+NS4 = document.layers;
+if (NS4) {
+origWidth = innerWidth;
+origHeight = innerHeight;
+}
+function reDo() {
+if (innerWidth != origWidth || innerHeight != origHeight) 
+location.reload();
+}
+if (NS4) onresize = reDo;
+//-->
+</SCRIPT> 
+</HEAD>
+
+<body background="/images/back.jpg" bgcolor="#FFFFFF" link="#003399" alink="#FF0000" vlink="#003399" topmargin=0 leftmargin=0 marginheight=0 marginwidth=0>
+
+<table bgcolor="#003366" width="100%" border="0" cellpadding="0" cellspacing="0">
+	<tr valign="top">
+		<td height="95">
+		&nbsp;&nbsp;<a href="http://www.earthweb.com" target="resource window"><img src="/images/ew_logo.jpg" width="82" height="58" alt="EarthWeb" border="0"></a>&nbsp;&nbsp;&nbsp;</td>
+		<td height=95">
+		<table width="100%">
+				<td bgcolor="#003366" nowrap>
+<SCRIPT LANGUAGE="javascript">
+<!--
+document.write('<NOLAYER>');
+document.write('<IFRAME SRC="http://ad.doubleclick.net/adi/itk.earthweb.dart/b_itm;a=b_itm1;sz=468x60;ord=' + ord + '" width="468" height="60" frameborder="no" border="0" MARGINWIDTH="0" MARGINHEIGHT="0" SCROLLING="no">');
+document.write('<A HREF="http://ad.doubleclick.net/jump/itk.earthweb.dart/b_itm;abr=!ie;a=b_itm1;sz=468x60;ord=' + ord + '" target="_top"><IMG SRC="http://ad.doubleclick.net/ad/itk.earthweb.dart/b_itm;abr=!ie;a=b_itm1;sz=468x60;ord=' + ord + '" border=0 height="60" width="468"></A>');
+document.write('</IFRAME>');
+document.write('</NOLAYER>');
+document.write('<ILAYER id="layer1" visibility="hidden" width=468 height=60></ILAYER>');
+//-->
+</SCRIPT>
+				</td>
+				<td bgcolor="#003366" nowrap>
+<SCRIPT LANGUAGE="javascript">
+<!--
+document.write('<NOLAYER>');
+document.write('<IFRAME SRC="http://ad.doubleclick.net/adi/itk.earthweb.dart/b_itm;a=b_itm4;sz=160x60;ord=' + ord + '" width="160" height="60" frameborder="no" border="0" MARGINWIDTH="0" MARGINHEIGHT="0" SCROLLING="no">');
+document.write('<A HREF="http://ad.doubleclick.net/jump/itk.earthweb.dart/b_itm;abr=!ie;a=b_itm4;sz=160x60;ord=' + ord + '" target="_top"><IMG SRC="http://ad.doubleclick.net/ad/itk.earthweb.dart/b_itm;abr=!ie;a=b_itm4;sz=160x60;ord=' + ord + '" border=0 height="60" width="160"></A>');
+document.write('</IFRAME>');
+document.write('</NOLAYER>');
+document.write('<ILAYER id="layer4" visibility="hidden" width=160 height=60></ILAYER>');
+//-->
+</SCRIPT>
+				</td>
+				<td bgcolor="#003366" nowrap><a href="ITKN1a2b3c4d5e6f7g8h9idefcon4.html"><img src="/images/dotclear.gif" border="0" height="1" width="1" align="left"></a></td>
+			</tr>
+		</table>
+		
+		</td>
+	</tr>
+		
+	<tr>
+		<td height="1" colspan="3" bgcolor="#003366"><img src="/images/dotclear.gif" border=0 alt=""></td>
+	</tr>
+</table>
+
+<!-- END HEADER -->
+
+
+<!-- BEGIN SUB HEADER -->
+
+<table bgcolor="#003366" cellpadding="0" cellspacing="0" border="0" width="100%">
+
+<!-- ITK TOPNAV -->
+	
+	<tr>
+		<td align="left" valign="top" nowrap><a href="/index2.html"><img src="/images/top_tabs/home_off.gif" alt="Home" border="0"></a><a href="/pick-account.html"><img src="/images/top_tabs/accountinfo.gif" alt="Account Info" border="0"></a><!--<a href="/PSUser/usrreg.htm?AdminAction=InitAdd&Locale=en&URI=/"><img src="/images/top_tabs/subscribe.gif" alt="Subscribe" border="0"></a>--><a href="/PSUser/psuserauth.htm?cmd=login&URI=/"><img src="/images/top_tabs/login.gif" alt="Login" border="0"></a><a href="/search/"><img src="/images/top_tabs/search.gif" alt="Search" border="0"></a><a href="/PSUser/EWIPOMain.html"><img src="/images/top_tabs/my_itknowledge.gif" alt="My ITKnowledge" border="0"></a><a href="/faq/faq.html"><img src="/images/top_tabs/faq.gif" alt="FAQ" border="0"></a><a href="/sitemap.html"><img src="/images/top_tabs/sitemap.gif" alt="Sitemap" border="0"></a><a href="/contactus.html"><img src="/images/top_tabs/contact_us.gif" alt="Contact Us" border="0"></a></td> 
+	</tr>
+	
+<!-- END of ITK TOPNAV -->
+
+<!-- ITK LOGO and newsletter sign up -->
+
+</table>
+	
+<table cellpadding="0" cellspacing="0" border="0" width="100%">
+
+	<tr>
+		<td align="left" valign="top" nowrap><img src="/images/itk_logo_sm.jpg" alt="" border="0"></td>
+		<td align="right"><font face="verdana, sans-serif" size="1">
+
+<script language="JavaScript">
+<!-- 
+
+var days = new Array(8);
+days[1] = "Sunday";
+days[2] = "Monday";
+days[3] = "Tuesday";
+days[4] = "Wednesday";
+days[5] = "Thursday";
+days[6] = "Friday";
+days[7] = "Saturday";
+
+var months = new Array(13);
+months[1] = "January";
+months[2] = "February";
+months[3] = "March";
+months[4] = "April";
+months[5] = "May";
+months[6] = "June";
+months[7] = "July";
+months[8] = "August";
+months[9] = "September";
+months[10] = "October";
+months[11] = "November";
+months[12] = "December";
+
+var dateObj = new Date()
+var wday = days[dateObj.getDay() + 1]
+var lmonth = months[dateObj.getMonth() + 1]
+var date = dateObj.getDate()
+var fyear = dateObj.getYear()
+if (fyear <1000) fyear += 1900;
+document.write(wday + ", " + lmonth + " " + date + ", " + fyear)
+                
+//-->
+</script>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</font>
+<br><br>
+
+
+		 </td>
+	</tr>
+	</table>
+
+<!-- END ITK LOGO and newsletter sign up-->
+	
+<!-- begin of ITK left NAV -->
+
+<!-- BEGIN LEFT NAVBAR -->
+
+<!-- BEGIN LEFT NAVBAR -->
+
+	<table border="0" cellpadding="0" cellspacing="0">
+	
+	
+		<tr>
+		<td width="145" valign="top" align="left" rowspan=8>
+		
+	<!-- KEYWORD SEARCH -->	
+<script language="JavaScript1.2">
+<!--
+function checkForQuery(fm) {
+  /* get the query value */
+  var i = escape(fm.query.value);
+  if (i == "") {
+      alert('Please enter a search word or phrase');
+      return false;
+  }                  /* query is blank, dont run the .jsp file */
+  else return true;  /* execute the .jsp file */
+}
+//-->
+</script>
+	
+	
+	<form name="keyword" method="POST" action="http://ewsearch.earthweb.com:80/jsp/k2search/ewkwk2search_p2.jsp" onSubmit=" return checkForQuery(this); ">
+<img src="/images/keyword_searcha.gif" vspace="5" width="145" alt="" border="0">
+<INPUT type="hidden" name="collection" value="corpitk_p2">
+<INPUT type="hidden" name="altcoll" value="allbooks_p2">
+<INPUT type="hidden" name="topics" value="itk_www">
+<INPUT type="hidden" name="hl" value="off">
+<INPUT name="sortspec" type=hidden value="vspubdate desc score desc">
+<INPUT name=fields type=hidden value="vdkvgwkey score vstitle vsauthor vsisbn vspublisher vspubdate">		
+<INPUT name=imageprefix type=hidden value="http://www.itknowledge.com">
+<INPUT name=ssiFolder type=hidden value="itk">
+		
+		<table width="145" border="0" cellpadding="0" cellspacing="0">
+		<tr>
+		<td width="145">&nbsp;&nbsp;<input type="text" name="query" value="" size="11">&nbsp;<input type="image" width=28 height=23 border=0 value="Go" name="Go" src="/images/go.gif" align=absmiddle><br>
+&nbsp;&nbsp;<INPUT type="radio" name="scope" value="" checked><FONT face="arial, helvetica" size="1" color="#ffffff" size="1">All ITKnowledge</FONT><br>
+&nbsp;&nbsp;<INPUT type="radio" name="scope" value="sourcecode"><FONT face="arial, helvetica" size="1" color="#ffffff" size="1">Source Code</FONT><br>
+			<font face="arial, helvetica" size="2">
+			<img src="/images/dotclear.gif" width="1" height="5" alt="" border="0"><br>
+			
+			&nbsp;&nbsp;<a href="/search/search-tips.html"><img src="/images/arrows_blue.gif" alt="" border="0"><font size="1" color="#ffffff">Search Tips</font></a><br>
+			&nbsp;&nbsp;<a href="/search/"><img src="/images/arrows_blue.gif" alt="" border="0"><font size="1" color="#ffffff">Advanced Search</font></a><br>
+			
+			</font>
+			
+		</td>
+		<td width="5"><img src="/images/dotclear.gif" width=5 height=10 hspace="5" alt="" border="0"></td>
+		</tr>
+		</table>
+	</form>
+		
+		
+<!-- BROWSE BY TOPIC -->
+		
+
+<form name="meta" method="POST" action="http://ewsearch.earthweb.com:80/jsp/k2search/ewmetak2search_p2.jsp" onSubmit=" return checkForQuery(this); ">
+<img src="/images/publication_searcha.gif" width="145" alt="" border="0">
+<INPUT type="hidden" name="collection" value="allbooks_p2">
+<INPUT type="hidden" name="altcoll" value="corpitk_p2">
+<INPUT type="hidden" name="topics" value="itk_www">
+<INPUT type="hidden" name="hl" value="off">
+<INPUT name="sortspec" type=hidden value="vspubdate desc score desc">
+<INPUT name=fields type=hidden value="vdkvgwkey score vstitle vsauthor vspublisher vspubdate">
+<INPUT name=imageprefix type=hidden value="http://www.itknowledge.com">
+<INPUT name=ssiFolder type=hidden value="itk">
+		
+<table width="145" border="0" cellpadding="0" cellspacing="0">
+	
+			<tr>
+			<td valign="top">
+			&nbsp;&nbsp;<input type="text" name="query" value="" size="11">&nbsp;<input type="image" width=28 height=23 border=0 value="Go" name="Go" src="/images/go.gif" align=absmiddle><br><font face="arial, helvetica" size="2">
+			&nbsp;&nbsp;<SELECT NAME="metatags" style="font-size: 12; font-family: sans-serif;" size="1">
+			<option value="vstitle" SELECTED>Title
+			<option value="vsauthor">Author
+			<option value="vspublisher">Publisher
+			<option value="vsisbn">ISBN			
+			</SELECT><br><br></font>
+			</td>
+			</tr>
+</table>
+</form>
+
+<form action="" name="catlist">	
+<table width="145" border="0" cellpadding="0" cellspacing="0">				
+			<tr>
+			<td valign="top">
+			<img src="/images/jump_topica.gif" width="145" alt="" border="0">
+			</td>
+			</tr>
+			<tr>
+			<td width="145">
+				
+	        	<font face="Arial,helvetica" size="1">
+				&nbsp;&nbsp;<SELECT NAME="cat" onChange='top.location.href=this.options[selectedIndex].value;' style="font-size: 10; font-family: sans-serif;">
+                        <option value="" selected>Please Select
+                        <option value="">-----------
+						<option value="/reference/dir.1-busman.html">Business &amp; IT Mgmt
+						<option value="/reference/dir.2-certification.html">Certification &amp; Training                       
+						<option value="/reference/dir.3-databaseanderp.html">Database &amp; ERP
+                        <option value="/reference/dir.4-desktopapps.html">Desktop Apps
+                        <option value="/reference/dir.5-desktoppubanddesign.html">Graphic Design
+                        <option value="/reference/dir.6-generalinternet.html">General Internet
+                        <option value="/reference/dir.7-hardwareandos.html">Hardware &amp; OS
+                        <option value="/reference/dir.8-ibmredbooks.html">IBM RedBooks
+                        <option value="/reference/dir.9-networktelcom.html">Network &amp; Telecom
+						<option value="/reference/dir.10-websoftwaredev.html">Web &amp; Software Dev
+                        <option value="">-----------
+
+                        <option value="/reference/dir.archive1.html">Public Archive               
+                        </SELECT>
+			</font>
+			
+		</td>
+		</tr>
+	</table>
+	</form>
+	
+<!-- LEFT NAV SEARCH END -->
+
+	</td>
+		
+
+<!-- END LEFT NAVBAR -->
+
+
+<!-- END LEFT NAVBAR -->
+	
+	<td width="15"><img src="/images/dotclear.gif" width="15" alt="" border="0"></td>
+
+<!-- end of ITK left NAV -->
+
+<!-- begin main content -->
+	
+	<td width="100%" valign="top" align="left">
+		<br>
+
+<!-- END SUB HEADER -->
+[an error occurred while processing this directive]
+<!-- Empty Reference Subhead -->
+
+<!--ISBN=0849320690//-->
+<!--TITLE=Practical Applications of Computational Intelligence for Adaptive Control//-->
+<!--AUTHOR=Charles Karr//-->
+<!--PUBLISHER=CRC Press LLC//-->
+<!--IMPRINT=CRC Press//-->
+<!--CHAPTER=10//-->
+<!--PAGES=125-128//-->
+<!--UNASSIGNED1//-->
+<!--UNASSIGNED2//-->
+
+<CENTER>
+<TABLE BORDER>
+<TR>
+<TD><A HREF="123-125.html">Previous</A></TD>
+<TD><A HREF="../ewtoc.html">Table of Contents</A></TD>
+<TD><A HREF="128-132.html">Next</A></TD>
+</TR>
+</TABLE>
+</CENTER>
+<P><BR></P>
+<H3><A NAME="Heading4"></A><FONT COLOR="#000077">10.3 Hydrocyclone Separator</FONT></H3>
+<P>The use of hydrocyclones is the standard method in the mineral processing industry of separating the particles in a slurry by size or by density. Hydrocyclones are continuously operating separating devices that utilize centrifugal forces to accelerate the settling rate of particles. They have achieved wide-spread use because of their simplicity, their durability, and their relatively low cost.
+</P>
+<P>A typical hydrocyclone is shown in Figure 10.1. The lower portion of a hydrocyclone is a conical vessel with an opening at the bottom to allow for the removal of the coarse or heavier particles. The conical section is joined to a cylindrical section, the top of which is closed with the exception of an overflow pipe known as a <I>vortex finder</I>. The vortex finder prevents the feed material that enters the cylindrical section tangentially from going directly into the overflow. Separation occurs in the cylindrical section due to the existence of a complex velocity distribution that carries the coarse particles to the bottom and the fine particles out the top.</P>
+<P><A NAME="Fig1"></A><A HREF="javascript:displayWindow('images/10-01.jpg',400,637)"><IMG SRC="images/10-01t.jpg"></A>
+<BR><A HREF="javascript:displayWindow('images/10-01.jpg',400,637)"><FONT COLOR="#000077"><B>Figure 10.1</B></FONT></A>&nbsp;&nbsp;Hydrocyclones have become the standard separation device in a number of industries including both the mineral processing industry and the separations industry.</P>
+<P>Plitt (1976) presented an empirical model to predict the <I>d</I><SUB><SMALL><I>50</I></SMALL></SUB> or <I>split size</I> that is still used extensively today. The split size is that size particle (given by diameter of the particle) that has an equal chance of exiting the hydrocyclone either through the underflow or the overflow, and is often used to quantify the efficiency of this separation process. Plitt&#146;s model has the following functional relationship:</P>
+<P ALIGN="CENTER"><IMG SRC="images/10-05d.jpg"></P>
+<P>where D<SUB><SMALL>c</SMALL></SUB>, is the diameter of the hydrocyclone, D<SUB><SMALL>i</SMALL></SUB>, is the diameter of the slurry input, D<SUB><SMALL>o</SMALL></SUB>. is the diameter of the overflow, D<SUB><SMALL>u</SMALL></SUB> is the diameter of the underflow, h is the height of the hydrocyclone, Q is the volumetric flow rate into the hydrocyclone, &#966; is the percent solids in the slurry input, and &#961; is the density of the solids. The empirical constants, C<SUB><SMALL>i</SMALL></SUB>, are selected so that the model accurately matches data that has been collected from actual hydrocyclone separators.</P>
+<P>A number of approaches have been developed for determining the empirical constants associated with this particular model of a hydrocyclone. Most of the approaches involve the use of statistical routines, each of which has some potential drawbacks (Karr et al, 1995), many of which can be overcome by using a GA. The problem at hand is similar to the curve-fitting problem of Chapter 5. The coding scheme that was employed in the Ree-Eyring equation example of Chapter 5 is again used here. The fitness function of Chapter 5 is similar, except that the LS criteria has been replaced with the LMS criteria resulting in the following fitness function:</P>
+<P ALIGN="CENTER"><IMG SRC="images/10-06d.jpg"></P>
+<P>where f is the fitness function value, <I>med</I> is the median value, y is an actual data value, and y&#146; is an estimated data value using the parameters defined by a particular GA string.</P>
+<P>A GA was used to select the values of C<SUB><SMALL>1</SMALL></SUB> through C<SUB><SMALL>9</SMALL></SUB> used in the empirical model of a hydrocyclone as shown in equation (10.1). Figure 10.2 demonstrates the effectiveness of using a GA for tuning the empirical constants. In this plot, the actual d<SUB><SMALL>50</SMALL></SUB> size is plotted against the d<SUB><SMALL>50</SMALL></SUB> size predicted using the model with the empirical constants as selected by a genetic algorithm. Note that the model would exactly reproduce the data if all of the points shown in Figure 10.2 fell on a line of 45&#176;. Although the GA tuned model fits the data well for most of the data shown (excluding the outliers in the lower range of d<SUB><SMALL>50</SMALL></SUB>) it systematically departs from the 45&#176; line at high values of d<SUB><SMALL>50</SMALL></SUB>. This modeling error indicates that either the GA has not determined the exact values of the coefficients or the mathematical relationship upon which the model is based is inadequate.</P>
+<P><A NAME="Fig2"></A><A HREF="javascript:displayWindow('images/10-02.jpg',500,406)"><IMG SRC="images/10-02t.jpg"></A>
+<BR><A HREF="javascript:displayWindow('images/10-02.jpg',500,406)"><FONT COLOR="#000077"><B>Figure 10.2</B></FONT></A>&nbsp;&nbsp;The GA tuned empirical model of the hydrocyclone separator matches the data obtained for real-world hydrocyclones well.</P>
+<P>It is important to note that the GA determined the empirical constants in roughly 10 minutes, whereas a statistical package took roughly 9 hours to locate constants that provided the same quality fit to the data. This time of computation becomes critical when the tuning of an empirical model is being done as a part of a real-time, adaptive process control system such as the one discussed in Chapter 9.
+</P><P><BR></P>
+<CENTER>
+<TABLE BORDER>
+<TR>
+<TD><A HREF="123-125.html">Previous</A></TD>
+<TD><A HREF="../ewtoc.html">Table of Contents</A></TD>
+<TD><A HREF="128-132.html">Next</A></TD>
+</TR>
+</TABLE>
+</CENTER>
+
+<hr width="90%" size="1" noshade>
+<div align="center">
+<font face="Verdana,sans-serif" size="1">Copyright &copy; <a href="/reference/crc00001.html">CRC Press LLC</a></font>
+</div>
+<!-- all of the reference materials (books) have the footer and subfoot reveresed -->
+<!-- reference_subfoot = footer -->
+<!-- reference_footer = subfoot -->
+
+<!-- BEGIN SUB FOOTER -->
+	<br>
+	<img src="/images/dotclear.gif" width="5" height="7" border="0">
+	</TD>
+    </TR>
+	</TABLE>
+	
+	<table width="100%" border=0 cellpadding=0 cellspacing=0>
+	<tr>
+		<td align="left" width="160"><img src="/images/bot_curve.jpg" width="160" alt="" border="0"></td>
+		<td align="left" valign="top" nowrap><a href="/index2.html"><img src="/images/top_tabs/home_bot.gif" alt="Home" border="0"></a><a href="/pick-account.html"><img src="/images/top_tabs/account_info_bot.gif" alt="Account Info" border="0"></a><a href="/PSUser/usrreg.htm?AdminAction=InitAdd&Locale=en&URI=/"><img src="/images/top_tabs/subscribe_bot.gif" alt="Subscribe" border="0"></a><a href="/PSUser/psuserauth.htm?cmd=login&URI=/"><img src="/images/top_tabs/login_bot.gif" alt="Login" border="0"></a><a href="/search/"><img src="/images/top_tabs/search_bot.gif" alt="Search" border="0"></a><a href="/PSUser/EWIPOMain.html"><img src="/images/top_tabs/my_itknowledge_bot.gif" alt="My ITKnowledge" border="0"></a><a href="/faq/faq.html"><img src="/images/top_tabs/faq_bot.gif" alt="FAQ" border="0"></a><a href="/sitemap.html"><img src="/images/top_tabs/sitemap_bot.gif" alt="Sitemap" border="0"></a><a href="/contactus.html"><img src="/images/top_tabs/contact_us_bot.gif" alt="Contact Us" border="0"></a></td> 
+	</tr>
+	</table>
+		
+	<table width="100%" bgcolor="#003366" border=0 cellpadding=0 cellspacing=0>
+	<tr>
+		<td align="left" width=145><img src="/images/clear_pixel.gif" width=145 height="1" alt="" border="0"></td>
+				
+<!-- END SUB FOOTER -->
+
+<!-- all of the books have the footer and subfoot reveresed -->
+<!-- reference_subfoot = footer -->
+<!-- reference_footer = subfoot -->
+
+<!-- FOOTER -->
+			
+<td align="left" bgcolor="#003366">
+<table border="0" cellspacing="10" cellpadding="5">
+<tr>
+<td align="center">
+<font face="arial, helvetica" size="1" color="#cccccc"><b><a href="/products.html"><font color="#0099CC">Products</font></a>&nbsp;|&nbsp; <a href="/contactus.html"><font color="#0099CC">Contact Us</font></a>&nbsp;|&nbsp; <a href="http://www.earthweb.com/dlink.corp|about_us-jhtml.72.0.-.0.jhtml" target="resource window"><font color="#0099CC">About Us</font></a>&nbsp;|&nbsp; <a href="http://www.earthweb.com/dlink.corp|privacy-jhtml.72.0.-.-.jhtml" target="resource window"><font color="#0099CC">Privacy</font></a> &nbsp;|&nbsp; <a href="http://www.itmarketer.com/" target="resource window"><font color="#0099CC">Ad Info</font></a> &nbsp;|&nbsp; <a href="/index2.html"><font color="#0099CC">Home</font></a></b>
+<br><br>Use of this site is subject to certain <a href="/agreement.html"><font color="#0099CC">Terms &amp; Conditions</font></a>, <a href="/copyright.html"><font color="#0099CC">Copyright &copy; 1996-2000 EarthWeb Inc.</font></a> All rights reserved.  Reproduction in whole or in part in any form or medium without express written <a href="http://www.earthweb.com/dlink.corp|permissions-jhtml.72.0.-.-.jhtml" target="resource window"><font color="#0099CC">permission</font></a> of EarthWeb is prohibited. Read EarthWeb's <A HREF="http://www.earthweb.com/dlink.corp|privacy-jhtml.72.0.-.-.jhtml" target="resource window"><font color="#0099CC">privacy</font></A> statement.</font><br><br>
+</td>
+</tr>
+</table>
+
+<!-- netranger link to stop spiders -->
+
+<a href="ITKN1a2b3c4d5e6f7g8h9idefcon4.html">
+<img src="/images/dotclear.gif" border="0" height="1" width="1" align="left"></a>
+</td>
+		</tr>
+</table>
+<SCRIPT LANGUAGE="javascript">
+<!--
+document.write('<LAYER SRC="http://ad.doubleclick.net/adl/itk.earthweb.dart/b_itm;a=b_itm1;sz=468x60;ord=' + ord + '" width=468 height=60 visibility="hidden" onLoad="moveToAbsolute(layer1.pageX,layer1.pageY);clip.height=60;clip.width=468; visibility=\'show\';"></LAYER>');
+document.write('<LAYER SRC="http://ad.doubleclick.net/adl/itk.earthweb.dart/b_itm;a=b_itm4;sz=160x60;ord=' + ord + '" width=160 height=60 visibility="hidden" onLoad="moveToAbsolute(layer4.pageX,layer4.pageY);clip.height=60;clip.width=160; visibility=\'show\';"></LAYER>');
+document.write('<LAYER SRC="http://ad.doubleclick.net/adl/itk.earthweb.dart/b_itm;a=b_itm3;sz=125x125;ord=' + ord + '" width=125 height=125 visibility="hidden" onLoad="moveToAbsolute(layer3.pageX,layer3.pageY);clip.height=125;clip.width=125; visibility=\'show\';"></LAYER>');
+//-->
+</SCRIPT>
+</BODY>
+</HTML>
+
+<!-- END FOOTER -->
+

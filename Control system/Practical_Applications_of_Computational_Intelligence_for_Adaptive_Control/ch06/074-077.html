@@ -1,0 +1,451 @@
+<HTML>
+<HEAD>
+<META name=vsisbn content="0849320690">
+<META name=vstitle content="Practical Applications of Computational Intelligence for Adaptive Control">
+<META name=vsauthor content="Charles Karr">
+<META name=vsimprint content="CRC Press">
+<META name=vspublisher content="CRC Press LLC">
+<META name=vspubdate content="04/01/99">
+<META name=vscategory content="Web and Software Development: Artificial Intelligence: Fuzzy Logic,Web and Software Development: Artificial Intelligence: Other">
+
+
+
+
+<TITLE>Practical Applications of Computational Intelligence for Adaptive Control:Genetic Algorithm Design of a Liquid Level Controller</TITLE>
+
+<!-- HEADER -->
+
+<STYLE type="text/css"> 
+ <!--
+ A:hover  {
+ 	color : Red;
+ }
+ -->
+</STYLE>
+
+<META NAME="ROBOTS" CONTENT="NOINDEX, NOFOLLOW">
+<script>
+<!--
+function displayWindow(url, width, height) {
+         var Win = window.open(url,"displayWindow",'width=' + width +',height=' + height + ',resizable=1,scrollbars=yes');
+	if (Win) {
+		Win.focus();
+	}
+}
+//-->
+</script>
+<SCRIPT>
+<!--
+function popUp(url) {
+        var Win = window.open(url,"displayWindow",'width=400,height=300,resizable=1,scrollbars=yes');
+	if (Win) {
+		Win.focus();
+	}
+}
+//-->
+</SCRIPT>
+
+<script language="JavaScript1.2">
+<!--
+function checkForQuery(fm) {
+  /* get the query value */
+  var i = escape(fm.query.value);
+  if (i == "") {
+      alert('Please enter a search word or phrase');
+      return false;
+  }                  /* query is blank, dont run the .jsp file */
+  else return true;  /* execute the .jsp file */
+}
+//-->
+</script>
+
+<SCRIPT LANGUAGE="JavaScript">
+<!--
+var axel = Math.random() + "";
+var ord = axel * 1000000000000000000 + "?";
+
+//This part of script alleviates a Netscape document.write bug
+<!-- 
+NS4 = document.layers;
+if (NS4) {
+origWidth = innerWidth;
+origHeight = innerHeight;
+}
+function reDo() {
+if (innerWidth != origWidth || innerHeight != origHeight) 
+location.reload();
+}
+if (NS4) onresize = reDo;
+//-->
+</SCRIPT> 
+</HEAD>
+
+<body background="/images/back.jpg" bgcolor="#FFFFFF" link="#003399" alink="#FF0000" vlink="#003399" topmargin=0 leftmargin=0 marginheight=0 marginwidth=0>
+
+<table bgcolor="#003366" width="100%" border="0" cellpadding="0" cellspacing="0">
+	<tr valign="top">
+		<td height="95">
+		&nbsp;&nbsp;<a href="http://www.earthweb.com" target="resource window"><img src="/images/ew_logo.jpg" width="82" height="58" alt="EarthWeb" border="0"></a>&nbsp;&nbsp;&nbsp;</td>
+		<td height=95">
+		<table width="100%">
+				<td bgcolor="#003366" nowrap>
+<SCRIPT LANGUAGE="javascript">
+<!--
+document.write('<NOLAYER>');
+document.write('<IFRAME SRC="http://ad.doubleclick.net/adi/itk.earthweb.dart/b_itm;a=b_itm1;sz=468x60;ord=' + ord + '" width="468" height="60" frameborder="no" border="0" MARGINWIDTH="0" MARGINHEIGHT="0" SCROLLING="no">');
+document.write('<A HREF="http://ad.doubleclick.net/jump/itk.earthweb.dart/b_itm;abr=!ie;a=b_itm1;sz=468x60;ord=' + ord + '" target="_top"><IMG SRC="http://ad.doubleclick.net/ad/itk.earthweb.dart/b_itm;abr=!ie;a=b_itm1;sz=468x60;ord=' + ord + '" border=0 height="60" width="468"></A>');
+document.write('</IFRAME>');
+document.write('</NOLAYER>');
+document.write('<ILAYER id="layer1" visibility="hidden" width=468 height=60></ILAYER>');
+//-->
+</SCRIPT>
+				</td>
+				<td bgcolor="#003366" nowrap>
+<SCRIPT LANGUAGE="javascript">
+<!--
+document.write('<NOLAYER>');
+document.write('<IFRAME SRC="http://ad.doubleclick.net/adi/itk.earthweb.dart/b_itm;a=b_itm4;sz=160x60;ord=' + ord + '" width="160" height="60" frameborder="no" border="0" MARGINWIDTH="0" MARGINHEIGHT="0" SCROLLING="no">');
+document.write('<A HREF="http://ad.doubleclick.net/jump/itk.earthweb.dart/b_itm;abr=!ie;a=b_itm4;sz=160x60;ord=' + ord + '" target="_top"><IMG SRC="http://ad.doubleclick.net/ad/itk.earthweb.dart/b_itm;abr=!ie;a=b_itm4;sz=160x60;ord=' + ord + '" border=0 height="60" width="160"></A>');
+document.write('</IFRAME>');
+document.write('</NOLAYER>');
+document.write('<ILAYER id="layer4" visibility="hidden" width=160 height=60></ILAYER>');
+//-->
+</SCRIPT>
+				</td>
+				<td bgcolor="#003366" nowrap><a href="ITKN1a2b3c4d5e6f7g8h9idefcon4.html"><img src="/images/dotclear.gif" border="0" height="1" width="1" align="left"></a></td>
+			</tr>
+		</table>
+		
+		</td>
+	</tr>
+		
+	<tr>
+		<td height="1" colspan="3" bgcolor="#003366"><img src="/images/dotclear.gif" border=0 alt=""></td>
+	</tr>
+</table>
+
+<!-- END HEADER -->
+
+
+<!-- BEGIN SUB HEADER -->
+
+<table bgcolor="#003366" cellpadding="0" cellspacing="0" border="0" width="100%">
+
+<!-- ITK TOPNAV -->
+	
+	<tr>
+		<td align="left" valign="top" nowrap><a href="/index2.html"><img src="/images/top_tabs/home_off.gif" alt="Home" border="0"></a><a href="/pick-account.html"><img src="/images/top_tabs/accountinfo.gif" alt="Account Info" border="0"></a><!--<a href="/PSUser/usrreg.htm?AdminAction=InitAdd&Locale=en&URI=/"><img src="/images/top_tabs/subscribe.gif" alt="Subscribe" border="0"></a>--><a href="/PSUser/psuserauth.htm?cmd=login&URI=/"><img src="/images/top_tabs/login.gif" alt="Login" border="0"></a><a href="/search/"><img src="/images/top_tabs/search.gif" alt="Search" border="0"></a><a href="/PSUser/EWIPOMain.html"><img src="/images/top_tabs/my_itknowledge.gif" alt="My ITKnowledge" border="0"></a><a href="/faq/faq.html"><img src="/images/top_tabs/faq.gif" alt="FAQ" border="0"></a><a href="/sitemap.html"><img src="/images/top_tabs/sitemap.gif" alt="Sitemap" border="0"></a><a href="/contactus.html"><img src="/images/top_tabs/contact_us.gif" alt="Contact Us" border="0"></a></td> 
+	</tr>
+	
+<!-- END of ITK TOPNAV -->
+
+<!-- ITK LOGO and newsletter sign up -->
+
+</table>
+	
+<table cellpadding="0" cellspacing="0" border="0" width="100%">
+
+	<tr>
+		<td align="left" valign="top" nowrap><img src="/images/itk_logo_sm.jpg" alt="" border="0"></td>
+		<td align="right"><font face="verdana, sans-serif" size="1">
+
+<script language="JavaScript">
+<!-- 
+
+var days = new Array(8);
+days[1] = "Sunday";
+days[2] = "Monday";
+days[3] = "Tuesday";
+days[4] = "Wednesday";
+days[5] = "Thursday";
+days[6] = "Friday";
+days[7] = "Saturday";
+
+var months = new Array(13);
+months[1] = "January";
+months[2] = "February";
+months[3] = "March";
+months[4] = "April";
+months[5] = "May";
+months[6] = "June";
+months[7] = "July";
+months[8] = "August";
+months[9] = "September";
+months[10] = "October";
+months[11] = "November";
+months[12] = "December";
+
+var dateObj = new Date()
+var wday = days[dateObj.getDay() + 1]
+var lmonth = months[dateObj.getMonth() + 1]
+var date = dateObj.getDate()
+var fyear = dateObj.getYear()
+if (fyear <1000) fyear += 1900;
+document.write(wday + ", " + lmonth + " " + date + ", " + fyear)
+                
+//-->
+</script>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</font>
+<br><br>
+
+
+		 </td>
+	</tr>
+	</table>
+
+<!-- END ITK LOGO and newsletter sign up-->
+	
+<!-- begin of ITK left NAV -->
+
+<!-- BEGIN LEFT NAVBAR -->
+
+<!-- BEGIN LEFT NAVBAR -->
+
+	<table border="0" cellpadding="0" cellspacing="0">
+	
+	
+		<tr>
+		<td width="145" valign="top" align="left" rowspan=8>
+		
+	<!-- KEYWORD SEARCH -->	
+<script language="JavaScript1.2">
+<!--
+function checkForQuery(fm) {
+  /* get the query value */
+  var i = escape(fm.query.value);
+  if (i == "") {
+      alert('Please enter a search word or phrase');
+      return false;
+  }                  /* query is blank, dont run the .jsp file */
+  else return true;  /* execute the .jsp file */
+}
+//-->
+</script>
+	
+	
+	<form name="keyword" method="POST" action="http://ewsearch.earthweb.com:80/jsp/k2search/ewkwk2search_p2.jsp" onSubmit=" return checkForQuery(this); ">
+<img src="/images/keyword_searcha.gif" vspace="5" width="145" alt="" border="0">
+<INPUT type="hidden" name="collection" value="corpitk_p2">
+<INPUT type="hidden" name="altcoll" value="allbooks_p2">
+<INPUT type="hidden" name="topics" value="itk_www">
+<INPUT type="hidden" name="hl" value="off">
+<INPUT name="sortspec" type=hidden value="vspubdate desc score desc">
+<INPUT name=fields type=hidden value="vdkvgwkey score vstitle vsauthor vsisbn vspublisher vspubdate">		
+<INPUT name=imageprefix type=hidden value="http://www.itknowledge.com">
+<INPUT name=ssiFolder type=hidden value="itk">
+		
+		<table width="145" border="0" cellpadding="0" cellspacing="0">
+		<tr>
+		<td width="145">&nbsp;&nbsp;<input type="text" name="query" value="" size="11">&nbsp;<input type="image" width=28 height=23 border=0 value="Go" name="Go" src="/images/go.gif" align=absmiddle><br>
+&nbsp;&nbsp;<INPUT type="radio" name="scope" value="" checked><FONT face="arial, helvetica" size="1" color="#ffffff" size="1">All ITKnowledge</FONT><br>
+&nbsp;&nbsp;<INPUT type="radio" name="scope" value="sourcecode"><FONT face="arial, helvetica" size="1" color="#ffffff" size="1">Source Code</FONT><br>
+			<font face="arial, helvetica" size="2">
+			<img src="/images/dotclear.gif" width="1" height="5" alt="" border="0"><br>
+			
+			&nbsp;&nbsp;<a href="/search/search-tips.html"><img src="/images/arrows_blue.gif" alt="" border="0"><font size="1" color="#ffffff">Search Tips</font></a><br>
+			&nbsp;&nbsp;<a href="/search/"><img src="/images/arrows_blue.gif" alt="" border="0"><font size="1" color="#ffffff">Advanced Search</font></a><br>
+			
+			</font>
+			
+		</td>
+		<td width="5"><img src="/images/dotclear.gif" width=5 height=10 hspace="5" alt="" border="0"></td>
+		</tr>
+		</table>
+	</form>
+		
+		
+<!-- BROWSE BY TOPIC -->
+		
+
+<form name="meta" method="POST" action="http://ewsearch.earthweb.com:80/jsp/k2search/ewmetak2search_p2.jsp" onSubmit=" return checkForQuery(this); ">
+<img src="/images/publication_searcha.gif" width="145" alt="" border="0">
+<INPUT type="hidden" name="collection" value="allbooks_p2">
+<INPUT type="hidden" name="altcoll" value="corpitk_p2">
+<INPUT type="hidden" name="topics" value="itk_www">
+<INPUT type="hidden" name="hl" value="off">
+<INPUT name="sortspec" type=hidden value="vspubdate desc score desc">
+<INPUT name=fields type=hidden value="vdkvgwkey score vstitle vsauthor vspublisher vspubdate">
+<INPUT name=imageprefix type=hidden value="http://www.itknowledge.com">
+<INPUT name=ssiFolder type=hidden value="itk">
+		
+<table width="145" border="0" cellpadding="0" cellspacing="0">
+	
+			<tr>
+			<td valign="top">
+			&nbsp;&nbsp;<input type="text" name="query" value="" size="11">&nbsp;<input type="image" width=28 height=23 border=0 value="Go" name="Go" src="/images/go.gif" align=absmiddle><br><font face="arial, helvetica" size="2">
+			&nbsp;&nbsp;<SELECT NAME="metatags" style="font-size: 12; font-family: sans-serif;" size="1">
+			<option value="vstitle" SELECTED>Title
+			<option value="vsauthor">Author
+			<option value="vspublisher">Publisher
+			<option value="vsisbn">ISBN			
+			</SELECT><br><br></font>
+			</td>
+			</tr>
+</table>
+</form>
+
+<form action="" name="catlist">	
+<table width="145" border="0" cellpadding="0" cellspacing="0">				
+			<tr>
+			<td valign="top">
+			<img src="/images/jump_topica.gif" width="145" alt="" border="0">
+			</td>
+			</tr>
+			<tr>
+			<td width="145">
+				
+	        	<font face="Arial,helvetica" size="1">
+				&nbsp;&nbsp;<SELECT NAME="cat" onChange='top.location.href=this.options[selectedIndex].value;' style="font-size: 10; font-family: sans-serif;">
+                        <option value="" selected>Please Select
+                        <option value="">-----------
+						<option value="/reference/dir.1-busman.html">Business &amp; IT Mgmt
+						<option value="/reference/dir.2-certification.html">Certification &amp; Training                       
+						<option value="/reference/dir.3-databaseanderp.html">Database &amp; ERP
+                        <option value="/reference/dir.4-desktopapps.html">Desktop Apps
+                        <option value="/reference/dir.5-desktoppubanddesign.html">Graphic Design
+                        <option value="/reference/dir.6-generalinternet.html">General Internet
+                        <option value="/reference/dir.7-hardwareandos.html">Hardware &amp; OS
+                        <option value="/reference/dir.8-ibmredbooks.html">IBM RedBooks
+                        <option value="/reference/dir.9-networktelcom.html">Network &amp; Telecom
+						<option value="/reference/dir.10-websoftwaredev.html">Web &amp; Software Dev
+                        <option value="">-----------
+
+                        <option value="/reference/dir.archive1.html">Public Archive               
+                        </SELECT>
+			</font>
+			
+		</td>
+		</tr>
+	</table>
+	</form>
+	
+<!-- LEFT NAV SEARCH END -->
+
+	</td>
+		
+
+<!-- END LEFT NAVBAR -->
+
+
+<!-- END LEFT NAVBAR -->
+	
+	<td width="15"><img src="/images/dotclear.gif" width="15" alt="" border="0"></td>
+
+<!-- end of ITK left NAV -->
+
+<!-- begin main content -->
+	
+	<td width="100%" valign="top" align="left">
+		<br>
+
+<!-- END SUB HEADER -->
+[an error occurred while processing this directive]
+<!-- Empty Reference Subhead -->
+
+<!--ISBN=0849320690//-->
+<!--TITLE=Practical Applications of Computational Intelligence for Adaptive Control//-->
+<!--AUTHOR=Charles Karr//-->
+<!--PUBLISHER=CRC Press LLC//-->
+<!--IMPRINT=CRC Press//-->
+<!--CHAPTER=6//-->
+<!--PAGES=074-077//-->
+<!--UNASSIGNED1//-->
+<!--UNASSIGNED2//-->
+
+<CENTER>
+<TABLE BORDER>
+<TR>
+<TD><A HREF="073-074.html">Previous</A></TD>
+<TD><A HREF="../ewtoc.html">Table of Contents</A></TD>
+<TD><A HREF="077-080.html">Next</A></TD>
+</TR>
+</TABLE>
+</CENTER>
+<P><BR></P>
+<H4 ALIGN="LEFT"><A NAME="Heading4"></A><FONT COLOR="#000077">6.2.1 Coding Scheme</FONT></H4>
+<P>The liquid level fuzzy controller presented in Chapter 2 employed triangular membership functions. Thus, the following presentation describes the use of a GA to adjust triangular membership functions. However, the same method can be applied to other membership function forms such as the trapezoidal membership functions used in the cart-pole controller of Chapter 3.
+</P>
+<P>The unoptimized, arbitrarily selected, triangular membership functions used initially for the liquid level controller were shown in Chapter 2 (Figures 2.2 through 2.4). Here, the membership functions for Error (E) are repeated in Figure 6.1. Recall that there are four fuzzy sets used to describe error (E), five fuzzy sets used to describe the time rate of change of error (&#916;E), and five fuzzy sets to describe the percent change in flow rate (Q<SUB>net</SUB>). These fuzzy sets provide linguistic terms that can describe both the condition (E and &#916;E) and the action (Q<SUB>net</SUB>) variables. With these definitions, there are 20 rules in the controller. The membership functions determine under precisely what conditions, and to what extent each rule is applied for particular values of E and &#916;E. Improving these membership functions improves the performance of the controller.</P>
+<P><A NAME="Fig1"></A><A HREF="javascript:displayWindow('images/06-01.jpg',500,358)"><IMG SRC="images/06-01t.jpg"></A>
+<BR><A HREF="javascript:displayWindow('images/06-01.jpg',500,358)"><FONT COLOR="#000077"><B>Figure 6.1</B></FONT></A>&nbsp;&nbsp;The linguistic terms used to describe the condition and action variables for the liquid level controller are initially defined with the triangular membership functions shown above.</P>
+<P>As a constraint on the GA&#146;s search, the membership functions in the liquid level controller were forced to maintain their triangular shape and their height, but the size of their base and their position relative to one another was allowed to change. The triangles describing <B><I>extreme membership functions</I></B> (those right triangles at the upper and lower limits of the variables they were describing; terms like <B>NB</B> and <B>PB</B> for E and &#916;E; <B>BN</B> and <B>BP</B> for change in Q) were forced to remain fixed to their associated extreme limits. In other words, they were forced to remain right triangles with their apex at either the lower or upper limit of the condition or action variable they describe. Membership functions defining <B><I>interior membership functions</I></B> were forced to remain isosceles triangles. Thus, the definition of each extreme triangle requires a single point (a left or right base point), while the definition of each interior membership function requires two points (both a left and a right base point). Figure 6.2 shows the six points that must be defined under these constraints to completely define the membership functions for E. (This figure has membership functions that are slightly different from those shown in Figure 6.1 so that the six points can be clearly identified.) When the membership functions associated with E, &#916;E, and Q<SUB>net</SUB> are considered, the result is a search problem with 22 parameters that must be defined (six points defining the triangles for E and eight points each defining the triangles for &#916;E and Q<SUB>net</SUB>).</P>
+<P><A NAME="Fig2"></A><A HREF="javascript:displayWindow('images/06-02.jpg',500,363)"><IMG SRC="images/06-02t.jpg"></A>
+<BR><A HREF="javascript:displayWindow('images/06-02.jpg',500,363)"><FONT COLOR="#000077"><B>Figure 6.2</B></FONT></A>&nbsp;&nbsp;The entire set of membership functions defining the linguistic terms used to describe the error in liquid level setpoint can be described with the definition of the six points identified above with a &#8226;.</P>
+<P>Thus, the search for efficient membership functions for the liquid level control problem defined in Chapter 2 involves the selection of values for 22 parameters (22 points are needed to locate the 14 triangles that describe the fuzzy terms). This is a much larger search problem than the curve-fitting problems addressed in Chapter 5. However, again, the application of GAs to search problems requires only the coding of the parameters and the definition of a fitness function; the size of the problem does not prevent the use of a GA. It might, however, force an increase in either the population size or the maximum number of generations, or both.
+</P>
+<P>In Chapter 5, the curve-fitting problems were solved with a GA using a concatenated, mapped, unsigned binary coding. In this coding, parameters that vary continuously between some minimum and maximum values are represented with bit strings. This same approach is applicable to the points defining the triangular membership functions in the current problem. For instance, a substring can be formed to represent the right base point of the extreme membership function NB describing E as shown in Figure 6.2. The substring is allocated a specified number of bits, p, and mapped using the familiar formula</P>
+<P ALIGN="CENTER"><IMG SRC="images/06-01d.jpg"></P>
+<P>where <I>bin</I> is the integer value represented by a <I>p</I>-bit string, C<SUB><SMALL>min</SMALL></SUB> is the minimum value of the parameter, C<SUB><SMALL>max</SMALL></SUB> is the maximum value of the parameter, and C is the value of the parameter represented by the substring. Each of the remaining parameters can be represented with similar substrings, and the entire parameter set can be represented by a string formed through the concatenation of the individual substrings. Again, the GA manipulates a population of strings using the familiar operators of reproduction, crossover, and mutation.</P>
+<P>The remaining tasks include determining the number of bits to be allocated for each of the 22 parameters and the selection of appropriate minimum and maximum values for each of the parameters. To keep things simple, and because there is no apparent reason for using substrings of different lengths, each substring is represented with four bits. Thus, the resulting strings are thus 88 bits in length. In other problems it will be necessary to use substrings with more or fewer bits (i.e., different lengths) and the current coding scheme can certainly accommodate such a need.</P><P><BR></P>
+<CENTER>
+<TABLE BORDER>
+<TR>
+<TD><A HREF="073-074.html">Previous</A></TD>
+<TD><A HREF="../ewtoc.html">Table of Contents</A></TD>
+<TD><A HREF="077-080.html">Next</A></TD>
+</TR>
+</TABLE>
+</CENTER>
+
+<hr width="90%" size="1" noshade>
+<div align="center">
+<font face="Verdana,sans-serif" size="1">Copyright &copy; <a href="/reference/crc00001.html">CRC Press LLC</a></font>
+</div>
+<!-- all of the reference materials (books) have the footer and subfoot reveresed -->
+<!-- reference_subfoot = footer -->
+<!-- reference_footer = subfoot -->
+
+<!-- BEGIN SUB FOOTER -->
+	<br>
+	<img src="/images/dotclear.gif" width="5" height="7" border="0">
+	</TD>
+    </TR>
+	</TABLE>
+	
+	<table width="100%" border=0 cellpadding=0 cellspacing=0>
+	<tr>
+		<td align="left" width="160"><img src="/images/bot_curve.jpg" width="160" alt="" border="0"></td>
+		<td align="left" valign="top" nowrap><a href="/index2.html"><img src="/images/top_tabs/home_bot.gif" alt="Home" border="0"></a><a href="/pick-account.html"><img src="/images/top_tabs/account_info_bot.gif" alt="Account Info" border="0"></a><a href="/PSUser/usrreg.htm?AdminAction=InitAdd&Locale=en&URI=/"><img src="/images/top_tabs/subscribe_bot.gif" alt="Subscribe" border="0"></a><a href="/PSUser/psuserauth.htm?cmd=login&URI=/"><img src="/images/top_tabs/login_bot.gif" alt="Login" border="0"></a><a href="/search/"><img src="/images/top_tabs/search_bot.gif" alt="Search" border="0"></a><a href="/PSUser/EWIPOMain.html"><img src="/images/top_tabs/my_itknowledge_bot.gif" alt="My ITKnowledge" border="0"></a><a href="/faq/faq.html"><img src="/images/top_tabs/faq_bot.gif" alt="FAQ" border="0"></a><a href="/sitemap.html"><img src="/images/top_tabs/sitemap_bot.gif" alt="Sitemap" border="0"></a><a href="/contactus.html"><img src="/images/top_tabs/contact_us_bot.gif" alt="Contact Us" border="0"></a></td> 
+	</tr>
+	</table>
+		
+	<table width="100%" bgcolor="#003366" border=0 cellpadding=0 cellspacing=0>
+	<tr>
+		<td align="left" width=145><img src="/images/clear_pixel.gif" width=145 height="1" alt="" border="0"></td>
+				
+<!-- END SUB FOOTER -->
+
+<!-- all of the books have the footer and subfoot reveresed -->
+<!-- reference_subfoot = footer -->
+<!-- reference_footer = subfoot -->
+
+<!-- FOOTER -->
+			
+<td align="left" bgcolor="#003366">
+<table border="0" cellspacing="10" cellpadding="5">
+<tr>
+<td align="center">
+<font face="arial, helvetica" size="1" color="#cccccc"><b><a href="/products.html"><font color="#0099CC">Products</font></a>&nbsp;|&nbsp; <a href="/contactus.html"><font color="#0099CC">Contact Us</font></a>&nbsp;|&nbsp; <a href="http://www.earthweb.com/dlink.corp|about_us-jhtml.72.0.-.0.jhtml" target="resource window"><font color="#0099CC">About Us</font></a>&nbsp;|&nbsp; <a href="http://www.earthweb.com/dlink.corp|privacy-jhtml.72.0.-.-.jhtml" target="resource window"><font color="#0099CC">Privacy</font></a> &nbsp;|&nbsp; <a href="http://www.itmarketer.com/" target="resource window"><font color="#0099CC">Ad Info</font></a> &nbsp;|&nbsp; <a href="/index2.html"><font color="#0099CC">Home</font></a></b>
+<br><br>Use of this site is subject to certain <a href="/agreement.html"><font color="#0099CC">Terms &amp; Conditions</font></a>, <a href="/copyright.html"><font color="#0099CC">Copyright &copy; 1996-2000 EarthWeb Inc.</font></a> All rights reserved.  Reproduction in whole or in part in any form or medium without express written <a href="http://www.earthweb.com/dlink.corp|permissions-jhtml.72.0.-.-.jhtml" target="resource window"><font color="#0099CC">permission</font></a> of EarthWeb is prohibited. Read EarthWeb's <A HREF="http://www.earthweb.com/dlink.corp|privacy-jhtml.72.0.-.-.jhtml" target="resource window"><font color="#0099CC">privacy</font></A> statement.</font><br><br>
+</td>
+</tr>
+</table>
+
+<!-- netranger link to stop spiders -->
+
+<a href="ITKN1a2b3c4d5e6f7g8h9idefcon4.html">
+<img src="/images/dotclear.gif" border="0" height="1" width="1" align="left"></a>
+</td>
+		</tr>
+</table>
+<SCRIPT LANGUAGE="javascript">
+<!--
+document.write('<LAYER SRC="http://ad.doubleclick.net/adl/itk.earthweb.dart/b_itm;a=b_itm1;sz=468x60;ord=' + ord + '" width=468 height=60 visibility="hidden" onLoad="moveToAbsolute(layer1.pageX,layer1.pageY);clip.height=60;clip.width=468; visibility=\'show\';"></LAYER>');
+document.write('<LAYER SRC="http://ad.doubleclick.net/adl/itk.earthweb.dart/b_itm;a=b_itm4;sz=160x60;ord=' + ord + '" width=160 height=60 visibility="hidden" onLoad="moveToAbsolute(layer4.pageX,layer4.pageY);clip.height=60;clip.width=160; visibility=\'show\';"></LAYER>');
+document.write('<LAYER SRC="http://ad.doubleclick.net/adl/itk.earthweb.dart/b_itm;a=b_itm3;sz=125x125;ord=' + ord + '" width=125 height=125 visibility="hidden" onLoad="moveToAbsolute(layer3.pageX,layer3.pageY);clip.height=125;clip.width=125; visibility=\'show\';"></LAYER>');
+//-->
+</SCRIPT>
+</BODY>
+</HTML>
+
+<!-- END FOOTER -->
+
